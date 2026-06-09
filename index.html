@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maine Beer Cafe — Lobster Rolls, Craft Beer &amp; Bourbon in Kittery, Maine</title>
+<meta name="description" content="Dave's Maine Beer Cafe on Route 1 in Kittery, Maine. Fresh, never-frozen Maine lobster rolls, killer burgers, rotating craft taps and a deep bourbon list. Cozy, family-owned, kid-friendly. Order online or come hang." />
+<meta name="theme-color" content="#0d2436" />
+<link rel="canonical" href="https://mainebeercafe.com/" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Maine Beer Cafe — Lobster Rolls, Craft Beer & Bourbon | Kittery, Maine" />
+<meta property="og:description" content="Never-frozen Maine lobster rolls, killer burgers, rotating craft taps and a deep bourbon list. Cozy, family-owned, on Route 1 in Kittery." />
+<meta property="og:url" content="https://mainebeercafe.com/" />
+<meta property="og:image" content="https://mainebeercafe.com/assets/lobster-roll.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- LocalBusiness / Restaurant structured data — the heavy lever for Google ranking recovery.
+     NOTE for Dave: confirm hours + price range below; everything else verified. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Maine Beer Cafe",
+  "alternateName": "Dave's Maine Cafe",
+  "image": "https://mainebeercafe.com/assets/lobster-roll.jpg",
+  "@id": "https://mainebeercafe.com",
+  "url": "https://mainebeercafe.com",
+  "telephone": "+1-207-475-5655",
+  "email": "dave@mainebeercafe.com",
+  "priceRange": "$$",
+  "servesCuisine": ["Seafood", "American", "Comfort Food", "Lobster Rolls"],
+  "menu": "https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3",
+  "acceptsReservations": "False",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "439 US Route 1, Ste 1",
+    "addressLocality": "Kittery",
+    "addressRegion": "ME",
+    "postalCode": "03904",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.1019, "longitude": -70.7378 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "15:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "11:30", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:30", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:30", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:30", "closes": "17:00" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0d2436; --navy-2:#13344d; --cream:#f6efe0; --cream-2:#efe6d2;
+    --lobster:#e1502a; --gold:#e9b949; --rope:#caa86a; --ink:#1a1a1a;
+    --maxw:1140px;
+    --shadow:0 10px 40px rgba(13,36,54,.16);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:Oswald,Impact,sans-serif;font-weight:700;letter-spacing:.5px;line-height:1.05;text-transform:uppercase;margin:0}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--lobster);color:#fff;text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:14px 26px;border-radius:6px;transition:transform .15s ease,background .15s ease}
+  .btn:hover{background:#c8421f;transform:translateY(-2px)}
+  .btn.gold{background:var(--gold);color:var(--navy)}
+  .btn.gold:hover{background:#dcab35}
+  .btn.ghost{background:transparent;border:2px solid #fff;color:#fff;padding:12px 24px}
+  .btn.ghost:hover{background:#fff;color:var(--navy)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(13,36,54,.97);backdrop-filter:blur(6px);border-bottom:2px solid var(--lobster)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:Oswald,sans-serif;font-weight:700;color:#fff;font-size:21px;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{color:var(--cream);text-decoration:none;font-weight:500;font-size:15px}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .menu-toggle{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+
+  /* Hero */
+  .hero{position:relative;background:
+        radial-gradient(circle at 72% 18%, rgba(225,80,42,.30) 0, transparent 42%),
+        radial-gradient(circle at 12% 90%, rgba(233,185,73,.20) 0, transparent 40%),
+        var(--navy);
+        color:#fff;overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 0 84px}
+  .eyebrow{font-family:Oswald,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;font-size:14px;margin-bottom:14px}
+  .hero h1{font-size:clamp(40px,6vw,74px);color:#fff}
+  .hero h1 em{font-style:normal;color:var(--lobster)}
+  .hero p.lead{font-size:19px;color:var(--cream-2);max-width:30ch;margin:18px 0 28px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-card{background:var(--cream);color:var(--navy);border-radius:14px;padding:26px;box-shadow:var(--shadow);transform:rotate(-1.4deg)}
+  .hero-card .badge{display:inline-block;background:var(--lobster);color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:12px;padding:5px 12px;border-radius:40px;margin-bottom:12px}
+  .hero-card h3{font-size:30px;color:var(--navy)}
+  .hero-card .price{font-size:46px;font-family:Oswald,sans-serif;color:var(--lobster);font-weight:700;line-height:1}
+  .hero-card small{display:block;color:#5a5a5a;margin-top:8px;text-transform:none;font-family:Inter,sans-serif}
+  .rope{height:8px;background:repeating-linear-gradient(45deg,var(--rope) 0 12px,#b8965a 12px 24px)}
+
+  /* Section base */
+  section{padding:72px 0}
+  .sec-head{text-align:center;max-width:720px;margin:0 auto 44px}
+  .sec-head .eyebrow{color:var(--lobster)}
+  .sec-head h2{font-size:clamp(30px,4.4vw,46px);color:var(--navy)}
+  .sec-head p{color:#4a4a4a;font-size:17px;margin-top:12px}
+
+  /* Signature */
+  .signature{background:var(--cream-2)}
+  .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .sig-photo{background:linear-gradient(160deg,#e9b949,#e1502a);border-radius:16px;aspect-ratio:4/3;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px}
+  .sig-photo span{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;opacity:.92}
+  .signature h2{font-size:clamp(30px,4.4vw,48px);color:var(--navy)}
+  .signature .opts{display:flex;gap:14px;margin:22px 0;flex-wrap:wrap}
+  .opt{flex:1;min-width:150px;background:#fff;border-radius:12px;padding:18px;border-left:4px solid var(--lobster)}
+  .opt strong{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;color:var(--navy);letter-spacing:.5px}
+
+  /* Menu grid */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border-radius:14px;padding:26px;box-shadow:0 6px 22px rgba(13,36,54,.08);border-top:4px solid var(--gold)}
+  .card h3{color:var(--navy);font-size:21px;margin-bottom:8px}
+  .card p{color:#555;font-size:15px;margin:0}
+  .menu-note{text-align:center;margin-top:38px}
+
+  /* Beer band */
+  .beer{background:var(--navy);color:#fff}
+  .beer .sec-head h2{color:#fff}
+  .beer .sec-head p{color:var(--cream-2)}
+  .beer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .beer-card{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:26px}
+  .beer-card h3{color:var(--gold);font-size:20px;margin-bottom:8px}
+  .beer-card p{color:var(--cream-2);font-size:15px;margin:0}
+
+  /* About Dave */
+  .about{background:var(--cream-2)}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:center}
+  .dave-photo{background:linear-gradient(160deg,var(--navy),var(--navy-2));border-radius:16px;aspect-ratio:1/1;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:var(--cream);text-align:center;padding:24px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px}
+  .about h2{color:var(--navy);font-size:clamp(30px,4.4vw,46px)}
+  .about p{font-size:17px;color:#3a3a3a;margin:16px 0}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .hours-list{list-style:none;margin:0;padding:0}
+  .hours-list li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed #cdbf9d;font-size:16px}
+  .hours-list li.closed{color:#9a9a9a}
+  .hours-list b{font-family:Oswald,sans-serif;letter-spacing:.5px;color:var(--navy)}
+  .info-line{display:flex;gap:12px;align-items:flex-start;margin:14px 0;font-size:16px}
+  .info-line .ic{color:var(--lobster);font-size:20px;line-height:1.2}
+  .map-embed{border:0;width:100%;height:100%;min-height:320px;border-radius:14px;box-shadow:var(--shadow)}
+
+  /* Final CTA */
+  .final{background:linear-gradient(180deg,var(--lobster),#c8421f);color:#fff;text-align:center}
+  .final h2{font-size:clamp(32px,5vw,52px);color:#fff}
+  .final p{font-size:18px;max-width:46ch;margin:14px auto 26px;color:#fff5ef}
+
+  footer{background:var(--navy);color:var(--cream-2);padding:46px 0 30px;font-size:15px}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  footer a{color:var(--gold);text-decoration:none}
+  .foot-bottom{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);opacity:.7;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  @media(max-width:860px){
+    .nav-links{display:none}
+    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--navy);flex-direction:column;padding:18px 22px;gap:16px;border-bottom:2px solid var(--lobster)}
+    .menu-toggle{display:block}
+    .hero-inner,.sig-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
+    .hero-card{transform:none;margin-top:8px}
+    .menu-grid,.beer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:560px){
+    .menu-grid,.beer-grid{grid-template-columns:1fr}
+    .nav-cta .btn:not(.order){display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Maine Beer <span>Cafe</span></a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#lobster">Lobster Roll</a>
+      <a href="#menu">Menu</a>
+      <a href="#beer">Beer &amp; Bourbon</a>
+      <a href="#dave">Our Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn order" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order Online</a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero" style="padding:0">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Route 1 · Kittery, Maine</div>
+      <h1>Real Maine <em>Lobster Rolls.</em> Cold Beer. No Fuss.</h1>
+      <p class="lead">Fresh, never-frozen lobster, a wall of rotating craft taps, and a bourbon list worth the drive. Dave's little lobster shack near the outlets.</p>
+      <div class="hero-cta">
+        <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order Online</a>
+        <a class="btn ghost" href="#visit">Find Us</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="badge">Every Thursday</span>
+      <h3>Dave's Famous<br>Lobster Roll</h3>
+      <div class="price">$18</div>
+      <small>Thursday lobster roll special — fresh-picked, never frozen. Hot with butter or cold, Maine-style.</small>
+    </div>
+  </div>
+  <div class="rope"></div>
+</section>
+
+<!-- SIGNATURE -->
+<section class="signature" id="lobster">
+  <div class="wrap sig-grid">
+    <div class="sig-photo"><span>📸 Dave's lobster roll<br>— photo goes here —</span></div>
+    <div>
+      <div class="eyebrow" style="color:var(--lobster)">The one everyone comes for</div>
+      <h2>Dave's Lobster Roll</h2>
+      <p>Succulent pieces of fresh, never-frozen Maine lobster, lightly dressed and piled into a buttered, toasted bun. No filler, no shortcuts — just the way it should be done up here.</p>
+      <div class="opts">
+        <div class="opt"><strong>Hot &amp; Buttered</strong>Warm lobster, drawn butter, toasted roll.</div>
+        <div class="opt"><strong>Cold, Maine-Style</strong>Chilled lobster, a touch of mayo, lemon.</div>
+      </div>
+      <a class="btn" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order a Roll</a>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Comfort food, done right</div>
+      <h2>More Than Lobster</h2>
+      <p>Bold comfort food and fresh seafood — burgers folks rave about, chowder, and shareables for the table.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="card"><h3>Berwick Classic Burger</h3><p>6oz seasoned Angus, lettuce, tomato, onion on a toasted brioche bun. The one reviewers keep talking about.</p></div>
+      <div class="card"><h3>Smoked Gouda Burger</h3><p>That Angus patty, blanketed in melty smoked gouda. Simple, serious.</p></div>
+      <div class="card"><h3>New England Clam Chowder</h3><p>Thick, creamy, the way the coast intended. Cup or bowl.</p></div>
+      <div class="card"><h3>Gumbo</h3><p>A little something different — rich, warming, and a local favorite.</p></div>
+      <div class="card"><h3>Shareables</h3><p>Chips &amp; dip, warm pretzel sticks, pigs in a blanket, hand-breaded chicken tenders.</p></div>
+      <div class="card"><h3>Kid-Friendly</h3><p>Bring the whole crew — board games on the shelf and a menu the little ones actually eat.</p></div>
+    </div>
+    <div class="menu-note"><a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">See the Full Menu &amp; Order</a></div>
+  </div>
+</section>
+
+<!-- BEER & BOURBON -->
+<section class="beer" id="beer">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">It's in the name</div>
+      <h2>Craft Beer &amp; A Deep Bourbon List</h2>
+      <p>An incredible, ever-changing lineup — the reason regulars keep coming back.</p>
+    </div>
+    <div class="beer-grid">
+      <div class="beer-card"><h3>Rotating Craft Taps</h3><p>Always changing, always local-leaning. Ask what's pouring today — there's usually something new.</p></div>
+      <div class="beer-card"><h3>Cans &amp; Cider</h3><p>A broad fridge of craft cans and ciders to drink in or take to go.</p></div>
+      <div class="beer-card"><h3>Extensive Bourbon</h3><p>One of the more serious bourbon lists on Route 1. Pull up a stool.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT DAVE -->
+<section class="about" id="dave">
+  <div class="wrap about-grid">
+    <div class="dave-photo">📸 Dave<br>— photo here —</div>
+    <div>
+      <div class="eyebrow" style="color:var(--lobster)">Family-owned · Chef-driven</div>
+      <h2>Hi, I'm Dave.</h2>
+      <p>This is my place — a cozy little spot near the Kittery outlets where the lobster's fresh, the taps are always rotating, and nobody's in a hurry. I cook the food I'd want to eat: honest, generous, and unmistakably Maine.</p>
+      <p>We've got board games on the shelf, a bourbon list I'm proud of, and room for the whole family. Come as you are, stay a while.</p>
+      <a class="btn" href="#visit">Come See Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Right on Route 1</div>
+      <h2>Find Us</h2>
+    </div>
+    <div class="visit-grid">
+      <div>
+        <ul class="hours-list">
+          <li class="closed"><b>Monday</b><span>Closed</span></li>
+          <li class="closed"><b>Tuesday</b><span>Closed</span></li>
+          <li><b>Wednesday</b><span>3:00 – 7:00 PM</span></li>
+          <li><b>Thursday</b><span>11:30 AM – 7:00 PM</span></li>
+          <li><b>Friday</b><span>11:30 AM – 7:00 PM</span></li>
+          <li><b>Saturday</b><span>11:30 AM – 5:00 PM</span></li>
+          <li><b>Sunday</b><span>11:30 AM – 5:00 PM</span></li>
+        </ul>
+        <div style="margin-top:22px">
+          <div class="info-line"><span class="ic">📍</span><span>439 US Route 1, Ste 1<br>Kittery, ME 03904</span></div>
+          <div class="info-line"><span class="ic">📞</span><a href="tel:+12074755655">(207) 475-5655</a></div>
+          <div class="info-line"><span class="ic">✉️</span><a href="mailto:dave@mainebeercafe.com">dave@mainebeercafe.com</a></div>
+        </div>
+        <a class="btn" style="margin-top:18px" href="https://www.google.com/maps/dir/?api=1&destination=Maine+Beer+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <iframe class="map-embed" loading="lazy" title="Map to Maine Beer Cafe"
+        src="https://www.google.com/maps?q=439+US+Route+1,+Kittery,+ME+03904&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Hungry Yet?</h2>
+    <p>Skip the line — order online for pickup, or just swing by. We'll have the taps cold and the lobster fresh.</p>
+    <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order Online Now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="font-size:20px">Maine Beer <span style="color:var(--gold)">Cafe</span></div>
+        <p style="margin:10px 0 0;max-width:30ch">Fresh Maine lobster, cold craft beer, and good bourbon on Route 1 in Kittery.</p>
+      </div>
+      <div>
+        <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">VISIT</strong>
+        <p style="margin:8px 0 0">439 US Route 1, Ste 1<br>Kittery, ME 03904<br><a href="tel:+12074755655">(207) 475-5655</a></p>
+      </div>
+      <div>
+        <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">ORDER</strong>
+        <p style="margin:8px 0 0"><a href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order online &rarr;</a><br><a href="mailto:dave@mainebeercafe.com">dave@mainebeercafe.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Maine Beer Cafe · Kittery, Maine</span>
+      <span>Fresh. Local. Never frozen.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // close mobile nav on link tap
+  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
