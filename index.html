@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dave's Maine Cafe — Lobster Rolls, Craft Beer &amp; Bourbon in Kittery, Maine</title>
-<meta name="description" content="Dave's Maine Cafe on Route 1 in Kittery, Maine. Fresh, never-frozen Maine lobster rolls, killer burgers, rotating craft taps and a deep bourbon list. Cozy, family-owned, kid-friendly. Order online or come hang." />
+<title>Dave's Maine Cafe — Kittery's Best Lobster Rolls, Craft Beer &amp; Bourbon | Route 1, Maine</title>
+<meta name="description" content="Dave's Maine Cafe on Route 1 in Kittery, Maine. Fresh, never-frozen Maine lobster rolls, the burger everyone talks about, rotating craft taps and a deep bourbon list. Family-run, kid-friendly, come as you are. Order online, join the list, or swing by." />
 <meta name="theme-color" content="#0d2436" />
 <link rel="canonical" href="https://mainebeercafe.com/" />
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="restaurant" />
-<meta property="og:title" content="Dave's Maine Cafe — Lobster Rolls, Craft Beer & Bourbon | Kittery, Maine" />
-<meta property="og:description" content="Never-frozen Maine lobster rolls, killer burgers, rotating craft taps and a deep bourbon list. Cozy, family-owned, on Route 1 in Kittery." />
+<meta property="og:title" content="Dave's Maine Cafe — Kittery's Best Lobster Rolls, Craft Beer & Bourbon" />
+<meta property="og:description" content="Never-frozen Maine lobster rolls, the burger everyone talks about, rotating craft taps and a deep bourbon list. Family-run, on Route 1 in Kittery." />
 <meta property="og:url" content="https://mainebeercafe.com/" />
 <meta property="og:image" content="https://mainebeercafe.com/wp-content/uploads/2023/04/CAC6455E-C433-4F83-810E-C193AFE604E4-876a51e.webp" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- LocalBusiness / Restaurant structured data — the heavy lever for Google ranking recovery.
-     NOTE for Dave: confirm hours + price range below; everything else verified. -->
+     NOTE for Dave: confirm hours + the aggregateRating (currently Google 4.5 / Yelp 80+ reviews); everything else verified. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,6 +33,13 @@
   "servesCuisine": ["Seafood", "American", "Comfort Food", "Lobster Rolls"],
   "menu": "https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3",
   "acceptsReservations": "False",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "80", "bestRating": "5" },
+  "sameAs": [
+    "https://www.instagram.com/davesmainecafe/",
+    "https://www.facebook.com/davesmainecafe/",
+    "https://www.threads.com/@davesmainecafe",
+    "https://www.yelp.com/biz/dave-s-maine-cafe-kittery"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "439 US Route 1, Ste 1",
@@ -69,19 +76,21 @@
   a{color:inherit}
   img{max-width:100%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-  .btn{display:inline-block;background:var(--lobster);color:#fff;text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:14px 26px;border-radius:6px;transition:transform .15s ease,background .15s ease}
+  .btn{display:inline-block;background:var(--lobster);color:#fff;text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:14px 26px;border-radius:6px;transition:transform .15s ease,background .15s ease;cursor:pointer;border:0}
   .btn:hover{background:#c8421f;transform:translateY(-2px)}
   .btn.gold{background:var(--gold);color:var(--navy)}
   .btn.gold:hover{background:#dcab35}
   .btn.ghost{background:transparent;border:2px solid #fff;color:#fff;padding:12px 24px}
   .btn.ghost:hover{background:#fff;color:var(--navy)}
+  .btn.dark{background:var(--navy)}
+  .btn.dark:hover{background:var(--navy-2)}
 
   /* Header */
   header{position:sticky;top:0;z-index:50;background:rgba(13,36,54,.97);backdrop-filter:blur(6px);border-bottom:2px solid var(--lobster)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
   .brand{font-family:Oswald,sans-serif;font-weight:700;color:#fff;font-size:21px;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
   .brand span{color:var(--gold)}
-  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links{display:flex;gap:24px;align-items:center}
   .nav-links a{color:var(--cream);text-decoration:none;font-weight:500;font-size:15px}
   .nav-links a:hover{color:var(--gold)}
   .nav-cta{display:flex;gap:10px;align-items:center}
@@ -97,7 +106,7 @@
   .eyebrow{font-family:Oswald,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;font-size:14px;margin-bottom:14px}
   .hero h1{font-size:clamp(40px,6vw,74px);color:#fff}
   .hero h1 em{font-style:normal;color:var(--lobster)}
-  .hero p.lead{font-size:19px;color:var(--cream-2);max-width:30ch;margin:18px 0 28px}
+  .hero p.lead{font-size:19px;color:var(--cream-2);max-width:32ch;margin:18px 0 28px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .hero-card{background:var(--cream);color:var(--navy);border-radius:14px;padding:26px;box-shadow:var(--shadow);transform:rotate(-1.4deg)}
   .hero-card .badge{display:inline-block;background:var(--lobster);color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:12px;padding:5px 12px;border-radius:40px;margin-bottom:12px}
@@ -106,9 +115,16 @@
   .hero-card small{display:block;color:#5a5a5a;margin-top:8px;text-transform:none;font-family:Inter,sans-serif}
   .rope{height:8px;background:repeating-linear-gradient(45deg,var(--rope) 0 12px,#b8965a 12px 24px)}
 
+  /* Trust strip */
+  .trust-strip{background:var(--navy-2);color:#fff}
+  .trust-in{display:flex;justify-content:space-around;flex-wrap:wrap;gap:18px;padding:22px 0}
+  .ts{text-align:center;min-width:120px}
+  .ts b{display:block;font-family:Oswald,sans-serif;font-size:26px;color:var(--gold);line-height:1}
+  .ts span{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--cream-2)}
+
   /* Section base */
   section{padding:72px 0}
-  .sec-head{text-align:center;max-width:720px;margin:0 auto 44px}
+  .sec-head{text-align:center;max-width:760px;margin:0 auto 44px}
   .sec-head .eyebrow{color:var(--lobster)}
   .sec-head h2{font-size:clamp(30px,4.4vw,46px);color:var(--navy)}
   .sec-head p{color:#4a4a4a;font-size:17px;margin-top:12px}
@@ -116,10 +132,7 @@
   /* Signature */
   .signature{background:var(--cream-2)}
   .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
-  .sig-photo{background:linear-gradient(160deg,#e9b949,#e1502a);border-radius:16px;aspect-ratio:4/3;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px}
-  .sig-photo span{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;opacity:.92}
   .signature h2{font-size:clamp(30px,4.4vw,48px);color:var(--navy)}
-  .signature .opts{display:flex;gap:14px;margin:22px 0;flex-wrap:wrap}
   .sig-two{grid-template-columns:1fr 1fr;gap:18px;max-width:720px;margin:0 auto}
   .opt{flex:1;min-width:150px;background:#fff;border-radius:12px;padding:20px 22px;border-left:4px solid var(--lobster)}
   .opt strong{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;color:var(--navy);letter-spacing:.5px}
@@ -144,12 +157,79 @@
   .beer-card h3{color:var(--gold);font-size:20px;margin-bottom:8px}
   .beer-card p{color:var(--cream-2);font-size:15px;margin:0}
 
+  /* What's On */
+  .whatson{background:var(--cream)}
+  .events-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .event{background:#fff;border-radius:16px;padding:30px 30px 32px;box-shadow:var(--shadow);border-top:5px solid var(--gold)}
+  .event .day{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;color:var(--lobster);font-weight:600;font-size:14px}
+  .event h3{color:var(--navy);font-size:26px;margin:6px 0 12px}
+  .event p{color:#4a4a4a;margin:0;font-size:16px}
+  .event .pricetag{display:inline-block;background:var(--navy);color:var(--gold);font-family:Oswald,sans-serif;letter-spacing:.5px;padding:7px 15px;border-radius:40px;font-size:14px;margin-top:16px}
+
   /* About Dave */
   .about{background:var(--cream-2)}
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:center}
-  .dave-photo{background:linear-gradient(160deg,var(--navy),var(--navy-2));border-radius:16px;aspect-ratio:1/1;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:var(--cream);text-align:center;padding:24px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px}
+  .dave-photo{border-radius:16px;aspect-ratio:1/1;box-shadow:var(--shadow);object-fit:cover;width:100%}
   .about h2{color:var(--navy);font-size:clamp(30px,4.4vw,46px)}
   .about p{font-size:17px;color:#3a3a3a;margin:16px 0}
+  .promise{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 26px}
+  .promise .p{background:#fff;border-radius:40px;padding:9px 18px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--navy);border:1px solid #e0d4b6}
+  .promise .p span{color:var(--lobster)}
+
+  /* Social — Live from the Cafe */
+  .social{background:#fff}
+  .social .sec-head .eyebrow{color:var(--lobster)}
+  .handle{font-family:Oswald,sans-serif;color:var(--navy);font-size:18px;letter-spacing:.5px}
+  .social-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:6px 0 8px}
+  .igbtn{display:inline-flex;align-items:center;gap:8px;border-radius:8px;padding:11px 20px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:14px;color:#fff;text-decoration:none;transition:transform .15s}
+  .igbtn:hover{transform:translateY(-2px)}
+  .igbtn.ig{background:linear-gradient(45deg,#f09433,#e6683c 30%,#dc2743 50%,#cc2366 75%,#bc1888)}
+  .igbtn.fb{background:#1877f2}
+  .igbtn.th{background:#000}
+  .ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:34px}
+  .ig-tile{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:8px;display:block}
+  .ig-tile img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  .ig-tile:hover img{transform:scale(1.08)}
+  .ig-tile::after{content:"";position:absolute;inset:0;background:rgba(13,36,54,0);transition:background .2s}
+  .ig-tile:hover::after{background:rgba(13,36,54,.18)}
+  .feed-note{text-align:center;margin-top:26px;font-size:14px;color:#8a8170}
+
+  /* Reviews */
+  .reviews{background:var(--navy);color:#fff}
+  .reviews .sec-head h2{color:#fff}
+  .reviews .sec-head .eyebrow{color:var(--gold)}
+  .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .quote{background:var(--navy-2);border-radius:14px;padding:28px;border-left:4px solid var(--gold)}
+  .quote .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:12px}
+  .quote p{font-size:18px;line-height:1.5;color:#fff;margin:0;font-style:italic}
+  .quote cite{display:block;color:var(--cream-2);font-style:normal;font-size:14px;margin-top:12px}
+  .rev-cta{text-align:center;margin-top:38px}
+
+  /* Join the list */
+  .signup{background:linear-gradient(160deg,var(--gold),#dca52d);color:var(--navy)}
+  .signup-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .signup h2{color:var(--navy);font-size:clamp(30px,4.4vw,46px)}
+  .signup p{font-size:17px;color:#3a2f12;margin:14px 0 0}
+  .signup form{display:flex;flex-direction:column;gap:12px;background:#fff;padding:26px;border-radius:14px;box-shadow:var(--shadow)}
+  .signup .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .field-note{font-size:12.5px;color:#7a7263;margin-top:2px}
+
+  /* Forms */
+  input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid #e2dcc9;border-radius:7px;font-family:Inter,sans-serif;font-size:15px;color:var(--ink);background:#fff}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lobster)}
+  textarea{min-height:96px;resize:vertical}
+  label.lbl{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.5px;font-size:12px;color:var(--navy);margin-bottom:5px}
+
+  /* Catering */
+  .catering{background:var(--cream-2)}
+  .cat-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}
+  .cat-grid h2{color:var(--navy);font-size:clamp(30px,4.4vw,44px)}
+  .cat-grid p{font-size:17px;color:#3a3a3a;margin:14px 0}
+  .cat-list{list-style:none;padding:0;margin:18px 0}
+  .cat-list li{padding:8px 0 8px 28px;position:relative;font-size:16px;color:#3a3a3a}
+  .cat-list li::before{content:"🦞";position:absolute;left:0;top:7px;font-size:15px}
+  .cat-form{background:#fff;border-radius:14px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:13px}
+  .cat-form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
   /* Visit */
   .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
@@ -165,42 +245,26 @@
   .final{background:linear-gradient(180deg,var(--lobster),#c8421f);color:#fff;text-align:center}
   .final h2{font-size:clamp(32px,5vw,52px);color:#fff}
   .final p{font-size:18px;max-width:46ch;margin:14px auto 26px;color:#fff5ef}
+  .final-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
   footer{background:var(--navy);color:var(--cream-2);padding:46px 0 30px;font-size:15px}
   .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
   footer a{color:var(--gold);text-decoration:none}
   .foot-bottom{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);opacity:.7;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
-  /* What's On */
-  .whatson{background:var(--cream)}
-  .events-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .event{background:#fff;border-radius:16px;padding:30px 30px 32px;box-shadow:var(--shadow);border-top:5px solid var(--gold)}
-  .event .day{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;color:var(--lobster);font-weight:600;font-size:14px}
-  .event h3{color:var(--navy);font-size:26px;margin:6px 0 12px}
-  .event p{color:#4a4a4a;margin:0;font-size:16px}
-  .event .pricetag{display:inline-block;background:var(--navy);color:var(--gold);font-family:Oswald,sans-serif;letter-spacing:.5px;padding:7px 15px;border-radius:40px;font-size:14px;margin-top:16px}
-
-  /* Reviews */
-  .reviews{background:var(--navy);color:#fff}
-  .reviews .sec-head h2{color:#fff}
-  .reviews .sec-head .eyebrow{color:var(--gold)}
-  .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .quote{background:var(--navy-2);border-radius:14px;padding:28px;border-left:4px solid var(--gold)}
-  .quote .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:12px}
-  .quote p{font-size:18px;line-height:1.5;color:#fff;margin:0;font-style:italic}
-  .quote cite{display:block;color:var(--cream-2);font-style:normal;font-size:14px;margin-top:12px}
-
   @media(max-width:860px){
     .nav-links{display:none}
-    .events-grid,.rev-grid,.sig-two{grid-template-columns:1fr}
+    .events-grid,.rev-grid,.sig-two,.signup-grid,.cat-grid{grid-template-columns:1fr}
     .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--navy);flex-direction:column;padding:18px 22px;gap:16px;border-bottom:2px solid var(--lobster)}
     .menu-toggle{display:block}
     .hero-inner,.sig-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
     .hero-card{transform:none;margin-top:8px}
     .menu-grid,.beer-grid{grid-template-columns:1fr 1fr}
+    .ig-grid{grid-template-columns:repeat(3,1fr)}
   }
   @media(max-width:560px){
     .menu-grid,.beer-grid{grid-template-columns:1fr}
+    .signup .row,.cat-form .row{grid-template-columns:1fr}
     .nav-cta .btn:not(.order){display:none}
   }
 </style>
@@ -216,6 +280,7 @@
       <a href="#beer">Beer &amp; Bourbon</a>
       <a href="#whatson">What's On</a>
       <a href="#dave">Our Story</a>
+      <a href="#social">Follow</a>
       <a href="#visit">Visit</a>
     </nav>
     <div class="nav-cta">
@@ -231,7 +296,7 @@
     <div>
       <div class="eyebrow">Route 1 · Kittery, Maine</div>
       <h1>Real Maine <em>Lobster Rolls.</em> Cold Beer. No Fuss.</h1>
-      <p class="lead">Kittery's best lobster rolls, wicked good comfort food, and 70+ bourbons &amp; craft beers — minutes from Portsmouth. Dave's lobster shack with a beer-café soul.</p>
+      <p class="lead">Home of Kittery's best lobster rolls — wicked good comfort food, rotating craft taps, and one of the Seacoast's deepest bourbon lists. A lobster shack with a beer-café soul, minutes from Portsmouth.</p>
       <div class="hero-cta">
         <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order Online</a>
         <a class="btn ghost" href="#visit">Find Us</a>
@@ -246,6 +311,16 @@
   </div>
   <div class="rope"></div>
 </section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="wrap trust-in">
+    <div class="ts"><b>★ 4.5</b><span>Google Rating</span></div>
+    <div class="ts"><b>80+</b><span>Yelp Reviews</span></div>
+    <div class="ts"><b>2,500+</b><span>On Instagram</span></div>
+    <div class="ts"><b>Family-Run</b><span>Route 1, Kittery</span></div>
+  </div>
+</div>
 
 <!-- SIGNATURE -->
 <section class="signature" id="lobster">
@@ -269,15 +344,15 @@
     <div class="sec-head">
       <div class="eyebrow">Comfort food, done right</div>
       <h2>More Than Lobster</h2>
-      <p>Bold comfort food and fresh seafood — the burgers folks rave about, chowder, loaded dogs, and a little Maine sweetness to finish.</p>
+      <p>Bold comfort food and fresh seafood — the burger folks rave about, house gumbo, chowder, loaded dogs, and a little Maine sweetness to finish.</p>
     </div>
     <div class="menu-grid">
       <div class="card"><img class="thumb" src="assets/photos/CAC6455E-C433-4F83-810E-C193AFE604E4-876a51e.webp" alt="Bacon and blue cheese burger on a pretzel bun" loading="lazy"><div class="card-body"><h3>The Burger Everyone Talks About</h3><p>A juicy seared patty, crisp bacon, and melty cheese stacked on a toasted pretzel bun. The one reviewers keep coming back for.</p></div></div>
-      <div class="card"><img class="thumb" src="assets/photos/508BAAFB-424A-4A40-865F-D3C36C7A1DB4.JPG_1682373921.jpeg" alt="Grilled chicken sandwich with lettuce, tomato and pickles" loading="lazy"><div class="card-body"><h3>Hand-Shaved Sandwiches</h3><p>Grilled chicken, lettuce, tomato, and house sauce — stacked tall and served with chips.</p></div></div>
-      <div class="card"><img class="thumb" src="assets/photos/D88CFC32-389F-4A5B-BDB1-4A3D8D15D6DB-d0b7216-1024x683.webp" alt="New England clam chowder with oyster crackers" loading="lazy"><div class="card-body"><h3>New England Clam Chowder</h3><p>Thick, creamy, and loaded — the way the coast intended. Cup or bowl.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/D88CFC32-389F-4A5B-BDB1-4A3D8D15D6DB-d0b7216-1024x683.webp" alt="New England clam chowder with oyster crackers" loading="lazy"><div class="card-body"><h3>House Gumbo &amp; Chowder</h3><p>Dave's house gumbo and a thick, creamy New England clam chowder — comfort in a bowl, the way the coast intended.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/508BAAFB-424A-4A40-865F-D3C36C7A1DB4.JPG_1682373921.jpeg" alt="Grilled chicken sandwich with lettuce, tomato and pickles" loading="lazy"><div class="card-body"><h3>Creative Sandwiches</h3><p>Grilled chicken, lettuce, tomato, and house sauce — stacked tall and served with chips. Plus rotating comfort specials.</p></div></div>
       <div class="card"><img class="thumb" src="assets/photos/Bacon-Gouda-Dog-6c1c0ec.webp" alt="Bacon gouda dog loaded with toppings" loading="lazy"><div class="card-body"><h3>Bacon Gouda Dog</h3><p>A snappy dog under melted gouda and a pile of crispy bacon. A house favorite.</p></div></div>
       <div class="card"><img class="thumb" src="assets/photos/Whoopie.JPG_1682373917-1024x1024.jpeg" alt="Maine whoopie pies" loading="lazy"><div class="card-body"><h3>Maine Whoopie Pies</h3><p>The official state treat — soft chocolate cake, sweet cream filling. Save room.</p></div></div>
-      <div class="card"><img class="thumb" src="assets/photos/Catering-Event-1-b8d4f4c-1024x1019.webp" alt="Fresh vegetable and hummus catering platter" loading="lazy"><div class="card-body"><h3>Catering &amp; Events</h3><p>Fresh platters and party trays for your next gathering. Ask Dave what he can put together.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/Catering-Event-1-b8d4f4c-1024x1019.webp" alt="Fresh vegetable and hummus catering platter" loading="lazy"><div class="card-body"><h3>Catering &amp; Events</h3><p>Fresh platters and party trays for your next gathering. <a href="#catering" style="color:var(--lobster);font-weight:600">Get a catering quote →</a></p></div></div>
     </div>
     <div class="menu-note"><a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">See the Full Menu &amp; Order</a></div>
   </div>
@@ -294,7 +369,7 @@
     <div class="beer-grid">
       <div class="beer-card"><img class="thumb" src="assets/photos/Beer2-4a8c48d-1024x1018.webp" alt="Fresh pour of Orono Brewing beer" loading="lazy"><div class="bc-body"><h3>Rotating Craft Taps</h3><p>Maine-leaning and always changing — Orono, Mast Landing, and friends. Ask what's pouring today.</p></div></div>
       <div class="beer-card"><img class="thumb" src="assets/photos/Beer1-702c60f-1024x683.webp" alt="Craft beer cans and a fresh pour" loading="lazy"><div class="bc-body"><h3>Cans &amp; Crowlers To Go</h3><p>A deep fridge of craft cans and ciders — drink in, or take a four-pack home.</p></div></div>
-      <div class="beer-card"><img class="thumb" src="assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="A flight of four bourbons at Dave's Maine Cafe" loading="lazy"><div class="bc-body"><h3>70+ Bourbons</h3><p>One of the most fun whiskey selections on the Seacoast — poured by the glass or as a flight. Pull up a stool.</p></div></div>
+      <div class="beer-card"><img class="thumb" src="assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="A flight of four bourbons at Dave's Maine Cafe" loading="lazy"><div class="bc-body"><h3>Deep Bourbon List</h3><p>One of the most fun whiskey selections on the Seacoast — poured by the glass or as a flight. Pull up a stool.</p></div></div>
     </div>
   </div>
 </section>
@@ -327,14 +402,147 @@
 <!-- ABOUT DAVE -->
 <section class="about" id="dave">
   <div class="wrap about-grid">
-    <img class="dave-photo" src="assets/photos/IMG_2887.jpg_1682373771.jpeg" alt="Dave, owner of Dave's Maine Cafe, with his wife" loading="lazy" style="object-fit:cover" />
+    <img class="dave-photo" src="assets/photos/IMG_2887.jpg_1682373771.jpeg" alt="Dave, owner of Dave's Maine Cafe, with his wife" loading="lazy" />
     <div>
-      <div class="eyebrow" style="color:var(--lobster)">Family-owned · Chef-driven</div>
+      <div class="eyebrow" style="color:var(--lobster)">Family-run · Chef-driven</div>
       <h2>Hi, I'm Dave.</h2>
-      <p>This is my place — a cozy little spot near the Kittery outlets where the lobster's fresh, the taps are always rotating, and nobody's in a hurry. I cook the food I'd want to eat: honest, generous, and unmistakably Maine.</p>
-      <p>We've got board games on the shelf, a bourbon list I'm proud of, and room for the whole family. Come as you are, stay a while.</p>
+      <p>We opened as a beer café — a cozy spot near the Kittery outlets with rotating taps and a bourbon list I'm genuinely proud of. Then folks tried the lobster rolls, and word got around. Today we're Dave's Maine Cafe, and that lobster-shaped flight board on the bar says it all: a real Maine lobster shack with a beer-café heart.</p>
+      <p>It's still my family running the place. I cook the food I'd want to eat — honest, generous, unmistakably Maine — and there's no hurry to push you out the door. Board games on the shelf, room for the whole family, the game on if there's a game on.</p>
+      <div class="promise">
+        <div class="p"><span>●</span> Fresh, Never Frozen</div>
+        <div class="p"><span>●</span> Family-Run</div>
+        <div class="p"><span>●</span> Come As You Are</div>
+      </div>
       <a class="btn" href="#visit">Come See Us</a>
     </div>
+  </div>
+</section>
+
+<!-- SOCIAL — LIVE FROM THE CAFE -->
+<section class="social" id="social">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Straight from the bar</div>
+      <h2>Live From the Cafe</h2>
+      <p>The taps change, the specials change, and Dave posts it all. Follow along for what's pouring, what's fresh, and what's happening this week.</p>
+      <div class="handle">@davesmainecafe</div>
+    </div>
+    <div class="social-cta">
+      <a class="igbtn ig" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener">📸 Follow on Instagram</a>
+      <a class="igbtn fb" href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">👍 Facebook</a>
+      <a class="igbtn th" href="https://www.threads.com/@davesmainecafe" target="_blank" rel="noopener">@ Threads</a>
+    </div>
+
+    <!-- ============================================================
+         LIVE INSTAGRAM FEED — one-time, no-code connect (≈5 min):
+         1. Go to behold.so (free) → sign in with the cafe's Instagram.
+         2. Create a feed, copy the <div data-behold-id> + <script> snippet.
+         3. Paste it right here, replacing the .ig-grid block below.
+         The feed then auto-updates every time Dave posts — zero site edits.
+         (SnapWidget / LightWidget work the same way if you prefer.)
+         Until then, the curated grid below shows real photos and links to IG.
+         ============================================================ -->
+    <div class="ig-grid">
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="assets/photos/2BF33665-B41D-4693-AECB-E4FBD2683E8E.jpeg_1682373941-1024x987.jpeg" alt="Lobster-shaped flight board at Dave's Maine Cafe" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="assets/photos/CAC6455E-C433-4F83-810E-C193AFE604E4-876a51e.webp" alt="The burger everyone talks about" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="Bourbon flight" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="assets/photos/Bacon-Gouda-Dog-6c1c0ec.webp" alt="Bacon gouda dog" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="assets/photos/D88CFC32-389F-4A5B-BDB1-4A3D8D15D6DB-d0b7216-1024x683.webp" alt="New England clam chowder" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="assets/photos/Beer2-4a8c48d-1024x1018.webp" alt="Fresh craft beer pour" loading="lazy"></a>
+    </div>
+    <p class="feed-note">Tap any photo to see the latest on Instagram · 2,500+ followers and counting</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">Regulars &amp; first-timers agree</div>
+      <h2>What People Are Saying</h2>
+      <p style="color:var(--cream-2)">★ 4.5 on Google · 80+ reviews on Yelp · loved across the Seacoast.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"The lobster roll was outstanding — buttered roll, light mayo, just perfect!"</p>
+        <cite>— Recent Seacoast review</cite>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"One of the better lobster rolls that we've each had on the Seacoast in a while."</p>
+        <cite>— Recent Seacoast review</cite>
+      </div>
+    </div>
+    <div class="rev-cta">
+      <a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=Dave%27s%20Maine%20Cafe%2C%20439%20US-1%2C%20Kittery%2C%20ME" target="_blank" rel="noopener">Had a Great Time? Leave a Google Review →</a>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN THE LIST -->
+<section class="signup" id="list">
+  <div class="wrap signup-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--navy)">Never miss a lobster drop</div>
+      <h2>Join Dave's List</h2>
+      <p>Be first to know when the Thursday lobster roll is on, what's pouring, and when something special is happening. No spam — just the good stuff, from Dave.</p>
+    </div>
+    <form action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
+      <input type="hidden" name="_subject" value="New signup — Dave's List (website)" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style="display:none" />
+      <div>
+        <label class="lbl">Name</label>
+        <input type="text" name="Name" placeholder="First name" />
+      </div>
+      <div class="row">
+        <div>
+          <label class="lbl">Email</label>
+          <input type="email" name="Email" placeholder="you@email.com" required />
+        </div>
+        <div>
+          <label class="lbl">Phone <span style="font-weight:400;text-transform:none">(for text alerts)</span></label>
+          <input type="tel" name="Phone" placeholder="optional" />
+        </div>
+      </div>
+      <button type="submit" class="btn dark" style="margin-top:4px">Sign Me Up</button>
+      <span class="field-note">We'll only use this to tell you about specials and events. Unsubscribe anytime.</span>
+    </form>
+  </div>
+</section>
+
+<!-- CATERING -->
+<section class="catering" id="catering">
+  <div class="wrap cat-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--lobster)">Bring Dave's to your event</div>
+      <h2>Catering &amp; Private Events</h2>
+      <p>From a backyard party to an office lunch to a full lobster bake — Dave will put together something your guests actually remember. Tell us what you've got in mind and we'll send a quote.</p>
+      <ul class="cat-list">
+        <li>Lobster rolls &amp; seafood for a crowd</li>
+        <li>Party platters, trays &amp; comfort-food spreads</li>
+        <li>Private gatherings &amp; group bookings</li>
+      </ul>
+    </div>
+    <form class="cat-form" action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
+      <input type="hidden" name="_subject" value="New catering inquiry (website)" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style="display:none" />
+      <div class="row">
+        <div><label class="lbl">Name</label><input type="text" name="Name" required /></div>
+        <div><label class="lbl">Phone</label><input type="tel" name="Phone" /></div>
+      </div>
+      <div class="row">
+        <div><label class="lbl">Email</label><input type="email" name="Email" required /></div>
+        <div><label class="lbl">Guests</label><input type="text" name="Guests" placeholder="approx." /></div>
+      </div>
+      <div><label class="lbl">Event Date</label><input type="text" name="Event Date" placeholder="e.g. Sat Aug 16" /></div>
+      <div><label class="lbl">What are you thinking?</label><textarea name="Message" placeholder="Tell Dave about your event…"></textarea></div>
+      <button type="submit" class="btn">Request a Catering Quote</button>
+    </form>
   </div>
 </section>
 
@@ -361,32 +569,10 @@
           <div class="info-line"><span class="ic">📞</span><a href="tel:+12074755655">(207) 475-5655</a></div>
           <div class="info-line"><span class="ic">✉️</span><a href="mailto:dave@mainebeercafe.com">dave@mainebeercafe.com</a></div>
         </div>
-        <a class="btn" style="margin-top:18px" href="https://www.google.com/maps/dir/?api=1&destination=Maine+Beer+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn" style="margin-top:18px" href="https://www.google.com/maps/dir/?api=1&destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener">Get Directions</a>
       </div>
       <iframe class="map-embed" loading="lazy" title="Map to Dave's Maine Cafe"
         src="https://www.google.com/maps?q=439+US+Route+1,+Kittery,+ME+03904&output=embed"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow" style="color:var(--gold)">Regulars &amp; first-timers agree</div>
-      <h2>What People Are Saying</h2>
-    </div>
-    <div class="rev-grid">
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>"The lobster roll was outstanding — buttered roll, light mayo, just perfect!"</p>
-        <cite>— Recent Seacoast review</cite>
-      </div>
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>"One of the better lobster rolls that we've each had on the Seacoast in a while."</p>
-        <cite>— Recent Seacoast review</cite>
-      </div>
     </div>
   </div>
 </section>
@@ -396,7 +582,10 @@
   <div class="wrap">
     <h2>Hungry Yet?</h2>
     <p>Skip the line — order online for pickup, or just swing by. We'll have the taps cold and the lobster fresh.</p>
-    <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order Online Now</a>
+    <div class="final-cta">
+      <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order Online Now</a>
+      <a class="btn ghost" href="#list">Join Dave's List</a>
+    </div>
   </div>
 </section>
 
@@ -405,16 +594,16 @@
     <div class="foot-grid">
       <div>
         <div class="brand" style="font-size:20px">Dave's Maine <span style="color:var(--gold)">Cafe</span></div>
-        <p style="margin:10px 0 0;max-width:30ch">Fresh Maine lobster, cold craft beer, and good bourbon on Route 1 in Kittery.</p>
-        <p style="margin:12px 0 0"><a href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">Facebook</a></p>
+        <p style="margin:10px 0 0;max-width:30ch">Fresh Maine lobster, cold craft beer, and good bourbon on Route 1 in Kittery. Family-run.</p>
+        <p style="margin:12px 0 0"><a href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.threads.com/@davesmainecafe" target="_blank" rel="noopener">Threads</a></p>
       </div>
       <div>
         <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">VISIT</strong>
         <p style="margin:8px 0 0">439 US Route 1, Ste 1<br>Kittery, ME 03904<br><a href="tel:+12074755655">(207) 475-5655</a></p>
       </div>
       <div>
-        <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">ORDER</strong>
-        <p style="margin:8px 0 0"><a href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order online &rarr;</a><br><a href="mailto:dave@mainebeercafe.com">dave@mainebeercafe.com</a></p>
+        <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">ORDER &amp; MORE</strong>
+        <p style="margin:8px 0 0"><a href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order online &rarr;</a><br><a href="#catering">Catering &amp; events</a><br><a href="#list">Join Dave's list</a></p>
       </div>
     </div>
     <div class="foot-bottom">
