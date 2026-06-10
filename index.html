@@ -171,8 +171,28 @@
   footer a{color:var(--gold);text-decoration:none}
   .foot-bottom{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);opacity:.7;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
+  /* What's On */
+  .whatson{background:var(--cream)}
+  .events-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .event{background:#fff;border-radius:16px;padding:30px 30px 32px;box-shadow:var(--shadow);border-top:5px solid var(--gold)}
+  .event .day{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;color:var(--lobster);font-weight:600;font-size:14px}
+  .event h3{color:var(--navy);font-size:26px;margin:6px 0 12px}
+  .event p{color:#4a4a4a;margin:0;font-size:16px}
+  .event .pricetag{display:inline-block;background:var(--navy);color:var(--gold);font-family:Oswald,sans-serif;letter-spacing:.5px;padding:7px 15px;border-radius:40px;font-size:14px;margin-top:16px}
+
+  /* Reviews */
+  .reviews{background:var(--navy);color:#fff}
+  .reviews .sec-head h2{color:#fff}
+  .reviews .sec-head .eyebrow{color:var(--gold)}
+  .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .quote{background:var(--navy-2);border-radius:14px;padding:28px;border-left:4px solid var(--gold)}
+  .quote .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:12px}
+  .quote p{font-size:18px;line-height:1.5;color:#fff;margin:0;font-style:italic}
+  .quote cite{display:block;color:var(--cream-2);font-style:normal;font-size:14px;margin-top:12px}
+
   @media(max-width:860px){
     .nav-links{display:none}
+    .events-grid,.rev-grid,.sig-two{grid-template-columns:1fr}
     .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--navy);flex-direction:column;padding:18px 22px;gap:16px;border-bottom:2px solid var(--lobster)}
     .menu-toggle{display:block}
     .hero-inner,.sig-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
@@ -194,6 +214,7 @@
       <a href="#lobster">Lobster Roll</a>
       <a href="#menu">Menu</a>
       <a href="#beer">Beer &amp; Bourbon</a>
+      <a href="#whatson">What's On</a>
       <a href="#dave">Our Story</a>
       <a href="#visit">Visit</a>
     </nav>
@@ -210,7 +231,7 @@
     <div>
       <div class="eyebrow">Route 1 · Kittery, Maine</div>
       <h1>Real Maine <em>Lobster Rolls.</em> Cold Beer. No Fuss.</h1>
-      <p class="lead">Fresh, never-frozen lobster, a wall of rotating craft taps, and a bourbon list worth the drive. Dave's little lobster shack near the outlets.</p>
+      <p class="lead">Kittery's best lobster rolls, wicked good comfort food, and 70+ bourbons &amp; craft beers — minutes from Portsmouth. Dave's lobster shack with a beer-café soul.</p>
       <div class="hero-cta">
         <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order Online</a>
         <a class="btn ghost" href="#visit">Find Us</a>
@@ -273,7 +294,32 @@
     <div class="beer-grid">
       <div class="beer-card"><img class="thumb" src="assets/photos/Beer2-4a8c48d-1024x1018.webp" alt="Fresh pour of Orono Brewing beer" loading="lazy"><div class="bc-body"><h3>Rotating Craft Taps</h3><p>Maine-leaning and always changing — Orono, Mast Landing, and friends. Ask what's pouring today.</p></div></div>
       <div class="beer-card"><img class="thumb" src="assets/photos/Beer1-702c60f-1024x683.webp" alt="Craft beer cans and a fresh pour" loading="lazy"><div class="bc-body"><h3>Cans &amp; Crowlers To Go</h3><p>A deep fridge of craft cans and ciders — drink in, or take a four-pack home.</p></div></div>
-      <div class="beer-card"><img class="thumb" src="assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="A flight of four bourbons at Maine Beer Café" loading="lazy"><div class="bc-body"><h3>Bourbon Flights</h3><p>One of the more serious bourbon lists on Route 1, poured as a flight. Pull up a stool.</p></div></div>
+      <div class="beer-card"><img class="thumb" src="assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="A flight of four bourbons at Maine Beer Café" loading="lazy"><div class="bc-body"><h3>70+ Bourbons</h3><p>One of the most fun whiskey selections on the Seacoast — poured by the glass or as a flight. Pull up a stool.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S ON -->
+<section class="whatson" id="whatson">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Every week on Route 1</div>
+      <h2>What's On</h2>
+      <p>More than a meal — there's almost always a reason to stick around.</p>
+    </div>
+    <div class="events-grid">
+      <div class="event">
+        <div class="day">Every Wednesday</div>
+        <h3>Craft Beer Trivia Night</h3>
+        <p>Round up a team and battle it out. The top three teams take home prizes — winners walk with a $75 gift card.</p>
+        <span class="pricetag">Top prize · $75 gift card</span>
+      </div>
+      <div class="event">
+        <div class="day">The Legendary Happy Hour</div>
+        <h3>Beat the Clock · 3–6 PM</h3>
+        <p>$3 at 3, $4 at 4, $5 at 5 on all drafts and wines — and $1 cocktail shrimp while you're at it.</p>
+        <span class="pricetag">$1 cocktail shrimp</span>
+      </div>
     </div>
   </div>
 </section>
@@ -323,6 +369,28 @@
   </div>
 </section>
 
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">Regulars &amp; first-timers agree</div>
+      <h2>What People Are Saying</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"The lobster roll was outstanding — buttered roll, light mayo, just perfect!"</p>
+        <cite>— Recent Seacoast review</cite>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"One of the better lobster rolls that we've each had on the Seacoast in a while."</p>
+        <cite>— Recent Seacoast review</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
@@ -338,6 +406,7 @@
       <div>
         <div class="brand" style="font-size:20px">Maine Beer <span style="color:var(--gold)">Cafe</span></div>
         <p style="margin:10px 0 0;max-width:30ch">Fresh Maine lobster, cold craft beer, and good bourbon on Route 1 in Kittery.</p>
+        <p style="margin:12px 0 0"><a href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">Facebook</a></p>
       </div>
       <div>
         <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">VISIT</strong>
