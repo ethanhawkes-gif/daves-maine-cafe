@@ -13,7 +13,7 @@
 <meta property="og:title" content="Maine Beer Cafe — Lobster Rolls, Craft Beer & Bourbon | Kittery, Maine" />
 <meta property="og:description" content="Never-frozen Maine lobster rolls, killer burgers, rotating craft taps and a deep bourbon list. Cozy, family-owned, on Route 1 in Kittery." />
 <meta property="og:url" content="https://mainebeercafe.com/" />
-<meta property="og:image" content="https://mainebeercafe.com/assets/lobster-roll.jpg" />
+<meta property="og:image" content="https://mainebeercafe.com/wp-content/uploads/2023/04/CAC6455E-C433-4F83-810E-C193AFE604E4-876a51e.webp" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- LocalBusiness / Restaurant structured data — the heavy lever for Google ranking recovery.
@@ -24,7 +24,7 @@
   "@type": "Restaurant",
   "name": "Maine Beer Cafe",
   "alternateName": "Dave's Maine Cafe",
-  "image": "https://mainebeercafe.com/assets/lobster-roll.jpg",
+  "image": "https://mainebeercafe.com/wp-content/uploads/2023/04/CAC6455E-C433-4F83-810E-C193AFE604E4-876a51e.webp",
   "@id": "https://mainebeercafe.com",
   "url": "https://mainebeercafe.com",
   "telephone": "+1-207-475-5655",
@@ -120,12 +120,15 @@
   .sig-photo span{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;opacity:.92}
   .signature h2{font-size:clamp(30px,4.4vw,48px);color:var(--navy)}
   .signature .opts{display:flex;gap:14px;margin:22px 0;flex-wrap:wrap}
-  .opt{flex:1;min-width:150px;background:#fff;border-radius:12px;padding:18px;border-left:4px solid var(--lobster)}
+  .sig-two{grid-template-columns:1fr 1fr;gap:18px;max-width:720px;margin:0 auto}
+  .opt{flex:1;min-width:150px;background:#fff;border-radius:12px;padding:20px 22px;border-left:4px solid var(--lobster)}
   .opt strong{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;color:var(--navy);letter-spacing:.5px}
 
   /* Menu grid */
   .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:#fff;border-radius:14px;padding:26px;box-shadow:0 6px 22px rgba(13,36,54,.08);border-top:4px solid var(--gold)}
+  .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(13,36,54,.08);display:flex;flex-direction:column}
+  .card .thumb{width:100%;height:185px;object-fit:cover;display:block}
+  .card .card-body{padding:22px 24px 26px}
   .card h3{color:var(--navy);font-size:21px;margin-bottom:8px}
   .card p{color:#555;font-size:15px;margin:0}
   .menu-note{text-align:center;margin-top:38px}
@@ -135,7 +138,9 @@
   .beer .sec-head h2{color:#fff}
   .beer .sec-head p{color:var(--cream-2)}
   .beer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .beer-card{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:26px}
+  .beer-card{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden}
+  .beer-card .thumb{width:100%;height:200px;object-fit:cover;display:block}
+  .beer-card .bc-body{padding:22px 24px 24px}
   .beer-card h3{color:var(--gold);font-size:20px;margin-bottom:8px}
   .beer-card p{color:var(--cream-2);font-size:15px;margin:0}
 
@@ -212,10 +217,10 @@
       </div>
     </div>
     <div class="hero-card">
+      <img src="assets/photos/2BF33665-B41D-4693-AECB-E4FBD2683E8E.jpeg_1682373941-1024x987.jpeg" alt="Drinks served on Maine Beer Café's signature lobster-shaped flight board" style="border-radius:10px;margin-bottom:16px" loading="eager" />
       <span class="badge">Every Thursday</span>
-      <h3>Dave's Famous<br>Lobster Roll</h3>
-      <div class="price">$18</div>
-      <small>Thursday lobster roll special — fresh-picked, never frozen. Hot with butter or cold, Maine-style.</small>
+      <h3>$18 Lobster Roll</h3>
+      <small>Fresh-picked, never frozen. Hot with butter or cold, Maine-style — only on Thursdays.</small>
     </div>
   </div>
   <div class="rope"></div>
@@ -223,18 +228,17 @@
 
 <!-- SIGNATURE -->
 <section class="signature" id="lobster">
-  <div class="wrap sig-grid">
-    <div class="sig-photo"><span>📸 Dave's lobster roll<br>— photo goes here —</span></div>
-    <div>
-      <div class="eyebrow" style="color:var(--lobster)">The one everyone comes for</div>
-      <h2>Dave's Lobster Roll</h2>
-      <p>Succulent pieces of fresh, never-frozen Maine lobster, lightly dressed and piled into a buttered, toasted bun. No filler, no shortcuts — just the way it should be done up here.</p>
-      <div class="opts">
-        <div class="opt"><strong>Hot &amp; Buttered</strong>Warm lobster, drawn butter, toasted roll.</div>
-        <div class="opt"><strong>Cold, Maine-Style</strong>Chilled lobster, a touch of mayo, lemon.</div>
-      </div>
-      <a class="btn" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order a Roll</a>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--lobster)">Every Thursday · while it lasts</div>
+      <h2>The $18 Thursday Lobster Roll</h2>
+      <p>Fresh, never-frozen Maine lobster, lightly dressed and piled into a buttered, toasted bun. No filler, no shortcuts — just the way it should be done up here. One day a week, done right.</p>
     </div>
+    <div class="sig-grid sig-two">
+      <div class="opt"><strong>Hot &amp; Buttered</strong>Warm lobster, drawn butter, toasted roll.</div>
+      <div class="opt"><strong>Cold, Maine-Style</strong>Chilled lobster, a touch of mayo, lemon.</div>
+    </div>
+    <div class="menu-note"><a class="btn" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">Order for Pickup</a></div>
   </div>
 </section>
 
@@ -244,15 +248,15 @@
     <div class="sec-head">
       <div class="eyebrow">Comfort food, done right</div>
       <h2>More Than Lobster</h2>
-      <p>Bold comfort food and fresh seafood — burgers folks rave about, chowder, and shareables for the table.</p>
+      <p>Bold comfort food and fresh seafood — the burgers folks rave about, chowder, loaded dogs, and a little Maine sweetness to finish.</p>
     </div>
     <div class="menu-grid">
-      <div class="card"><h3>Berwick Classic Burger</h3><p>6oz seasoned Angus, lettuce, tomato, onion on a toasted brioche bun. The one reviewers keep talking about.</p></div>
-      <div class="card"><h3>Smoked Gouda Burger</h3><p>That Angus patty, blanketed in melty smoked gouda. Simple, serious.</p></div>
-      <div class="card"><h3>New England Clam Chowder</h3><p>Thick, creamy, the way the coast intended. Cup or bowl.</p></div>
-      <div class="card"><h3>Gumbo</h3><p>A little something different — rich, warming, and a local favorite.</p></div>
-      <div class="card"><h3>Shareables</h3><p>Chips &amp; dip, warm pretzel sticks, pigs in a blanket, hand-breaded chicken tenders.</p></div>
-      <div class="card"><h3>Kid-Friendly</h3><p>Bring the whole crew — board games on the shelf and a menu the little ones actually eat.</p></div>
+      <div class="card"><img class="thumb" src="assets/photos/CAC6455E-C433-4F83-810E-C193AFE604E4-876a51e.webp" alt="Bacon and blue cheese burger on a pretzel bun" loading="lazy"><div class="card-body"><h3>The Burger Everyone Talks About</h3><p>A juicy seared patty, crisp bacon, and melty cheese stacked on a toasted pretzel bun. The one reviewers keep coming back for.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/508BAAFB-424A-4A40-865F-D3C36C7A1DB4.JPG_1682373921.jpeg" alt="Grilled chicken sandwich with lettuce, tomato and pickles" loading="lazy"><div class="card-body"><h3>Hand-Shaved Sandwiches</h3><p>Grilled chicken, lettuce, tomato, and house sauce — stacked tall and served with chips.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/D88CFC32-389F-4A5B-BDB1-4A3D8D15D6DB-d0b7216-1024x683.webp" alt="New England clam chowder with oyster crackers" loading="lazy"><div class="card-body"><h3>New England Clam Chowder</h3><p>Thick, creamy, and loaded — the way the coast intended. Cup or bowl.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/Bacon-Gouda-Dog-6c1c0ec.webp" alt="Bacon gouda dog loaded with toppings" loading="lazy"><div class="card-body"><h3>Bacon Gouda Dog</h3><p>A snappy dog under melted gouda and a pile of crispy bacon. A house favorite.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/Whoopie.JPG_1682373917-1024x1024.jpeg" alt="Maine whoopie pies" loading="lazy"><div class="card-body"><h3>Maine Whoopie Pies</h3><p>The official state treat — soft chocolate cake, sweet cream filling. Save room.</p></div></div>
+      <div class="card"><img class="thumb" src="assets/photos/Catering-Event-1-b8d4f4c-1024x1019.webp" alt="Fresh vegetable and hummus catering platter" loading="lazy"><div class="card-body"><h3>Catering &amp; Events</h3><p>Fresh platters and party trays for your next gathering. Ask Dave what he can put together.</p></div></div>
     </div>
     <div class="menu-note"><a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3" target="_blank" rel="noopener">See the Full Menu &amp; Order</a></div>
   </div>
@@ -267,9 +271,9 @@
       <p>An incredible, ever-changing lineup — the reason regulars keep coming back.</p>
     </div>
     <div class="beer-grid">
-      <div class="beer-card"><h3>Rotating Craft Taps</h3><p>Always changing, always local-leaning. Ask what's pouring today — there's usually something new.</p></div>
-      <div class="beer-card"><h3>Cans &amp; Cider</h3><p>A broad fridge of craft cans and ciders to drink in or take to go.</p></div>
-      <div class="beer-card"><h3>Extensive Bourbon</h3><p>One of the more serious bourbon lists on Route 1. Pull up a stool.</p></div>
+      <div class="beer-card"><img class="thumb" src="assets/photos/Beer2-4a8c48d-1024x1018.webp" alt="Fresh pour of Orono Brewing beer" loading="lazy"><div class="bc-body"><h3>Rotating Craft Taps</h3><p>Maine-leaning and always changing — Orono, Mast Landing, and friends. Ask what's pouring today.</p></div></div>
+      <div class="beer-card"><img class="thumb" src="assets/photos/Beer1-702c60f-1024x683.webp" alt="Craft beer cans and a fresh pour" loading="lazy"><div class="bc-body"><h3>Cans &amp; Crowlers To Go</h3><p>A deep fridge of craft cans and ciders — drink in, or take a four-pack home.</p></div></div>
+      <div class="beer-card"><img class="thumb" src="assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="A flight of four bourbons at Maine Beer Café" loading="lazy"><div class="bc-body"><h3>Bourbon Flights</h3><p>One of the more serious bourbon lists on Route 1, poured as a flight. Pull up a stool.</p></div></div>
     </div>
   </div>
 </section>
@@ -277,7 +281,7 @@
 <!-- ABOUT DAVE -->
 <section class="about" id="dave">
   <div class="wrap about-grid">
-    <div class="dave-photo">📸 Dave<br>— photo here —</div>
+    <img class="dave-photo" src="assets/photos/IMG_2887.jpg_1682373771.jpeg" alt="Dave, owner of Maine Beer Café, with his wife" loading="lazy" style="object-fit:cover" />
     <div>
       <div class="eyebrow" style="color:var(--lobster)">Family-owned · Chef-driven</div>
       <h2>Hi, I'm Dave.</h2>
