@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mainebeercafe.com/sitemap.xml
+Sitemap: https://davesmainecafe.com/sitemap.xml
