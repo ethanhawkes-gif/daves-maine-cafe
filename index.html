@@ -68,10 +68,11 @@
     --navy:#0d2436; --navy-2:#13344d; --cream:#f6efe0; --cream-2:#efe6d2;
     --lobster:#e1502a; --gold:#e9b949; --rope:#caa86a; --ink:#1a1a1a;
     --maxw:1140px;
+    --navh:68px;          /* nav content height; +2px border = 70px total bar */
     --shadow:0 10px 40px rgba(13,36,54,.16);
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--navh) + 10px)}
   body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3,.display{font-family:Oswald,Impact,sans-serif;font-weight:700;letter-spacing:.5px;line-height:1.05;text-transform:uppercase;margin:0}
   a{color:inherit}
@@ -87,8 +88,8 @@
   .btn.dark:hover{background:var(--navy-2)}
 
   /* Header */
-  header{position:sticky;top:0;z-index:50;background:rgba(13,36,54,.97);backdrop-filter:blur(6px);border-bottom:2px solid var(--lobster)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:2px solid var(--lobster);box-shadow:0 6px 18px rgba(0,0,0,.22)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:var(--navh)}
   .brand{font-family:Oswald,sans-serif;font-weight:700;color:#fff;font-size:21px;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
   .brand span{color:var(--gold)}
   .nav-links{display:flex;gap:24px;align-items:center}
@@ -287,7 +288,7 @@
   @media(max-width:860px){
     .nav-links{display:none}
     .events-grid,.rev-grid,.sig-two,.signup-grid,.cat-grid{grid-template-columns:1fr}
-    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--navy);flex-direction:column;padding:18px 22px;gap:16px;border-bottom:2px solid var(--lobster)}
+    .nav-links.open{display:flex;position:absolute;top:calc(var(--navh) + 2px);left:0;right:0;background:var(--navy);flex-direction:column;padding:18px 22px;gap:16px;border-bottom:2px solid var(--lobster)}
     .menu-toggle{display:flex}
     .hero-inner,.sig-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
     .hero-card{transform:none;margin-top:8px}
@@ -325,7 +326,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top">Dave's Maine <span>Cafe</span></a>
-    <nav class="nav-links" id="navlinks">
+    <nav class="nav-links" id="navlinks" onclick="this.classList.remove('open')">
       <a href="#lobster">Lobster Roll</a>
       <a href="#menu">Menu</a>
       <a href="#beer">Beer &amp; Bourbon</a>
