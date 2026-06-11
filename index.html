@@ -114,6 +114,16 @@
   .hero-card h3{font-size:30px;color:var(--navy)}
   .hero-card .price{font-size:46px;font-family:Oswald,sans-serif;color:var(--lobster);font-weight:700;line-height:1}
   .hero-card small{display:block;color:#5a5a5a;margin-top:8px;text-transform:none;font-family:Inter,sans-serif}
+
+  /* Lobster mascot */
+  .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none;z-index:0}
+  .hero .wrap{position:relative;z-index:1}
+  .mascot-col{display:flex;flex-direction:column;align-items:center;gap:0}
+  .mascot-bubble{font-family:Oswald,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:8px 22px;border-radius:40px;position:relative;margin-bottom:16px;z-index:2;white-space:nowrap}
+  .mascot-bubble::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:var(--gold);border-bottom:0}
+  .mascot-ring{width:280px;height:280px;border-radius:50%;background:var(--cream);border:5px dashed var(--lobster);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(225,80,42,.35),0 0 0 10px rgba(233,185,73,.18);transform:rotate(-2deg);flex-shrink:0}
+  .mascot-img{width:128%;max-width:none;object-fit:contain;transform:rotate(2deg) translateY(8%)}
+
   .rope{height:8px;background:repeating-linear-gradient(45deg,var(--rope) 0 12px,#b8965a 12px 24px)}
 
   /* Trust strip */
@@ -260,6 +270,7 @@
     .menu-toggle{display:flex}
     .hero-inner,.sig-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
     .hero-card{transform:none;margin-top:8px}
+    .mascot-ring{width:220px;height:220px}
     .menu-grid,.beer-grid{grid-template-columns:1fr 1fr}
     .ig-grid{grid-template-columns:repeat(3,1fr)}
   }
@@ -303,11 +314,16 @@
         <a class="btn ghost" href="#visit">Find Us</a>
       </div>
     </div>
-    <div class="hero-card">
-      <img src="assets/photos/2BF33665-B41D-4693-AECB-E4FBD2683E8E.jpeg_1682373941-1024x987.jpeg" alt="Drinks served on Dave's Maine Cafe signature lobster-shaped flight board" style="border-radius:10px;margin-bottom:16px" loading="eager" />
-      <span class="badge">Every Thursday</span>
-      <h3>$18 Lobster Roll</h3>
-      <small>Fresh-picked, never frozen. Hot with butter or cold, Maine-style — only on Thursdays.</small>
+    <div class="mascot-col">
+      <div class="mascot-bubble">Wicked Fresh. 🦞</div>
+      <div class="mascot-ring">
+        <img class="mascot-img" src="assets/daves-lobster-mascot.webp" alt="Dave's lobster mascot giving a thumbs-up on a scooter" loading="eager" />
+      </div>
+      <div class="hero-card" style="margin-top:-14px;width:100%">
+        <span class="badge">Every Thursday</span>
+        <h3>$18 Lobster Roll</h3>
+        <small>Fresh-picked, never frozen. Hot with butter or cold, Maine-style — only on Thursdays.</small>
+      </div>
     </div>
   </div>
   <div class="rope"></div>
