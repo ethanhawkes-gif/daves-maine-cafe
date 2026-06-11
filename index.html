@@ -320,6 +320,7 @@
       <a href="#beer">Beer &amp; Bourbon</a>
       <a href="#whatson">What's On</a>
       <a href="#dave">Our Story</a>
+      <a href="#shop">Shop</a>
       <a href="#social">Follow</a>
       <a href="#visit">Visit</a>
     </nav>
@@ -674,6 +675,86 @@
         <div class="p"><span>●</span> Come As You Are</div>
       </div>
       <a class="btn" href="#visit">Come See Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP / MERCH -->
+<section class="merch" id="shop" style="background:var(--cream-2)">
+  <style>
+    .merch{padding:64px 0;border-top:1px solid rgba(13,36,54,.08)}
+    .merch-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+    .merch-photo{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(13,36,54,.22)}
+    .merch-photo img{display:block;width:100%;height:auto}
+    .merch-photo .pricetag{position:absolute;top:16px;right:16px;background:var(--lobster);color:#fff;
+      font-family:Oswald,sans-serif;font-weight:600;font-size:22px;letter-spacing:.02em;
+      padding:10px 16px;border-radius:999px;box-shadow:0 6px 18px rgba(225,80,42,.4)}
+    .merch .eyebrow{color:var(--lobster)}
+    .merch h2{margin:6px 0 4px}
+    .merch .slogan{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em;
+      color:var(--navy);font-size:20px;line-height:1.15;margin:10px 0 14px}
+    .merch .slogan span{color:var(--lobster)}
+    .merch p{color:rgba(26,26,26,.82)}
+    .merch .specs{list-style:none;padding:0;margin:16px 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
+    .merch .specs li{font-size:14px;color:var(--ink);display:flex;gap:8px;align-items:baseline}
+    .merch .specs li::before{content:"●";color:var(--gold);font-size:10px}
+    .preorder{margin-top:22px;background:#fff;border:1px solid rgba(13,36,54,.12);border-radius:12px;padding:20px 22px}
+    .preorder h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:16px;color:var(--navy);margin:0 0 4px}
+    .preorder .ptag{font-size:13px;color:rgba(26,26,26,.7);margin:0 0 14px}
+    .preorder .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .preorder select{width:100%;padding:11px 12px;border:1px solid rgba(13,36,54,.2);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+    .club-note{margin-top:14px;font-size:13px;color:rgba(26,26,26,.62);font-style:italic}
+    @media(max-width:820px){.merch-grid{grid-template-columns:1fr;gap:28px}.merch .specs{grid-template-columns:1fr}.preorder .row{grid-template-columns:1fr}}
+  </style>
+  <div class="wrap merch-grid">
+    <div class="merch-photo">
+      <img src="assets/photos/daves-slogan-tee.jpg" alt="Dave's Maine Cafe slogan t-shirt — Butter-Fueled, Bourbon-Powered, Lobster-Loaded — navy tee with lobster mascot" loading="lazy" />
+      <div class="pricetag">$28</div>
+    </div>
+    <div>
+      <div class="eyebrow">New · Slogan of the Month Club</div>
+      <h2>Wear the Cafe</h2>
+      <div class="slogan">Butter-Fueled.<br><span>Bourbon-Powered.</span><br>Lobster-Loaded.</div>
+      <p>Our first drop. Soft tri-blend navy tee with the lobster mascot and cream-and-gold print — the same Route 1 vibe as the cafe. A fresh slogan drops every month; fan favorites stick around.</p>
+      <ul class="specs">
+        <li>Soft tri-blend, unisex fit</li>
+        <li>Sizes S–XXL</li>
+        <li>Cream &amp; gold print</li>
+        <li>Printed on demand</li>
+      </ul>
+      <form class="preorder" action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
+        <input type="hidden" name="_subject" value="New t-shirt pre-order (website)" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" />
+        <input type="hidden" name="Item" value="Slogan Tee — Butter-Fueled, Bourbon-Powered, Lobster-Loaded ($28)" />
+        <h3>Reserve Yours — $28</h3>
+        <p class="ptag">First drop is limited. Reserve your size and Dave will text or email you the moment it's ready for pickup.</p>
+        <div class="row">
+          <div><label class="lbl">Name</label><input type="text" name="Name" required /></div>
+          <div><label class="lbl">Phone</label><input type="tel" name="Phone" /></div>
+        </div>
+        <div class="row">
+          <div><label class="lbl">Email</label><input type="email" name="Email" required /></div>
+          <div>
+            <label class="lbl">Size</label>
+            <select name="Size" required>
+              <option value="" disabled selected>Choose a size</option>
+              <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label class="lbl">Quantity</label>
+            <select name="Quantity">
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+            </select>
+          </div>
+          <div style="display:flex;align-items:flex-end"><button type="submit" class="btn" style="width:100%">Reserve My Tee</button></div>
+        </div>
+      </form>
+      <div class="club-note">Want the whole club? Tell Dave at pickup and he'll set you up for the monthly drop.</div>
     </div>
   </div>
 </section>
