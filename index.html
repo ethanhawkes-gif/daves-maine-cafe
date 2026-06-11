@@ -118,13 +118,21 @@
   /* Lobster mascot */
   .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none;z-index:0}
   .hero .wrap{position:relative;z-index:1}
-  .mascot-col{display:flex;flex-direction:column;align-items:center;gap:0}
-  .mascot-bubble{font-family:Oswald,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:8px 22px;border-radius:40px;position:relative;margin-bottom:16px;z-index:2;white-space:nowrap}
+  .mascot-col{position:relative;display:flex;flex-direction:column;align-items:center;gap:0;min-height:520px;justify-content:center}
+  .mascot-bubble{font-family:Oswald,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:8px 22px;border-radius:40px;position:absolute;top:6px;left:50%;z-index:3;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.22);transform:translateX(-50%) rotate(-2deg)}
   .mascot-bubble::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:var(--gold);border-bottom:0}
-  .mascot-ring{width:280px;height:280px;border-radius:50%;background:var(--cream);border:5px dashed var(--lobster);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(225,80,42,.35),0 0 0 10px rgba(233,185,73,.18);transform:rotate(-2deg);flex-shrink:0}
-  .mascot-img{width:128%;max-width:none;object-fit:contain;transform:rotate(2deg) translateY(8%)}
+  .mascot-ring{position:relative;width:min(100%,520px);aspect-ratio:1/1;border-radius:50%;background:repeating-conic-gradient(from -10deg, rgba(233,185,73,.22) 0 10deg, rgba(246,239,224,.96) 10deg 20deg);border:5px solid rgba(233,185,73,.6);display:flex;align-items:center;justify-content:center;box-shadow:0 28px 70px rgba(0,0,0,.22);transform:rotate(-2deg);flex-shrink:0}
+  .mascot-ring::after{content:'Route 1';position:absolute;right:12px;top:54px;width:104px;height:104px;border-radius:999px;background:var(--lobster);border:3px solid #fff;display:grid;place-items:center;text-align:center;color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:22px;line-height:1;box-shadow:0 14px 32px rgba(0,0,0,.24);transform:rotate(9deg)}
+  .mascot-img{position:absolute;left:50%;bottom:8px;width:min(96%,500px);max-width:none;object-fit:contain;transform:translateX(-50%) rotate(2deg);filter:drop-shadow(0 18px 18px rgba(0,0,0,.22));z-index:2}
+  .mascot-col .hero-card{position:relative;z-index:3;max-width:360px;align-self:flex-start;margin-left:22px}
 
   .rope{height:8px;background:repeating-linear-gradient(45deg,var(--rope) 0 12px,#b8965a 12px 24px)}
+  .mascot-strip{background:var(--cream);border-bottom:1px solid rgba(13,36,54,.12)}
+  .mascot-strip-in{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px 0}
+  .mascot-callout{display:flex;align-items:center;gap:16px;color:var(--navy)}
+  .mascot-callout img{width:78px;height:78px;object-fit:contain;filter:drop-shadow(0 8px 9px rgba(13,36,54,.16))}
+  .mascot-callout b{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:24px;line-height:1;color:var(--lobster)}
+  .mascot-callout span{display:block;color:#4a4a4a;margin-top:3px}
 
   /* Trust strip */
   .trust-strip{background:var(--navy-2);color:#fff}
@@ -176,6 +184,9 @@
   .event h3{color:var(--navy);font-size:26px;margin:6px 0 12px}
   .event p{color:#4a4a4a;margin:0;font-size:16px}
   .event .pricetag{display:inline-block;background:var(--navy);color:var(--gold);font-family:Oswald,sans-serif;letter-spacing:.5px;padding:7px 15px;border-radius:40px;font-size:14px;margin-top:16px}
+  .full-menu-section{position:relative;overflow:hidden}
+  .full-menu-section::before{content:"";position:absolute;right:-72px;top:14px;width:min(34vw,360px);aspect-ratio:1/1;background:url("assets/daves-lobster-mascot.webp") center/contain no-repeat;opacity:.13;filter:saturate(1.08);pointer-events:none}
+  .full-menu-section>.wrap{position:relative;z-index:1}
 
   /* About Dave */
   .about{background:var(--cream-2)}
@@ -270,14 +281,31 @@
     .menu-toggle{display:flex}
     .hero-inner,.sig-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
     .hero-card{transform:none;margin-top:8px}
-    .mascot-ring{width:220px;height:220px}
+    .mascot-col{min-height:430px;order:-1}
+    .mascot-ring{width:min(100%,390px)}
+    .mascot-ring::after{right:-2px;top:34px;width:88px;height:88px;font-size:18px}
+    .mascot-img{width:88%;bottom:10px}
+    .mascot-col .hero-card{align-self:center;margin-left:0;max-width:330px}
     .menu-grid,.beer-grid{grid-template-columns:1fr 1fr}
     .ig-grid{grid-template-columns:repeat(3,1fr)}
+    .mascot-strip-in{align-items:flex-start}
   }
   @media(max-width:560px){
     .menu-grid,.beer-grid{grid-template-columns:1fr}
     .signup .row,.cat-form .row{grid-template-columns:1fr}
     .nav-cta .btn:not(.order){display:none}
+    .hero-inner{padding-top:42px;padding-bottom:58px}
+    .mascot-col{min-height:360px}
+    .mascot-ring{width:min(100%,330px)}
+    .mascot-bubble{font-size:14px;top:0}
+    .mascot-ring::after{width:72px;height:72px;font-size:14px}
+    .mascot-img{width:84%;bottom:12px}
+    .mascot-col .hero-card{max-width:280px;padding:20px}
+    .mascot-strip-in{display:block;text-align:left}
+    .mascot-callout{align-items:center}
+    .mascot-callout img{width:62px;height:62px}
+    .mascot-callout b{font-size:20px}
+    .mascot-strip .btn{margin-top:14px}
   }
 </style>
 </head>
@@ -315,7 +343,7 @@
       </div>
     </div>
     <div class="mascot-col">
-      <div class="mascot-bubble">Wicked Fresh. 🦞</div>
+      <div class="mascot-bubble">Wicked Fresh.</div>
       <div class="mascot-ring">
         <img class="mascot-img" src="assets/daves-lobster-mascot.webp" alt="Dave's lobster mascot giving a thumbs-up on a scooter" loading="eager" />
       </div>
@@ -328,6 +356,19 @@
   </div>
   <div class="rope"></div>
 </section>
+
+<div class="mascot-strip">
+  <div class="wrap mascot-strip-in">
+    <div class="mascot-callout">
+      <img src="assets/daves-lobster-mascot.webp" alt="" loading="lazy" />
+      <div>
+        <b>Never saw this roll comin'</b>
+        <span>Fresh lobster, cold taps, Route 1 energy.</span>
+      </div>
+    </div>
+    <a class="btn dark" href="#full-menu">See the Menu</a>
+  </div>
+</div>
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
@@ -376,7 +417,7 @@
 </section>
 
 <!-- FULL MENU -->
-<section id="full-menu" style="background:var(--navy);color:#f6efe0">
+<section id="full-menu" class="full-menu-section" style="background:var(--navy);color:#f6efe0">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow" style="color:var(--gold)">Route 1 · Never saw this roll comin'</div>
