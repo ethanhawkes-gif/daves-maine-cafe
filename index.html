@@ -679,84 +679,324 @@
   </div>
 </section>
 
-<!-- SHOP / MERCH -->
-<section class="merch" id="shop" style="background:var(--cream-2)">
-  <style>
-    .merch{padding:64px 0;border-top:1px solid rgba(13,36,54,.08)}
-    .merch-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
-    .merch-photo{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(13,36,54,.22)}
-    .merch-photo img{display:block;width:100%;height:auto}
-    .merch-photo .pricetag{position:absolute;top:16px;right:16px;background:var(--lobster);color:#fff;
-      font-family:Oswald,sans-serif;font-weight:600;font-size:22px;letter-spacing:.02em;
-      padding:10px 16px;border-radius:999px;box-shadow:0 6px 18px rgba(225,80,42,.4)}
-    .merch .eyebrow{color:var(--lobster)}
-    .merch h2{margin:6px 0 4px}
-    .merch .slogan{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em;
-      color:var(--navy);font-size:20px;line-height:1.15;margin:10px 0 14px}
-    .merch .slogan span{color:var(--lobster)}
-    .merch p{color:rgba(26,26,26,.82)}
-    .merch .specs{list-style:none;padding:0;margin:16px 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
-    .merch .specs li{font-size:14px;color:var(--ink);display:flex;gap:8px;align-items:baseline}
-    .merch .specs li::before{content:"●";color:var(--gold);font-size:10px}
-    .preorder{margin-top:22px;background:#fff;border:1px solid rgba(13,36,54,.12);border-radius:12px;padding:20px 22px}
-    .preorder h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:16px;color:var(--navy);margin:0 0 4px}
-    .preorder .ptag{font-size:13px;color:rgba(26,26,26,.7);margin:0 0 14px}
-    .preorder .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .preorder select{width:100%;padding:11px 12px;border:1px solid rgba(13,36,54,.2);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
-    .club-note{margin-top:14px;font-size:13px;color:rgba(26,26,26,.62);font-style:italic}
-    @media(max-width:820px){.merch-grid{grid-template-columns:1fr;gap:28px}.merch .specs{grid-template-columns:1fr}.preorder .row{grid-template-columns:1fr}}
-  </style>
-  <div class="wrap merch-grid">
-    <div class="merch-photo">
-      <img src="assets/photos/daves-slogan-tee.jpg" alt="Dave's Maine Cafe slogan t-shirt — Butter-Fueled, Bourbon-Powered, Lobster-Loaded — navy tee with lobster mascot" loading="lazy" />
-      <div class="pricetag">$28</div>
+<!-- THE ROUTE 1 SHOP -->
+<section class="r1shop" id="shop">
+<style>
+  .r1shop{padding:72px 0;border-top:1px solid rgba(13,36,54,.08);background:var(--cream-2)}
+  .r1shop .sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+  .r1shop .sec-head p{color:rgba(26,26,26,.72);margin:0}
+  /* How it works */
+  .shop-how{display:flex;gap:0;justify-content:center;margin:0 auto 52px;max-width:700px;
+    background:#fff;border:1px solid rgba(13,36,54,.1);border-radius:16px;overflow:hidden}
+  .shop-how-step{flex:1;padding:20px 18px;text-align:center;border-right:1px solid rgba(13,36,54,.08)}
+  .shop-how-step:last-child{border-right:none}
+  .shop-how-step .num{font-family:Oswald,sans-serif;font-size:28px;font-weight:700;
+    color:var(--lobster);line-height:1}
+  .shop-how-step .label{font-size:13px;font-weight:600;color:var(--navy);margin:4px 0 2px;text-transform:uppercase;letter-spacing:.04em}
+  .shop-how-step .sub{font-size:12px;color:rgba(26,26,26,.55)}
+  /* Product grid */
+  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:52px}
+  .prod-card{background:#fff;border-radius:14px;overflow:hidden;
+    box-shadow:0 4px 20px rgba(13,36,54,.10);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+  .prod-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(13,36,54,.16)}
+  .prod-img{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--navy)}
+  .prod-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .prod-img .prod-price{position:absolute;bottom:12px;right:12px;background:var(--lobster);color:#fff;
+    font-family:Oswald,sans-serif;font-weight:700;font-size:20px;letter-spacing:.02em;
+    padding:6px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(225,80,42,.4)}
+  .prod-img .prod-badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--navy);
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    padding:4px 10px;border-radius:999px}
+  .prod-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
+  .prod-body h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;
+    font-size:17px;color:var(--navy);margin:0 0 6px}
+  .prod-body p{font-size:13.5px;color:rgba(26,26,26,.7);margin:0 0 16px;flex:1;line-height:1.5}
+  .prod-body .prod-specs{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px}
+  .prod-body .prod-specs li{font-size:11.5px;background:rgba(13,36,54,.06);color:var(--navy);
+    padding:3px 10px;border-radius:999px;font-weight:600;letter-spacing:.03em}
+  .prod-card .order-btn{display:block;width:100%;text-align:center;padding:12px;
+    background:var(--navy);color:#fff;font-family:Oswald,sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:.06em;font-size:14px;border:none;cursor:pointer;
+    border-radius:8px;text-decoration:none;transition:background .15s}
+  .prod-card .order-btn:hover{background:var(--lobster)}
+  /* Coming soon card variant */
+  .prod-img.coming-soon{display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,var(--navy) 0%,#1a3a5c 100%)}
+  .prod-img.coming-soon img{width:52%;height:52%;object-fit:contain;opacity:.55}
+  .prod-img .soon-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.15);
+    color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+  /* Club banner */
+  .club-banner{background:var(--navy);border-radius:18px;padding:36px 44px;
+    display:flex;align-items:center;gap:36px;margin-bottom:52px;color:#fff}
+  .club-banner .cb-mascot{width:80px;flex-shrink:0}
+  .club-banner h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;
+    font-size:22px;color:var(--gold);margin:0 0 6px}
+  .club-banner p{font-size:14px;color:rgba(255,255,255,.75);margin:0 0 16px;max-width:480px}
+  .club-banner .btn-ghost{display:inline-block;padding:11px 24px;border:2px solid var(--gold);
+    color:var(--gold);font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;
+    letter-spacing:.06em;font-size:13px;border-radius:8px;text-decoration:none;transition:all .15s}
+  .club-banner .btn-ghost:hover{background:var(--gold);color:var(--navy)}
+  /* Order form */
+  .shop-order-wrap{background:#fff;border:1px solid rgba(13,36,54,.1);border-radius:18px;
+    padding:38px 44px;max-width:720px;margin:0 auto}
+  .shop-order-wrap h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;
+    font-size:22px;color:var(--navy);margin:0 0 4px}
+  .shop-order-wrap .sub{font-size:14px;color:rgba(26,26,26,.6);margin:0 0 26px}
+  .shop-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  .shop-form-row.single{grid-template-columns:1fr}
+  .shop-form-row label.lbl{display:block;font-size:12px;font-weight:700;text-transform:uppercase;
+    letter-spacing:.06em;color:var(--navy);margin-bottom:5px}
+  .shop-form-row input,.shop-form-row select,.shop-form-row textarea{
+    width:100%;padding:11px 13px;border:1px solid rgba(13,36,54,.18);border-radius:8px;
+    font:inherit;font-size:14px;background:#fff;color:var(--ink);box-sizing:border-box}
+  .shop-form-row textarea{height:78px;resize:vertical}
+  #shop-size-row{display:none}
+  .shop-submit-row{display:flex;gap:16px;align-items:center;margin-top:20px}
+  .shop-submit-row .btn{flex:1;padding:14px;font-size:15px}
+  .shop-submit-row .policy{font-size:12px;color:rgba(26,26,26,.5);flex:1}
+  @media(max-width:900px){.shop-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){
+    .shop-grid{grid-template-columns:1fr}
+    .shop-how{flex-direction:column}
+    .shop-how-step{border-right:none;border-bottom:1px solid rgba(13,36,54,.08)}
+    .shop-how-step:last-child{border-bottom:none}
+    .club-banner{flex-direction:column;padding:28px 24px;gap:18px;text-align:center}
+    .shop-order-wrap{padding:28px 22px}
+    .shop-form-row{grid-template-columns:1fr}
+    .shop-submit-row{flex-direction:column}
+  }
+</style>
+
+<div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">Merch · Printed on Demand · Ships Anywhere</div>
+    <h2>The Route 1 Shop</h2>
+    <p>Take a piece of the cafe home. Every item printed on demand via Printful — ships right to your door, or pick it up next time you're in.</p>
+  </div>
+
+  <!-- How it works -->
+  <div class="shop-how">
+    <div class="shop-how-step">
+      <div class="num">1</div>
+      <div class="label">Browse & Order</div>
+      <div class="sub">Pick your item below</div>
     </div>
-    <div>
-      <div class="eyebrow">New · Slogan of the Month Club</div>
-      <h2>Wear the Cafe</h2>
-      <div class="slogan">Butter-Fueled.<br><span>Bourbon-Powered.</span><br>Lobster-Loaded.</div>
-      <p>Our first drop. Soft tri-blend navy tee with the lobster mascot and cream-and-gold print — the same Route 1 vibe as the cafe. A fresh slogan drops every month; fan favorites stick around.</p>
-      <ul class="specs">
-        <li>Soft tri-blend, unisex fit</li>
-        <li>Sizes S–XXL</li>
-        <li>Cream &amp; gold print</li>
-        <li>Printed on demand</li>
-      </ul>
-      <form class="preorder" action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
-        <input type="hidden" name="_subject" value="New t-shirt pre-order (website)" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="_honey" style="display:none" />
-        <input type="hidden" name="Item" value="Slogan Tee — Butter-Fueled, Bourbon-Powered, Lobster-Loaded ($28)" />
-        <h3>Reserve Yours — $28</h3>
-        <p class="ptag">First drop is limited. Reserve your size and Dave will text or email you the moment it's ready for pickup.</p>
-        <div class="row">
-          <div><label class="lbl">Name</label><input type="text" name="Name" required /></div>
-          <div><label class="lbl">Phone</label><input type="tel" name="Phone" /></div>
-        </div>
-        <div class="row">
-          <div><label class="lbl">Email</label><input type="email" name="Email" required /></div>
-          <div>
-            <label class="lbl">Size</label>
-            <select name="Size" required>
-              <option value="" disabled selected>Choose a size</option>
-              <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label class="lbl">Quantity</label>
-            <select name="Quantity">
-              <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
-            </select>
-          </div>
-          <div style="display:flex;align-items:flex-end"><button type="submit" class="btn" style="width:100%">Reserve My Tee</button></div>
-        </div>
-      </form>
-      <div class="club-note">Want the whole club? Tell Dave at pickup and he'll set you up for the monthly drop.</div>
+    <div class="shop-how-step">
+      <div class="num">2</div>
+      <div class="label">Printed Fresh</div>
+      <div class="sub">Made to order via Printful</div>
+    </div>
+    <div class="shop-how-step">
+      <div class="num">3</div>
+      <div class="label">Ships to You</div>
+      <div class="sub">Or pick up at the cafe</div>
     </div>
   </div>
+
+  <!-- Product grid -->
+  <div class="shop-grid">
+
+    <!-- Slogan Tee -->
+    <div class="prod-card">
+      <div class="prod-img">
+        <img src="assets/photos/daves-slogan-tee.jpg" alt="Dave's Maine Cafe slogan t-shirt — navy tee with lobster mascot" loading="lazy" />
+        <div class="prod-badge">&#9733; First Drop</div>
+        <div class="prod-price">$28</div>
+      </div>
+      <div class="prod-body">
+        <h3>Slogan Tee</h3>
+        <p>Soft tri-blend navy tee. Butter-Fueled. Bourbon-Powered. Lobster-Loaded. Cream &amp; gold varsity print with the lobster mascot — new slogan drops monthly.</p>
+        <ul class="prod-specs"><li>Unisex S–XXL</li><li>Tri-blend</li><li>Print on demand</li></ul>
+        <a class="order-btn" href="#shop-order" onclick="prefillProduct('Slogan Tee — Butter-Fueled, Bourbon-Powered, Lobster-Loaded ($28)', true)">Order Now — $28</a>
+      </div>
+    </div>
+
+    <!-- Lobster Mug -->
+    <div class="prod-card">
+      <div class="prod-img">
+        <img src="assets/photos/daves-mug.jpg" alt="Dave's Maine Cafe navy 15oz coffee mug with lobster mascot" loading="lazy" />
+        <div class="prod-price">$22</div>
+      </div>
+      <div class="prod-body">
+        <h3>Lobster Mug</h3>
+        <p>Navy 15oz ceramic mug. The whole slogan and mascot wrap around — a proper Maine morning, every morning. Dishwasher safe.</p>
+        <ul class="prod-specs"><li>15oz ceramic</li><li>Dishwasher safe</li><li>Navy gloss</li></ul>
+        <a class="order-btn" href="#shop-order" onclick="prefillProduct('Lobster Mug — 15oz Navy Ceramic ($22)', false)">Order Now — $22</a>
+      </div>
+    </div>
+
+    <!-- Pint Glass -->
+    <div class="prod-card">
+      <div class="prod-img coming-soon">
+        <img src="assets/photos/daves-lobster-mascot.png" alt="Dave's Maine Cafe pint glass — preview" loading="lazy" />
+        <div class="soon-badge">Preview Coming</div>
+        <div class="prod-price">$20</div>
+      </div>
+      <div class="prod-body">
+        <h3>Pint Glass</h3>
+        <p>16oz shaker pint with the Dave's Maine Cafe lobster logo. The right glass for a Route 1 pour. Craft-beer ready.</p>
+        <ul class="prod-specs"><li>16oz shaker</li><li>Screen printed</li><li>Set of 2 available</li></ul>
+        <a class="order-btn" href="#shop-order" onclick="prefillProduct('Pint Glass — 16oz Dave\'s Lobster Logo ($20)', false)">Order Now — $20</a>
+      </div>
+    </div>
+
+    <!-- Canvas Tote -->
+    <div class="prod-card">
+      <div class="prod-img coming-soon">
+        <img src="assets/photos/daves-lobster-mascot.png" alt="Dave's Maine Cafe canvas tote — preview" loading="lazy" />
+        <div class="soon-badge">Preview Coming</div>
+        <div class="prod-price">$26</div>
+      </div>
+      <div class="prod-body">
+        <h3>Canvas Tote</h3>
+        <p>Sturdy natural canvas tote with the full slogan and mascot in navy &amp; gold ink. Lobster market bag. Farmer's market bag. Both.</p>
+        <ul class="prod-specs"><li>Heavy canvas</li><li>15" × 16"</li><li>Top handles</li></ul>
+        <a class="order-btn" href="#shop-order" onclick="prefillProduct('Canvas Tote — Slogan &amp; Mascot ($26)', false)">Order Now — $26</a>
+      </div>
+    </div>
+
+    <!-- Dad Hat -->
+    <div class="prod-card">
+      <div class="prod-img coming-soon">
+        <img src="assets/photos/daves-lobster-mascot.png" alt="Dave's Maine Cafe dad hat — preview" loading="lazy" />
+        <div class="soon-badge">Preview Coming</div>
+        <div class="prod-price">$38</div>
+      </div>
+      <div class="prod-body">
+        <h3>Lobster Dad Hat</h3>
+        <p>Classic low-profile navy cap with embroidered lobster mascot on the front panel. Adjustable strap. The casual Route 1 flex.</p>
+        <ul class="prod-specs"><li>Structured 6-panel</li><li>Embroidered</li><li>Adjustable strap</li></ul>
+        <a class="order-btn" href="#shop-order" onclick="prefillProduct('Dad Hat — Navy Embroidered Lobster ($38)', true)">Order Now — $38</a>
+      </div>
+    </div>
+
+    <!-- Gift Bundle teaser -->
+    <div class="prod-card" style="background:var(--navy);border:2px solid var(--gold)">
+      <div class="prod-img" style="background:linear-gradient(135deg,var(--navy) 0%,#0d2236 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:28px">
+        <img src="assets/photos/daves-lobster-mascot.png" alt="Dave's Maine Cafe gift bundle" loading="lazy" style="width:60%;opacity:.9" />
+      </div>
+      <div class="prod-body" style="background:var(--navy)">
+        <h3 style="color:var(--gold)">Gift Bundle</h3>
+        <p style="color:rgba(255,255,255,.7)">Tee + mug + tote. The full Route 1 care package — great for tourists who found their place. Ask Dave for custom bundles.</p>
+        <ul class="prod-specs" style="--bg:rgba(255,255,255,.1)"><li style="background:rgba(255,255,255,.12);color:#fff">Mix & Match</li><li style="background:rgba(255,255,255,.12);color:#fff">Custom note</li></ul>
+        <a class="order-btn" href="#shop-order" onclick="prefillProduct('Gift Bundle — Custom Mix (price varies)', false)" style="background:var(--gold);color:var(--navy)">Build a Bundle</a>
+      </div>
+    </div>
+
+  </div><!-- /shop-grid -->
+
+  <!-- Slogan Club banner -->
+  <div class="club-banner">
+    <img class="cb-mascot" src="assets/photos/daves-lobster-mascot.png" alt="Lobster mascot" />
+    <div>
+      <h3>Slogan of the Month Club</h3>
+      <p>New slogan. New drop. Every month. Fan favorites stay in the vault forever — but each month brings something new. Order the current drop before it's gone, or sign up to be the first to know about every release.</p>
+      <a class="btn-ghost" href="#list">Get the Drop First</a>
+    </div>
+  </div>
+
+  <!-- Unified order form -->
+  <div class="shop-order-wrap" id="shop-order">
+    <h3>Place Your Order</h3>
+    <p class="sub">Dave will confirm by text or email — ship to you, or grab it at the cafe. Questions? Call or text Dave directly.</p>
+    <form action="https://formsubmit.co/dave@mainebeercafe.com" method="POST" onsubmit="return validateShopForm()">
+      <input type="hidden" name="_subject" value="New shop order (website)" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style="display:none" />
+
+      <div class="shop-form-row single">
+        <div>
+          <label class="lbl" for="shop-product">Product</label>
+          <select id="shop-product" name="Product" required onchange="handleProductChange(this)">
+            <option value="" disabled selected>— Choose a product —</option>
+            <option value="Slogan Tee — Butter-Fueled, Bourbon-Powered, Lobster-Loaded ($28)">Slogan Tee — $28</option>
+            <option value="Lobster Mug — 15oz Navy Ceramic ($22)">Lobster Mug — $22</option>
+            <option value="Pint Glass — 16oz Dave's Lobster Logo ($20)">Pint Glass — $20</option>
+            <option value="Canvas Tote — Slogan &amp; Mascot ($26)">Canvas Tote — $26</option>
+            <option value="Dad Hat — Navy Embroidered Lobster ($38)">Dad Hat — $38</option>
+            <option value="Gift Bundle — Custom Mix (price varies)">Gift Bundle (custom)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="shop-form-row" id="shop-size-row">
+        <div>
+          <label class="lbl" for="shop-size">Size</label>
+          <select id="shop-size" name="Size">
+            <option value="" disabled selected>Choose a size</option>
+            <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>One size (Hat)</option>
+          </select>
+        </div>
+        <div>
+          <label class="lbl" for="shop-qty">Quantity</label>
+          <select id="shop-qty" name="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+          </select>
+        </div>
+      </div>
+      <div class="shop-form-row" id="shop-qty-row" style="display:none">
+        <div>
+          <label class="lbl" for="shop-qty2">Quantity</label>
+          <select id="shop-qty2" name="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+          </select>
+        </div>
+        <div></div>
+      </div>
+
+      <div class="shop-form-row">
+        <div><label class="lbl" for="shop-name">Name</label><input id="shop-name" type="text" name="Name" required placeholder="Your name" /></div>
+        <div><label class="lbl" for="shop-phone">Phone</label><input id="shop-phone" type="tel" name="Phone" placeholder="Best number to text" /></div>
+      </div>
+      <div class="shop-form-row">
+        <div><label class="lbl" for="shop-email">Email</label><input id="shop-email" type="email" name="Email" required placeholder="your@email.com" /></div>
+        <div>
+          <label class="lbl" for="shop-delivery">Pickup or Ship?</label>
+          <select id="shop-delivery" name="Delivery">
+            <option value="Pickup at the cafe">Pickup at the cafe</option>
+            <option value="Ship to me">Ship to me</option>
+          </select>
+        </div>
+      </div>
+      <div class="shop-form-row single">
+        <div><label class="lbl" for="shop-notes">Notes / shipping address</label>
+          <textarea id="shop-notes" name="Notes" placeholder="Shipping address if mailing, gift note, or any other requests…"></textarea>
+        </div>
+      </div>
+      <div class="shop-submit-row">
+        <button type="submit" class="btn shop-submit-row">Place My Order</button>
+        <div class="policy">Dave confirms every order personally. Pick-up orders are ready within a few days. Shipped orders go via Printful — standard delivery applies.</div>
+      </div>
+    </form>
+  </div><!-- /shop-order-wrap -->
+
+</div><!-- /wrap -->
+
+<script>
+  function prefillProduct(val, needsSize) {
+    var sel = document.getElementById('shop-product');
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === val) { sel.selectedIndex = i; break; }
+    }
+    handleProductChange(sel, needsSize);
+  }
+  function handleProductChange(sel, forceSize) {
+    var val = sel ? sel.value : '';
+    var needsSize = forceSize !== undefined ? forceSize :
+      (val.includes('Tee') || val.includes('Hat'));
+    var sizeRow = document.getElementById('shop-size-row');
+    var qtyRow = document.getElementById('shop-qty-row');
+    sizeRow.style.display = needsSize ? '' : 'none';
+    qtyRow.style.display = needsSize ? 'none' : '';
+  }
+  function validateShopForm() {
+    var prod = document.getElementById('shop-product').value;
+    if (!prod) { alert('Please choose a product.'); return false; }
+    return true;
+  }
+</script>
 </section>
 
 <!-- SOCIAL — LIVE FROM THE CAFE -->
