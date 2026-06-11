@@ -739,13 +739,6 @@
     text-transform:uppercase;letter-spacing:.06em;font-size:14px;border:none;cursor:pointer;
     border-radius:8px;text-decoration:none;transition:background .15s}
   .prod-card .order-btn:hover{background:var(--lobster)}
-  /* Coming soon card variant */
-  .prod-img.coming-soon{display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,var(--navy) 0%,#1a3a5c 100%)}
-  .prod-img.coming-soon img{width:52%;height:52%;object-fit:contain;opacity:.55}
-  .prod-img .soon-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.15);
-    color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
-    padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px)}
   /* Club banner */
   .club-banner{background:var(--navy);border-radius:18px;padding:36px 44px;
     display:flex;align-items:center;gap:36px;margin-bottom:52px;color:#fff}
@@ -874,21 +867,6 @@
       </div>
     </div>
 
-    <!-- Dad Hat -->
-    <div class="prod-card">
-      <div class="prod-img coming-soon">
-        <img src="assets/daves-lobster-mascot.webp" alt="Dave's Maine Cafe dad hat — preview" loading="lazy" />
-        <div class="soon-badge">Preview Coming</div>
-        <div class="prod-price">$38</div>
-      </div>
-      <div class="prod-body">
-        <h3>Lobster Dad Hat</h3>
-        <p>Classic low-profile navy cap with embroidered lobster mascot on the front panel. Adjustable strap. The casual Route 1 flex.</p>
-        <ul class="prod-specs"><li>Structured 6-panel</li><li>Embroidered</li><li>Adjustable strap</li></ul>
-        <a class="order-btn" href="#shop-order" onclick="prefillProduct('Dad Hat — Navy Embroidered Lobster ($38)', true)">Order Now — $38</a>
-      </div>
-    </div>
-
     <!-- Gift Bundle teaser -->
     <div class="prod-card" style="background:var(--navy);border:2px solid var(--gold)">
       <div class="prod-img" style="background:linear-gradient(135deg,var(--navy) 0%,#0d2236 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:28px">
@@ -933,7 +911,6 @@
             <option value="Lobster Mug — 15oz Navy Ceramic ($22)">Lobster Mug — $22</option>
             <option value="Pint Glass — 16oz Dave's Lobster Logo ($20)">Pint Glass — $20</option>
             <option value="Canvas Tote — Slogan &amp; Mascot ($26)">Canvas Tote — $26</option>
-            <option value="Dad Hat — Navy Embroidered Lobster ($38)">Dad Hat — $38</option>
             <option value="Gift Bundle — Custom Mix (price varies)">Gift Bundle (custom)</option>
           </select>
         </div>
