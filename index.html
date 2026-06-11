@@ -6,14 +6,14 @@
 <title>Dave's Maine Cafe — Lobster Rolls &amp; Craft Beer | Kittery, ME</title>
 <meta name="description" content="Kittery's best Maine lobster rolls, the burger everyone talks about, rotating craft taps &amp; 70+ bourbons. Family-run on Route 1. Order online or visit." />
 <meta name="theme-color" content="#0d2436" />
-<link rel="canonical" href="https://mainebeercafe.com/" />
+<link rel="canonical" href="https://davesmainecafe.com/" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%A6%9E%3C/text%3E%3C/svg%3E" />
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="restaurant" />
 <meta property="og:title" content="Dave's Maine Cafe — Kittery's Best Lobster Rolls, Craft Beer & Bourbon" />
 <meta property="og:description" content="Never-frozen Maine lobster rolls, the burger everyone talks about, rotating craft taps and 70+ bourbons. Family-run, on Route 1 in Kittery." />
-<meta property="og:url" content="https://mainebeercafe.com/" />
+<meta property="og:url" content="https://davesmainecafe.com/" />
 <meta property="og:image" content="https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/daves-lobster-roll.jpeg" />
 <meta name="twitter:card" content="summary_large_image" />
 
@@ -26,8 +26,8 @@
   "name": "Dave's Maine Cafe",
   "alternateName": "Maine Beer Cafe",
   "image": "https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/daves-lobster-roll.jpeg",
-  "@id": "https://mainebeercafe.com",
-  "url": "https://mainebeercafe.com",
+  "@id": "https://davesmainecafe.com",
+  "url": "https://davesmainecafe.com",
   "telephone": "+1-207-475-5655",
   "email": "dave@mainebeercafe.com",
   "priceRange": "$$",
@@ -119,8 +119,8 @@
   .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none;z-index:0}
   .hero .wrap{position:relative;z-index:1}
   .mascot-col{position:relative;display:flex;flex-direction:column;align-items:center;gap:0;min-height:520px;justify-content:center}
-  .mascot-bubble{font-family:Oswald,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:8px 22px;border-radius:40px;position:absolute;top:6px;left:50%;z-index:3;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.22);transform:translateX(-50%) rotate(-2deg)}
-  .mascot-bubble::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:var(--gold);border-bottom:0}
+  .mascot-bubble{font-family:Oswald,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:8px 22px;border-radius:40px;position:absolute;top:30px;left:calc(50% - 188px);z-index:3;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.22);transform:rotate(-8deg)}
+  .mascot-bubble::after{content:'';position:absolute;bottom:-9px;right:18px;transform:rotate(20deg);border:8px solid transparent;border-top-color:var(--gold);border-bottom:0}
   .mascot-ring{position:relative;width:min(100%,520px);aspect-ratio:1/1;border-radius:50%;background:repeating-conic-gradient(from -10deg, rgba(233,185,73,.22) 0 10deg, rgba(246,239,224,.96) 10deg 20deg);border:5px solid rgba(233,185,73,.6);display:flex;align-items:center;justify-content:center;box-shadow:0 28px 70px rgba(0,0,0,.22);transform:rotate(-2deg);flex-shrink:0}
   .mascot-ring::after{content:'Route 1';position:absolute;right:12px;top:54px;width:104px;height:104px;border-radius:999px;background:var(--lobster);border:3px solid #fff;display:grid;place-items:center;text-align:center;color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:22px;line-height:1;box-shadow:0 14px 32px rgba(0,0,0,.24);transform:rotate(9deg)}
   .mascot-img{position:absolute;left:50%;bottom:8px;width:min(96%,500px);max-width:none;object-fit:contain;transform:translateX(-50%) rotate(2deg);filter:drop-shadow(0 18px 18px rgba(0,0,0,.22));z-index:2}
@@ -283,6 +283,7 @@
     .hero-card{transform:none;margin-top:8px}
     .mascot-col{min-height:430px;order:-1}
     .mascot-ring{width:min(100%,390px)}
+    .mascot-bubble{left:calc(50% - 142px);top:18px}
     .mascot-ring::after{right:-2px;top:34px;width:88px;height:88px;font-size:18px}
     .mascot-img{width:88%;bottom:10px}
     .mascot-col .hero-card{align-self:center;margin-left:0;max-width:330px}
@@ -297,7 +298,7 @@
     .hero-inner{padding-top:42px;padding-bottom:58px}
     .mascot-col{min-height:360px}
     .mascot-ring{width:min(100%,330px)}
-    .mascot-bubble{font-size:14px;top:0}
+    .mascot-bubble{font-size:14px;top:12px;left:calc(50% - 122px);padding:7px 16px}
     .mascot-ring::after{width:72px;height:72px;font-size:14px}
     .mascot-img{width:84%;bottom:12px}
     .mascot-col .hero-card{max-width:280px;padding:20px}
@@ -828,9 +829,8 @@
 
     <!-- Pint Glass -->
     <div class="prod-card">
-      <div class="prod-img coming-soon">
-        <img src="assets/daves-lobster-mascot.webp" alt="Dave's Maine Cafe pint glass — preview" loading="lazy" />
-        <div class="soon-badge">Preview Coming</div>
+      <div class="prod-img">
+        <img src="assets/daves-pint-glass.jpg" alt="Dave's Maine Cafe 16oz pint glass with lobster logo" loading="lazy" />
         <div class="prod-price">$20</div>
       </div>
       <div class="prod-body">
@@ -965,7 +965,7 @@
         </div>
       </div>
       <div class="shop-submit-row">
-        <button type="submit" class="btn shop-submit-row">Place My Order</button>
+        <button type="submit" class="btn">Place My Order</button>
         <div class="policy">Dave confirms every order personally. Pick-up orders are ready within a few days. Shipped orders go via Printful — standard delivery applies.</div>
       </div>
     </form>
