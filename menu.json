@@ -41,7 +41,7 @@
         "items": [
           { "name": "Dave-Oux Gumbo", "price": "$18", "desc": "Where New Orleans took a wrong turn and ended up on Route 1. Andouille, chicken, secret spices & a little Maine magic. Add lobster +$8." }
         ],
-        "subgroup": { "name": "🍓 Sweet Detour", "items": [ { "name": "Strawberry Shortcake Parfait", "price": "$6", "desc": "Layers of strawberries, cake, whipped cream & poor decision-making." } ] }
+        "subgroup": { "name": "🍓 Sweet Detour", "items": [ { "name": "Strawberry Shortcake Parfait", "price": "$6", "desc": "Layers of strawberries, cake, whipped cream & poor decision-making." }, { "name": "Classic Maine Whoopie Pie", "price": "$4", "desc": "The official state treat — soft chocolate cake, sweet cream filling." } ] }
       }
     ]
   },
