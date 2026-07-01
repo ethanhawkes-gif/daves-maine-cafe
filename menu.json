@@ -1,0 +1,109 @@
+{
+  "_master": "SINGLE SOURCE OF TRUTH for Dave's Maine Café menu. Edit here → run `node build-menu.mjs` → the website menu regenerates. The SAME file is what Chipper will push to Toast POS (item names, descriptions, prices) once Dave grants Toast admin/API access, so pricing + copy stay in sync across web + POS from one place. Transcribed from Dave's menu photos 2026-07-01; confirm any (?) items with Dave.",
+  "brand": {
+    "taglines": ["Butter-fueled, bourbon-powered, lobster-loaded.", "You can't drink all day... unless you start at lunch!", "Fresh. Never frozen. Picked daily. Good food. Good people. Maine made."]
+  },
+  "addNote": "＋ Add coleslaw or potato salad to any meal — $1",
+  "headliners": [
+    { "name": "Dave's Lobster Roll", "price": "$20", "desc": "Fresh-picked Maine lobster, light mayo, piled into a buttered New England roll. Served cold; hot with butter for $2 more.", "tag": "$18 THURSDAYS · MEAL DEAL +$10 (cup soup, side & whoopie pie)" },
+    { "name": "Tourists Revenge", "price": "$37", "star": true, "flag": "★ The Big One · 7 oz", "desc": "7 oz of fresh lobster meat piled high, served cold. Available hot with butter for $2 more.", "tag": "REAL MAINE LOBSTER" }
+  ],
+  "eats": {
+    "id": "eats",
+    "kicker": "Exit 123 · Full Belly Next Right",
+    "title": "The Eats",
+    "blurb": "Comfort food with a Route 1 sense of humor. Fresh, never frozen — picked daily.",
+    "groups": [
+      {
+        "name": "Slow Ya Roll", "type": "items",
+        "items": [
+          { "name": "Soup of the Day", "price": "Cup $8 · Bowl $12", "desc": "Clam chowder or shrimp & corn chowder." },
+          { "name": "Soft Pretzel Sticks", "price": "$9", "desc": "Warm, salty & dangerously good." },
+          { "name": "French Onion Dip & Chips", "price": "$9", "desc": "Because veggies are overrated." },
+          { "name": "Chicken Tenders", "price": "$15", "desc": "Buffalo, BBQ, blue cheese or ranch on the side." },
+          { "name": "Pigs in a Blanket", "price": "$14", "desc": "Party food. Grown-up magic." }
+        ]
+      },
+      {
+        "name": "Keep On Truckin'", "type": "items", "note": "Sandwiches, served with chips.",
+        "items": [
+          { "name": "Baxter BBQ Pulled Pork", "price": "$11", "desc": "Slow-roasted & slathered in house BBQ sauce." },
+          { "name": "Acadia Turkey Club", "price": "$11", "desc": "Turkey, cheese, lettuce, tomato, bacon, mayo." },
+          { "name": "Portland Pesto Caprese", "price": "$11", "desc": "Fresh mozz, tomato, lettuce, pesto & balsamic glaze." },
+          { "name": "Caribou Chicken Salad Wrap", "price": "$11", "desc": "Cranberry-walnut chicken salad & lettuce." },
+          { "name": "Berwick Classic Burger", "price": "$12", "desc": "6 oz Maine beef. Simple. Classic. Delicious." },
+          { "name": "Smoked Gouda Burger", "price": "$13", "desc": "Gouda, caramelized onions & a burger that means business." },
+          { "name": "Hot Dog", "price": "$5", "desc": "Ketchup, mustard, onion, relish, celery salt or sauerkraut." }
+        ]
+      },
+      {
+        "name": "🛣️ Detour", "type": "items",
+        "items": [
+          { "name": "Dave-Oux Gumbo", "price": "$18", "desc": "Where New Orleans took a wrong turn and ended up on Route 1. Andouille, chicken, secret spices & a little Maine magic. Add lobster +$8." }
+        ],
+        "subgroup": { "name": "🍓 Sweet Detour", "items": [ { "name": "Strawberry Shortcake Parfait", "price": "$6", "desc": "Layers of strawberries, cake, whipped cream & poor decision-making." } ] }
+      }
+    ]
+  },
+  "bar": {
+    "id": "bar",
+    "kicker": "It's in the name",
+    "title": "The Bar",
+    "blurb": "16 rotating taps, shot-and-beer combos, Maine THC beverages, wine & the cold stuff. Pull up a stool.",
+    "combos": {
+      "name": "Bad Decisions · Exit 123", "note": "Shot + beer combos · $9 unless noted",
+      "items": [
+        { "n": 1, "name": "Dave's Daily Affirmation", "desc": "Bud Light + Bailey's — \"if you're waiting for life to slow down, you'll miss happy hour.\"" },
+        { "n": 2, "name": "Ashley's Redneck Royalty", "desc": "PBR tall boy + Jack Daniel's — trailer-park confidence, unlimited." },
+        { "n": 3, "name": "Tabby's Taylor Made", "desc": "Modelo + house tequila — ends in karaoke and three new best friends." },
+        { "n": 4, "name": "Irish Goodbye", "desc": "Harp + Jameson — leave quietly, tip loudly." },
+        { "n": 5, "name": "Janelle's Swish · Nothing But Net", "desc": "Miller High Life + McGillicuddy — half court straight to bad decisions." },
+        { "n": 6, "name": "Mainahs' Mouthwash", "price": "$4", "desc": "Dr. McGillicuddy — minty fresh, the Maine way." },
+        { "n": 7, "name": "Blow-Out Beer", "price": "$5", "desc": "Ask your server what today's daily poison is." }
+      ]
+    },
+    "taps": {
+      "name": "Draft Highway · 16 Taps", "note": "Maine-leaning & always rotating — a current pour:",
+      "footnote": "Ask what's new this week — the list changes.",
+      "items": [
+        { "name": "Batson River Max IPA", "meta": "8.0 · ME" },
+        { "name": "Orono Tubular IPA", "meta": "6.1 · ME" },
+        { "name": "Orono Totally Tubular DIPA", "meta": "8.0 · ME" },
+        { "name": "Orange Bike GF Pilsner", "meta": "5.1 · ME" },
+        { "name": "Boothbay Botanist IPA", "meta": "7.0 · ME" },
+        { "name": "Bissell Bros Substance IPA", "meta": "6.6 · ME" },
+        { "name": "Allagash White", "meta": "5.2 · ME" },
+        { "name": "Stoneface IPA", "meta": "7.0 · NH" },
+        { "name": "Some Whoopie Pie Stout", "meta": "6.0 · ME" },
+        { "name": "Bissell Bros Cosmica DIPA", "meta": "8.1 · ME" },
+        { "name": "Geaghan Bros Irish Red", "meta": "5.5 · ME" },
+        { "name": "Definitive Camp Beer", "meta": "4.0 · ME" },
+        { "name": "Downeast Cider Original", "meta": "5.0 · MA" },
+        { "name": "Miller Lite", "meta": "4.2" },
+        { "name": "Guinness Stout", "meta": "4.2 · IE" }
+      ]
+    },
+    "groups": [
+      {
+        "name": "The Feast · Seltzers & THC", "type": "items",
+        "items": [
+          { "name": "Wild Maine Hard Seltzer", "price": "$9", "desc": "Blueberry, blood orange or black cherry · 5.0%" },
+          { "name": "Sun Cruiser Vodka Iced Tea", "price": "$10", "desc": "Classic, half & half, or peach lemonade." },
+          { "name": "Daisy THC Soda · 10mg", "price": "$10", "desc": "Strawberry lemonade, blueberry lemonade, watermelon lime or root beer." },
+          { "name": "Dr. Lovejoy Maine · 5mg THC / 5mg CBD", "price": "$10", "desc": "Strawberry lemonade." },
+          { "name": "Theory Wellness Hi-Five · 5mg THC", "price": "$10", "desc": "Peach mango or blueberry lemonade." },
+          { "name": "Bissell Buds · Berry / Citrus", "price": "$10", "desc": "Berry 10mg THC/5mg CBD · Citrus 5mg THC/5mg CBD." },
+          { "name": "Guinness 0.0", "price": "—", "desc": "Non-alcoholic. (Price: confirm with Dave.)" }
+        ]
+      },
+      {
+        "name": "Fancy People Section", "type": "items", "note": "Wine · $13 by the glass", "footnote": "Please drink responsibly.",
+        "items": [
+          { "name": "Red", "price": "$13", "desc": "Pinot Noir or Cabernet Sauvignon." },
+          { "name": "White", "price": "$13", "desc": "Chardonnay, Pinot Grigio, Sauvignon Blanc or Prosecco." },
+          { "name": "Rosé", "price": "$13", "desc": "White Zinfandel or Rosé." }
+        ]
+      }
+    ]
+  }
+}
