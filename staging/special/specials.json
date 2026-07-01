@@ -1,0 +1,32 @@
+{
+  "_note": "Refresh engine for Dave's monthly specials. Edit the active entry (or add a new one and set active), then run: node build-special.mjs. That regenerates special/index.html with matching SEO title, meta, Open Graph, and MenuItem/Offer schema. When Dave texts a photo of a new special, Chipper adds/edits the entry here and rebuilds — live in ~1 min.",
+  "active": "2026-07-lobsterpalooza",
+  "specials": [
+    {
+      "id": "2026-07-lobsterpalooza",
+      "flag": "July Special",
+      "title": "Lobsterpalooza",
+      "price": "$20",
+      "priceNumeric": "20.00",
+      "when": "All July long",
+      "blurb": "A whole month of lobster. Fresh-picked, never-frozen Maine lobster — Dave's favorite roll, celebrated all July for $20. Butter-fueled, bourbon-powered, lobster-loaded.",
+      "image": "https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/daves-lobster-roll.jpeg",
+      "imageAlt": "Lobsterpalooza — Dave's Maine Café July lobster special",
+      "seoKeywords": "Lobsterpalooza Kittery, July lobster special Maine, $20 lobster roll Kittery, Dave's Maine Cafe July special, Route 1 lobster Portsmouth",
+      "copySource": "PLACEHOLDER — real wording/details pending Dave's Facebook Lobsterpalooza post (FB is login-walled). Only the given facts ($20, July, lobster) are asserted; no invented inclusions or dates."
+    },
+    {
+      "id": "evergreen-thursday-roll",
+      "flag": "Every Thursday",
+      "title": "$18 Thursday Lobster Roll",
+      "price": "$18",
+      "priceNumeric": "18.00",
+      "when": "Every Thursday · all day, while it lasts",
+      "blurb": "Fresh-picked, never-frozen Maine lobster, lightly dressed and piled into a buttered New England roll. Hot & buttered or cold, Maine-style. One day a week, done right.",
+      "image": "https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/daves-lobster-roll.jpeg",
+      "imageAlt": "$18 Thursday Lobster Roll at Dave's Maine Café",
+      "seoKeywords": "lobster roll special Kittery, Maine lobster roll deal, Dave's Maine Cafe special, Route 1 Kittery lunch",
+      "copySource": "verified — standing weekly special from Dave's menu"
+    }
+  ]
+}
