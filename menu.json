@@ -5,7 +5,7 @@
   },
   "addNote": "＋ Add coleslaw or potato salad to any meal — $1",
   "headliners": [
-    { "name": "Dave's Lobster Roll", "price": "$20", "desc": "Fresh-picked Maine lobster, light mayo, piled into a buttered New England roll. Served cold; hot with butter for $2 more.", "tag": "$18 THURSDAYS · MEAL DEAL +$10 (cup soup, side & whoopie pie)" },
+    { "name": "Dave's Lobster Roll", "price": "$20", "desc": "Fresh-picked Maine lobster, light mayo, piled into a buttered New England roll. Served cold; hot with butter for $2 more.", "tag": "MEAL DEAL +$10 (cup soup, side & whoopie pie)" },
     { "name": "Tourists Revenge", "price": "$37", "star": true, "flag": "★ The Big One · 7 oz", "desc": "7 oz of fresh lobster meat piled high, served cold. Available hot with butter for $2 more.", "tag": "REAL MAINE LOBSTER" }
   ],
   "eats": {
