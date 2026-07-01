@@ -52,6 +52,9 @@ const combos = bar.combos.items
 const taps = bar.taps.items
   .map((t) => `          <div class="tap"><span class="nm">${e(t.name)}</span><span class="meta">${e(t.meta)}</span></div>`)
   .join("\n");
+const bourbonsBlock = bar.bourbons
+  ? `\n\n    <div class="exit-cat" style="margin-top:30px">\n        <h3>${e(bar.bourbons.name)}</h3>\n        <p class="note">${e(bar.bourbons.note)}</p>\n        <div class="taps" style="columns:3">\n${bar.bourbons.list.map((n) => `          <div class="tap"><span class="nm">${e(n)}</span></div>`).join("\n")}\n        </div>\n        <p class="note" style="margin-top:12px">${e(bar.bourbons.footnote)}</p>\n    </div>`
+  : "";
 const barSection = `<section class="menu-band" id="bar" style="border-top:0">
   <div class="wrap">
     <div class="sec-head">
@@ -79,7 +82,7 @@ ${taps}
 
     <div class="exit-cols" style="grid-template-columns:1.15fr .85fr;margin-top:26px">
 ${bar.groups.map(itemsGroup).join("\n")}
-    </div>
+    </div>${bourbonsBlock}
   </div>
 </section>`;
 

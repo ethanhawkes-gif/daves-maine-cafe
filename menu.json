@@ -49,7 +49,7 @@
     "id": "bar",
     "kicker": "It's in the name",
     "title": "The Bar",
-    "blurb": "16 rotating taps, shot-and-beer combos, Maine THC beverages, wine & the cold stuff. Pull up a stool.",
+    "blurb": "16 rotating taps, one of the Seacoast's deepest bourbon lists, shot-and-beer combos, Maine THC beverages & wine. Pull up a stool.",
     "combos": {
       "name": "Bad Decisions · Exit 123", "note": "Shot + beer combos · $9 unless noted",
       "items": [
@@ -81,6 +81,14 @@
         { "name": "Downeast Cider Original", "meta": "5.0 · MA" },
         { "name": "Miller Lite", "meta": "4.2" },
         { "name": "Guinness Stout", "meta": "4.2 · IE" }
+      ]
+    },
+    "bourbons": {
+      "name": "70+ Bourbons & Whiskey",
+      "note": "One of the Seacoast's deepest lists — poured neat, on the rocks, or as a flight (any 4, $20). Friday: all pours $9.",
+      "footnote": "List rotates — ask your bartender what's pouring this week. (Confirm current pour pricing with Dave.)",
+      "list": [
+        "Rebel Cask Strength Single Barrel", "Longford Reserve Straight Bourbon", "Cynthia Crossing Single Barrel Canadian", "Dickel Tennessee Sour Mash", "Maker's Mark 46 French Oaked", "Wild Turkey Rare Breed", "Wyoming Whiskey", "Elijah Craig Kentucky Straight", "Ashley Gray 10 Year Single Malt Scotch", "Russell's Reserve Kentucky Straight", "Bulleit Bourbon Kentucky Straight", "Four Roses Small Batch", "Powers Gold Label Irish Whiskey", "Breckenridge Bourbon", "Monkey Shoulder Blended Malt Scotch", "Stranahan's Whiskey", "Lux Row Distillers Double Single Barrel", "Wiggly Bridge Small Batch Bourbon", "Clyde May's Straight Bourbon", "Larceny Kentucky Straight", "Jefferson's Straight Bourbon", "The Glenlivet Single Malt Scotch", "New England Barrel Company", "Basil Hayden Toast", "Colonel E.H. Taylor Straight Rye", "Stellum Bourbon", "Tyrconnell Single Malt Irish", "Buffalo Trace Kentucky Straight", "Eagle Rare 10 Year Straight", "Blanton's Kentucky Straight", "Jameson Irish Whiskey", "Putnam Rye Whiskey", "Penelope Blend", "Boondocks Barrel Strength", "Weller Wheated Bourbon", "Journeyman Distillery Bourbon", "Redemption High Rye Single Barrel", "Traveller Blended Whiskey", "Old Ezra Kentucky Straight", "Bulleit 95 Rye", "Split Rock Distilling Organic Bourbon", "Wild Turkey Aged 8 Years", "Yellowstone Single Barrel", "1792 Full Proof Kentucky Straight", "Old Fitzgerald Bottled in Bond", "Fifth Stone Single Malt", "Jameson Black Barrel", "Jack Daniel's", "Jim Beam", "Maker's Mark", "Crown Royal", "Dingle Single Malt Irish", "Green Spot Single Pot Still Irish", "Redbreast 12 Year Irish", "Ben Holladay Bottled in Bond"
       ]
     },
     "groups": [
