@@ -86,7 +86,8 @@ ${bar.groups.map(itemsGroup).join("\n")}
 function replaceRegion(src, startTag, endTag, replacement) {
   const re = new RegExp(`(${startTag}[^]*?-->)[\\s\\S]*?(${endTag})`);
   if (!re.test(src)) { console.error(`Marker not found: ${startTag}`); process.exit(1); }
-  return src.replace(re, `$1\n${replacement}\n$2`);
+  // Function replacer so literal $ in prices ($12, $18) is never treated as a capture-group ref.
+  return src.replace(re, (_m, g1, g2) => `${g1}\n${replacement}\n${g2}`);
 }
 
 html = replaceRegion(html, "<!-- MENU:EATS:START", "<!-- MENU:EATS:END -->", eatsSection);
