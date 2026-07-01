@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dave's Maine Cafe — Lobster Rolls &amp; Craft Beer | Kittery, ME</title>
+<meta name="description" content="Kittery's best Maine lobster rolls, the burger everyone talks about, rotating craft taps &amp; 70+ bourbons. Family-run on Route 1. Order online or visit." />
+<meta name="theme-color" content="#0d2436" />
+<link rel="canonical" href="https://davesmainecafe.com/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%A6%9E%3C/text%3E%3C/svg%3E" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Dave's Maine Cafe — Kittery's Best Lobster Rolls, Craft Beer & Bourbon" />
+<meta property="og:description" content="Never-frozen Maine lobster rolls, the burger everyone talks about, rotating craft taps and 70+ bourbons. Family-run, on Route 1 in Kittery." />
+<meta property="og:url" content="https://davesmainecafe.com/" />
+<meta property="og:image" content="https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/daves-lobster-roll.jpeg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- LocalBusiness / Restaurant structured data — the heavy lever for Google ranking recovery.
+     NOTE for Dave: confirm hours + the aggregateRating (currently Google 4.5 / Yelp 80+ reviews); everything else verified. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Dave's Maine Cafe",
+  "alternateName": "Maine Beer Cafe",
+  "image": "https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/daves-lobster-roll.jpeg",
+  "@id": "https://davesmainecafe.com",
+  "url": "https://davesmainecafe.com",
+  "telephone": "+1-207-475-5655",
+  "email": "dave@mainebeercafe.com",
+  "priceRange": "$$",
+  "servesCuisine": ["Seafood", "American", "Comfort Food", "Lobster Rolls"],
+  "menu": "https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3",
+  "acceptsReservations": "False",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "80", "bestRating": "5" },
+  "sameAs": [
+    "https://www.instagram.com/davesmainecafe/",
+    "https://www.facebook.com/davesmainecafe/",
+    "https://www.threads.com/@davesmainecafe",
+    "https://www.yelp.com/biz/dave-s-maine-cafe-kittery"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "439 US Route 1, Ste 1",
+    "addressLocality": "Kittery",
+    "addressRegion": "ME",
+    "postalCode": "03904",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.1019, "longitude": -70.7378 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "11:30", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "11:30", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:30", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:30", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:30", "closes": "17:00" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0d2436; --navy-2:#13344d; --cream:#f6efe0; --cream-2:#efe6d2;
+    --lobster:#e1502a; --gold:#e9b949; --rope:#caa86a; --ink:#1a1a1a;
+    --maxw:1140px;
+    --navh:68px;          /* nav content height; +2px border = 70px total bar */
+    --shadow:0 10px 40px rgba(13,36,54,.16);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--navh) + 10px)}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:Oswald,Impact,sans-serif;font-weight:700;letter-spacing:.5px;line-height:1.05;text-transform:uppercase;margin:0}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--lobster);color:#fff;text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:14px 26px;border-radius:6px;transition:transform .15s ease,background .15s ease;cursor:pointer;border:0}
+  .btn:hover{background:#c8421f;transform:translateY(-2px)}
+  .btn.gold{background:var(--gold);color:var(--navy)}
+  .btn.gold:hover{background:#dcab35}
+  .btn.ghost{background:transparent;border:2px solid #fff;color:#fff;padding:12px 24px}
+  .btn.ghost:hover{background:#fff;color:var(--navy)}
+  .btn.dark{background:var(--navy)}
+  .btn.dark:hover{background:var(--navy-2)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:2px solid var(--lobster);box-shadow:0 6px 18px rgba(0,0,0,.22)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:var(--navh)}
+  .brand{font-family:Oswald,sans-serif;font-weight:700;color:#fff;font-size:21px;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:24px;align-items:center}
+  .nav-links a{color:var(--cream);text-decoration:none;font-weight:500;font-size:15px}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .menu-toggle{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center;border-radius:8px}
+
+  /* Hero */
+  .hero{position:relative;background:
+        radial-gradient(circle at 72% 18%, rgba(225,80,42,.30) 0, transparent 42%),
+        radial-gradient(circle at 12% 90%, rgba(233,185,73,.20) 0, transparent 40%),
+        var(--navy);
+        color:#fff;overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:74px;padding-bottom:84px}
+  .eyebrow{font-family:Oswald,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;font-size:14px;margin-bottom:14px}
+  .hero h1{font-size:clamp(40px,6vw,74px);color:#fff}
+  .hero h1 em{font-style:normal;color:var(--lobster)}
+  .hero p.lead{font-size:19px;color:var(--cream-2);max-width:32ch;margin:18px 0 28px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-card{background:var(--cream);color:var(--navy);border-radius:14px;padding:26px;box-shadow:var(--shadow);transform:rotate(-1.4deg)}
+  .hero-card .badge{display:inline-block;background:var(--lobster);color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:12px;padding:5px 12px;border-radius:40px;margin-bottom:12px}
+  .hero-card h3{font-size:30px;color:var(--navy)}
+  .hero-card .price{font-size:46px;font-family:Oswald,sans-serif;color:var(--lobster);font-weight:700;line-height:1}
+  .hero-card small{display:block;color:#5a5a5a;margin-top:8px;text-transform:none;font-family:Inter,sans-serif}
+
+  /* Lobster mascot */
+  .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none;z-index:0}
+  .hero .wrap{position:relative;z-index:1}
+  .mascot-col{position:relative;display:flex;flex-direction:column;align-items:center;gap:0;min-height:520px;justify-content:center}
+  .mascot-bubble{font-family:Oswald,sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:8px 22px;border-radius:40px;position:absolute;top:30px;left:calc(50% - 188px);z-index:3;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.22);transform:rotate(-8deg)}
+  .mascot-bubble::after{content:'';position:absolute;bottom:-9px;right:18px;transform:rotate(20deg);border:8px solid transparent;border-top-color:var(--gold);border-bottom:0}
+  .mascot-ring{position:relative;width:min(100%,520px);aspect-ratio:1/1;border-radius:50%;background:repeating-conic-gradient(from -10deg, rgba(233,185,73,.22) 0 10deg, rgba(246,239,224,.96) 10deg 20deg);border:5px solid rgba(233,185,73,.6);display:flex;align-items:center;justify-content:center;box-shadow:0 28px 70px rgba(0,0,0,.22);transform:rotate(-2deg);flex-shrink:0}
+  .mascot-ring::after{content:'Route 1';position:absolute;right:12px;top:54px;width:104px;height:104px;border-radius:999px;background:var(--lobster);border:3px solid #fff;display:grid;place-items:center;text-align:center;color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:22px;line-height:1;box-shadow:0 14px 32px rgba(0,0,0,.24);transform:rotate(9deg)}
+  .mascot-img{position:absolute;left:50%;bottom:8px;width:min(96%,500px);max-width:none;object-fit:contain;transform:translateX(-50%) rotate(2deg);filter:drop-shadow(0 18px 18px rgba(0,0,0,.22));z-index:2}
+  .mascot-col .hero-card{position:relative;z-index:3;max-width:360px;align-self:flex-start;margin-left:22px}
+
+  .rope{height:8px;background:repeating-linear-gradient(45deg,var(--rope) 0 12px,#b8965a 12px 24px)}
+  .mascot-strip{background:var(--cream);border-bottom:1px solid rgba(13,36,54,.12)}
+  .mascot-strip-in{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px 0}
+  .mascot-callout{display:flex;align-items:center;gap:16px;color:var(--navy)}
+  .mascot-callout img{width:78px;height:78px;object-fit:contain;filter:drop-shadow(0 8px 9px rgba(13,36,54,.16))}
+  .mascot-callout b{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:24px;line-height:1;color:var(--lobster)}
+  .mascot-callout span{display:block;color:#4a4a4a;margin-top:3px}
+
+  /* Trust strip */
+  .trust-strip{background:var(--navy-2);color:#fff}
+  .trust-in{display:flex;justify-content:space-around;flex-wrap:wrap;gap:18px;padding:22px 0}
+  .ts{text-align:center;min-width:120px}
+  .ts b{display:block;font-family:Oswald,sans-serif;font-size:26px;color:var(--gold);line-height:1}
+  .ts span{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--cream-2)}
+
+  /* Section base */
+  section{padding:72px 0}
+  .sec-head{text-align:center;max-width:760px;margin:0 auto 44px}
+  .sec-head .eyebrow{color:var(--lobster)}
+  .sec-head h2{font-size:clamp(30px,4.4vw,46px);color:var(--navy)}
+  .sec-head p{color:#4a4a4a;font-size:17px;margin-top:12px}
+
+  /* Signature */
+  .signature{background:var(--cream-2)}
+  .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .signature h2{font-size:clamp(30px,4.4vw,48px);color:var(--navy)}
+  .sig-two{grid-template-columns:1fr 1fr;gap:18px;max-width:720px;margin:0 auto}
+  .opt{flex:1;min-width:150px;background:#fff;border-radius:12px;padding:20px 22px;border-left:4px solid var(--lobster)}
+  .opt strong{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;color:var(--navy);letter-spacing:.5px}
+
+  /* Menu grid */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(13,36,54,.08);display:flex;flex-direction:column}
+  .card .thumb{width:100%;height:185px;object-fit:cover;display:block}
+  .card .card-body{padding:22px 24px 26px}
+  .card h3{color:var(--navy);font-size:21px;margin-bottom:8px}
+  .card p{color:#555;font-size:15px;margin:0}
+  .menu-note{text-align:center;margin-top:38px}
+
+  /* Beer band */
+  .beer{background:var(--navy);color:#fff}
+  .beer .sec-head h2{color:#fff}
+  .beer .sec-head p{color:var(--cream-2)}
+  .beer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .beer-card{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden}
+  .beer-card .thumb{width:100%;height:200px;object-fit:cover;display:block}
+  .beer-card .bc-body{padding:22px 24px 24px}
+  .beer-card h3{color:var(--gold);font-size:20px;margin-bottom:8px}
+  .beer-card p{color:var(--cream-2);font-size:15px;margin:0}
+
+  /* What's On */
+  .whatson{background:var(--cream)}
+  .events-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .event{background:#fff;border-radius:16px;padding:30px 30px 32px;box-shadow:var(--shadow);border-top:5px solid var(--gold)}
+  .event .day{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;color:var(--lobster);font-weight:600;font-size:14px}
+  .event h3{color:var(--navy);font-size:26px;margin:6px 0 12px}
+  .event p{color:#4a4a4a;margin:0;font-size:16px}
+  .event .pricetag{display:inline-block;background:var(--navy);color:var(--gold);font-family:Oswald,sans-serif;letter-spacing:.5px;padding:7px 15px;border-radius:40px;font-size:14px;margin-top:16px}
+  .full-menu-section{position:relative;overflow:hidden}
+  .full-menu-section::before{content:"";position:absolute;right:-72px;top:14px;width:min(34vw,360px);aspect-ratio:1/1;background:url("/assets/daves-lobster-mascot.webp") center/contain no-repeat;opacity:.13;filter:saturate(1.08);pointer-events:none}
+  .full-menu-section>.wrap{position:relative;z-index:1}
+
+  /* About Dave */
+  .about{background:var(--cream-2)}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:center}
+  .dave-photo{border-radius:16px;aspect-ratio:1/1;box-shadow:var(--shadow);object-fit:cover;width:100%}
+  .about h2{color:var(--navy);font-size:clamp(30px,4.4vw,46px)}
+  .about p{font-size:17px;color:#3a3a3a;margin:16px 0}
+  .promise{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 26px}
+  .promise .p{background:#fff;border-radius:40px;padding:9px 18px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--navy);border:1px solid #e0d4b6}
+  .promise .p span{color:var(--lobster)}
+
+  /* Social — Live from the Cafe */
+  .social{background:#fff}
+  .social .sec-head .eyebrow{color:var(--lobster)}
+  .handle{font-family:Oswald,sans-serif;color:var(--navy);font-size:18px;letter-spacing:.5px}
+  .social-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:6px 0 8px}
+  .igbtn{display:inline-flex;align-items:center;gap:8px;border-radius:8px;padding:11px 20px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:14px;color:#fff;text-decoration:none;transition:transform .15s}
+  .igbtn:hover{transform:translateY(-2px)}
+  .igbtn.ig{background:linear-gradient(45deg,#f09433,#e6683c 30%,#dc2743 50%,#cc2366 75%,#bc1888)}
+  .igbtn.fb{background:#1877f2}
+  .igbtn.th{background:#000}
+  .ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:34px}
+  .ig-tile{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:8px;display:block}
+  .ig-tile img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  .ig-tile:hover img{transform:scale(1.08)}
+  .ig-tile::after{content:"";position:absolute;inset:0;background:rgba(13,36,54,0);transition:background .2s}
+  .ig-tile:hover::after{background:rgba(13,36,54,.18)}
+  .feed-note{text-align:center;margin-top:26px;font-size:14px;color:#8a8170}
+
+  /* Reviews */
+  .reviews{background:var(--navy);color:#fff}
+  .reviews .sec-head h2{color:#fff}
+  .reviews .sec-head .eyebrow{color:var(--gold)}
+  .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .quote{background:var(--navy-2);border-radius:14px;padding:28px;border-left:4px solid var(--gold)}
+  .quote .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:12px}
+  .quote p{font-size:18px;line-height:1.5;color:#fff;margin:0;font-style:italic}
+  .quote cite{display:block;color:var(--cream-2);font-style:normal;font-size:14px;margin-top:12px}
+  .rev-cta{text-align:center;margin-top:38px}
+
+  /* Join the list */
+  .signup{background:linear-gradient(160deg,var(--gold),#dca52d);color:var(--navy)}
+  .signup-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .signup h2{color:var(--navy);font-size:clamp(30px,4.4vw,46px)}
+  .signup p{font-size:17px;color:#3a2f12;margin:14px 0 0}
+  .signup form{display:flex;flex-direction:column;gap:12px;background:#fff;padding:26px;border-radius:14px;box-shadow:var(--shadow)}
+  .signup .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .field-note{font-size:12.5px;color:#7a7263;margin-top:2px}
+
+  /* Forms */
+  input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid #e2dcc9;border-radius:7px;font-family:Inter,sans-serif;font-size:15px;color:var(--ink);background:#fff}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lobster)}
+  textarea{min-height:96px;resize:vertical}
+  label.lbl{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.5px;font-size:12px;color:var(--navy);margin-bottom:5px}
+
+  /* Catering */
+  .catering{background:var(--cream-2)}
+  .cat-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}
+  .cat-grid h2{color:var(--navy);font-size:clamp(30px,4.4vw,44px)}
+  .cat-grid p{font-size:17px;color:#3a3a3a;margin:14px 0}
+  .cat-list{list-style:none;padding:0;margin:18px 0}
+  .cat-list li{padding:8px 0 8px 28px;position:relative;font-size:16px;color:#3a3a3a}
+  .cat-list li::before{content:"🦞";position:absolute;left:0;top:7px;font-size:15px}
+  .cat-form{background:#fff;border-radius:14px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:13px}
+  .cat-form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .hours-list{list-style:none;margin:0;padding:0}
+  .hours-list li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed #cdbf9d;font-size:16px}
+  .hours-list li.closed{color:#9a9a9a}
+  .hours-list b{font-family:Oswald,sans-serif;letter-spacing:.5px;color:var(--navy)}
+  .info-line{display:flex;gap:12px;align-items:flex-start;margin:14px 0;font-size:16px}
+  .info-line .ic{color:var(--lobster);font-size:20px;line-height:1.2}
+  .map-card{position:relative;display:flex;align-items:flex-end;min-height:320px;border-radius:14px;box-shadow:var(--shadow);overflow:hidden;text-decoration:none;background:
+    linear-gradient(135deg,rgba(13,36,54,.88),rgba(19,52,77,.80)),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.10) 0 1px,transparent 1px 42px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.08) 0 1px,transparent 1px 42px),
+    var(--navy)}
+  .map-card::before{content:"";position:absolute;left:50%;top:50%;width:88px;height:88px;border-radius:999px;background:var(--lobster);border:5px solid #fff;box-shadow:0 16px 36px rgba(0,0,0,.28);transform:translate(-50%,-50%)}
+  .map-card::after{content:"";position:absolute;left:50%;top:50%;width:26px;height:26px;border-radius:999px;background:var(--gold);transform:translate(-50%,-50%)}
+  .map-card-in{position:relative;z-index:1;width:100%;padding:26px;background:linear-gradient(180deg,transparent,rgba(13,36,54,.82));color:#fff}
+  .map-card-in h3{font-size:28px;color:#fff;margin-bottom:8px}
+  .map-card-in p{margin:0;color:var(--cream-2)}
+  .map-card-in span{display:inline-block;margin-top:14px;color:var(--gold);font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+
+  /* Final CTA */
+  .final{background:linear-gradient(180deg,var(--lobster),#c8421f);color:#fff;text-align:center}
+  .final h2{font-size:clamp(32px,5vw,52px);color:#fff}
+  .final p{font-size:18px;max-width:46ch;margin:14px auto 26px;color:#fff5ef}
+  .final-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--navy);color:var(--cream-2);padding:46px 0 30px;font-size:15px}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  footer a{color:var(--gold);text-decoration:none}
+  .foot-bottom{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);opacity:.7;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  @media(max-width:860px){
+    .nav-links{display:none}
+    .events-grid,.rev-grid,.sig-two,.signup-grid,.cat-grid{grid-template-columns:1fr}
+    .nav-links.open{display:flex;position:absolute;top:calc(var(--navh) + 2px);left:0;right:0;background:var(--navy);flex-direction:column;padding:18px 22px;gap:16px;border-bottom:2px solid var(--lobster)}
+    .menu-toggle{display:flex}
+    .hero-inner,.sig-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
+    .hero-card{transform:none;margin-top:8px}
+    .mascot-col{min-height:430px;order:-1}
+    .mascot-ring{width:min(100%,390px)}
+    .mascot-bubble{left:calc(50% - 142px);top:18px}
+    .mascot-ring::after{right:-2px;top:34px;width:88px;height:88px;font-size:18px}
+    .mascot-img{width:88%;bottom:10px}
+    .mascot-col .hero-card{align-self:center;margin-left:0;max-width:330px}
+    .menu-grid,.beer-grid{grid-template-columns:1fr 1fr}
+    .ig-grid{grid-template-columns:repeat(3,1fr)}
+    .mascot-strip-in{align-items:flex-start}
+  }
+  @media(max-width:560px){
+    .menu-grid,.beer-grid{grid-template-columns:1fr}
+    .signup .row,.cat-form .row{grid-template-columns:1fr}
+    .nav-cta .btn:not(.order){display:none}
+    .hero-inner{padding-top:42px;padding-bottom:58px}
+    .mascot-col{min-height:360px}
+    .mascot-ring{width:min(100%,330px)}
+    .mascot-bubble{font-size:14px;top:12px;left:calc(50% - 122px);padding:7px 16px}
+    .mascot-ring::after{width:72px;height:72px;font-size:14px}
+    .mascot-img{width:84%;bottom:12px}
+    .mascot-col .hero-card{max-width:280px;padding:20px}
+    .mascot-strip-in{display:block;text-align:left}
+    .mascot-callout{align-items:center}
+    .mascot-callout img{width:62px;height:62px}
+    .mascot-callout b{font-size:20px}
+    .mascot-strip .btn{margin-top:14px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Dave's Maine <span>Cafe</span></a>
+    <nav class="nav-links" id="navlinks" onclick="this.classList.remove('open')">
+      <a href="#lobster">Lobster Roll</a>
+      <a href="#menu">Menu</a>
+      <a href="#beer">Beer &amp; Bourbon</a>
+      <a href="#whatson">What's On</a>
+      <a href="#dave">Our Story</a>
+      <a href="#social">Follow</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn order" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=order_online" target="_blank" rel="noopener" data-track="toast-order">Order Online</a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero" style="padding:0">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Route 1 · Kittery, Maine · 11th Season</div>
+      <h1>Real Maine <em>Lobster Rolls.</em> Cold Beer. No Fuss.</h1>
+      <p class="lead">Home of Kittery's best lobster rolls — wicked good comfort food, rotating craft taps, and 70+ bourbons. A lobster shack with a beer-café soul, minutes from Portsmouth.</p>
+      <div class="hero-cta">
+        <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=order_online" target="_blank" rel="noopener" data-track="toast-order">Order Online</a>
+        <a class="btn ghost" href="#visit">Find Us</a>
+      </div>
+    </div>
+    <div class="mascot-col">
+      <div class="mascot-bubble">Wicked Fresh.</div>
+      <div class="mascot-ring">
+        <img class="mascot-img" src="/assets/daves-lobster-mascot.webp" alt="Dave's lobster mascot giving a thumbs-up on a scooter" loading="eager" />
+      </div>
+      <div class="hero-card" style="margin-top:-14px;width:100%">
+        <span class="badge">Every Thursday</span>
+        <h3>$18 Lobster Roll</h3>
+        <small>Fresh-picked, never frozen. Hot with butter or cold, Maine-style — only on Thursdays.</small>
+      </div>
+    </div>
+  </div>
+  <div class="rope"></div>
+</section>
+
+<div class="mascot-strip">
+  <div class="wrap mascot-strip-in">
+    <div class="mascot-callout">
+      <img src="/assets/daves-lobster-mascot.webp" alt="" loading="lazy" />
+      <div>
+        <b>Never saw this roll comin'</b>
+        <span>Fresh lobster, cold taps, Route 1 energy.</span>
+      </div>
+    </div>
+    <a class="btn dark" href="#full-menu">See the Menu</a>
+  </div>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="wrap trust-in">
+    <div class="ts"><b>★ 4.5</b><span>Google Rating</span></div>
+    <div class="ts"><b>80+</b><span>Yelp Reviews</span></div>
+    <div class="ts"><b>2,500+</b><span>On Instagram</span></div>
+    <div class="ts"><b>11th Season</b><span>Family-run on Route 1</span></div>
+  </div>
+</div>
+
+<!-- SIGNATURE -->
+<section class="signature" id="lobster">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--lobster)">Every Thursday · while it lasts</div>
+      <h2>The $18 Thursday Lobster Roll</h2>
+      <p>Fresh, never-frozen Maine lobster, lightly dressed and piled into a buttered, toasted bun. No filler, no shortcuts — just the way it should be done up here. One day a week, done right.</p>
+    </div>
+    <div class="sig-grid sig-two">
+      <div class="opt"><strong>Hot &amp; Buttered</strong>Warm lobster, drawn butter, toasted roll.</div>
+      <div class="opt"><strong>Cold, Maine-Style</strong>Chilled lobster, a touch of mayo, lemon.</div>
+    </div>
+    <div class="menu-note"><a class="btn" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=order_pickup" target="_blank" rel="noopener" data-track="toast-order">Order for Pickup</a></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Comfort food, done right</div>
+      <h2>More Than Lobster</h2>
+      <p>Bold comfort food and fresh seafood — the burger folks rave about, house gumbo, chowder, loaded dogs, and a little Maine sweetness to finish.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="card"><img class="thumb" src="/assets/photos/CAC6455E-C433-4F83-810E-C193AFE604E4-876a51e.webp" alt="Bacon and blue cheese burger on a pretzel bun" loading="lazy"><div class="card-body"><h3>The Burger Everyone Talks About</h3><p>A juicy seared patty, crisp bacon, and melty cheese stacked on a toasted pretzel bun. The one reviewers keep coming back for.</p></div></div>
+      <div class="card"><img class="thumb" src="/assets/photos/D88CFC32-389F-4A5B-BDB1-4A3D8D15D6DB-d0b7216-1024x683.webp" alt="New England clam chowder with oyster crackers" loading="lazy"><div class="card-body"><h3>House Gumbo &amp; Chowder</h3><p>Dave's house gumbo and a thick, creamy New England clam chowder — comfort in a bowl, the way the coast intended.</p></div></div>
+      <div class="card"><img class="thumb" src="/assets/photos/508BAAFB-424A-4A40-865F-D3C36C7A1DB4.JPG_1682373921.jpeg" alt="Grilled chicken wrap with lettuce, tomato and pickles" loading="lazy"><div class="card-body"><h3>Something for Everyone</h3><p>Wraps and rolls — stacked tall and served with chips, plus rotating comfort specials.</p></div></div>
+      <div class="card"><img class="thumb" src="/assets/photos/Whoopie.JPG_1682373917-1024x1024.jpeg" alt="Maine whoopie pies" loading="lazy"><div class="card-body"><h3>Maine Whoopie Pies</h3><p>The official state treat — soft chocolate cake, sweet cream filling. Save room.</p></div></div>
+      <div class="card"><img class="thumb" src="/assets/photos/Catering-Event-1-b8d4f4c-1024x1019.webp" alt="Fresh vegetable and hummus catering platter" loading="lazy"><div class="card-body"><h3>Catering &amp; Events</h3><p>Fresh platters and party trays for your next gathering. <a href="#catering" style="color:var(--lobster);font-weight:600">Get a catering quote →</a></p></div></div>
+    </div>
+    <div class="menu-note"><a class="btn gold" href="#full-menu">See the Full Menu</a></div>
+  </div>
+</section>
+
+<!-- FULL MENU -->
+<section id="full-menu" class="full-menu-section" style="background:var(--navy);color:#f6efe0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">Route 1 · Never saw this roll comin'</div>
+      <h2 style="color:#fff">The Menu</h2>
+      <p style="color:rgba(246,239,224,.8)">Butter-fueled, bourbon-powered, lobster-loaded. Fresh, never frozen — picked daily.</p>
+    </div>
+
+    <style>
+      .fm-feature{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:34px}
+      .fm-hero{background:rgba(255,255,255,.05);border:1px solid rgba(233,185,73,.35);border-radius:10px;padding:24px 26px}
+      .fm-hero .fm-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+      .fm-hero h3{font-family:Oswald,sans-serif;font-size:1.5rem;color:var(--gold);margin:0;text-transform:uppercase;letter-spacing:.02em}
+      .fm-hero .price{font-family:Oswald,sans-serif;font-size:1.5rem;color:#fff;white-space:nowrap}
+      .fm-hero p{color:rgba(246,239,224,.82);margin:8px 0 0;font-size:.96rem}
+      .fm-hero .tag{margin-top:12px;font-size:.82rem;color:var(--gold);font-weight:600;letter-spacing:.04em}
+      .fm-hero.star{border-color:var(--lobster);border-width:2px;box-shadow:0 10px 30px rgba(225,80,42,.22),0 0 0 1px rgba(225,80,42,.4)}
+      .fm-hero.star h3{color:#fff}
+      .star-flag{display:inline-block;background:var(--lobster);color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;padding:4px 13px;border-radius:999px;margin-bottom:12px}
+      .fm-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+      .fm-cat h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--lobster);font-size:1.05rem;border-bottom:2px solid rgba(225,80,42,.5);padding-bottom:8px;margin:0 0 14px}
+      .fm-cat .note{font-size:.8rem;color:rgba(246,239,224,.6);margin:-8px 0 14px;font-style:italic}
+      .fm-item{margin-bottom:14px}
+      .fm-line{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+      .fm-line .nm{font-weight:600;color:#fff}
+      .fm-line .pr{font-family:Oswald,sans-serif;color:var(--gold);white-space:nowrap}
+      .fm-item .desc{font-size:.86rem;color:rgba(246,239,224,.7);margin-top:2px}
+      .fm-addons{font-size:.86rem;color:rgba(246,239,224,.65);background:rgba(255,255,255,.04);border-radius:8px;padding:12px 16px;margin-top:24px;text-align:center}
+      .fm-foot{text-align:center;margin-top:30px;font-family:Oswald,sans-serif;letter-spacing:.05em;color:var(--gold);text-transform:uppercase;font-size:.9rem}
+      @media(max-width:820px){.fm-cols{grid-template-columns:1fr;gap:26px}.fm-feature{grid-template-columns:1fr}}
+      @media(max-width:560px){
+        .fm-hero{padding:20px}
+        .fm-line .nm{font-size:.98rem}
+        .fm-line .pr{font-size:1rem}
+        .fm-item{margin-bottom:16px}
+        .fm-item .desc{font-size:.93rem;line-height:1.45}
+        .fm-bourbon-list .bn{font-size:.95rem;padding:7px 0}
+        .fm-cat h3{font-size:1.12rem}
+      }
+    </style>
+
+    <div class="fm-feature">
+      <div class="fm-hero">
+        <div class="fm-top"><h3>Dave's Lobster Roll</h3><span class="price">$20</span></div>
+        <p>Fresh-picked Maine lobster, lightly tossed in mayo on a buttered New England roll. Served cold; available hot with butter for $2 more.</p>
+        <div class="tag">$18 Thursdays · Meal deal +$10 (cup soup, side &amp; whoopie pie)</div>
+      </div>
+      <div class="fm-hero star">
+        <div class="star-flag">★ The Big One · 7 oz</div>
+        <div class="fm-top"><h3>Tourists Revenge</h3><span class="price">$37</span></div>
+        <p>7 oz of fresh lobster meat piled high, served cold. Available hot with butter for $2 more.</p>
+        <div class="tag">Real Maine lobster</div>
+      </div>
+    </div>
+
+    <div class="fm-cols">
+      <div class="fm-cat">
+        <h3>Smalls</h3>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Soup of the Day</span><span class="pr">Cup $8 · Bowl $12</span></div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Soft Pretzel Sticks</span><span class="pr">$9</span></div><div class="desc">Warm, salty &amp; dangerously good.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">French Onion Dip &amp; Chips</span><span class="pr">$9</span></div><div class="desc">Because veggies are overrated.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Chicken Tenders</span><span class="pr">$15</span></div><div class="desc">Buffalo, BBQ, blue cheese or ranch on the side.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Pigs in a Blanket</span><span class="pr">$14</span></div><div class="desc">Party food. Grown-up approved.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Jumbo Shrimp Cocktail</span><span class="pr">$1.50 ea</span></div><div class="desc">Chilled, peeled &amp; ready to enjoy.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Whoopie Pie</span><span class="pr">$4</span></div><div class="desc">The official state treat — happiness in chocolate.</div></div>
+      </div>
+
+      <div class="fm-cat">
+        <h3>Maine Favorites</h3>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Dave-Oux Gumbo</span><span class="pr">$18</span></div><div class="desc">Andouille, chicken, secret spices &amp; a little Maine magic. Add lobster +$8.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Shepherd's Pie</span><span class="pr">$15</span></div><div class="desc">Lamb, beef, peas, carrots &amp; creamy mashed potatoes, topped with cheddar.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Smoked Gouda Mac &amp; Cheese</span><span class="pr">$12</span></div><div class="desc">The way life should be. Add bacon +$4, pulled pork +$4, lobster +$8.</div></div>
+      </div>
+
+      <div class="fm-cat">
+        <h3>Sandwiches</h3>
+        <p class="note">Served with chips. Add slaw or potato salad for $1.</p>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Baxter BBQ Pulled Pork</span><span class="pr">$11</span></div><div class="desc">Slow-roasted &amp; slathered in house BBQ sauce.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Acadia Turkey Club</span><span class="pr">$11</span></div><div class="desc">Turkey, cheese, lettuce, tomato, bacon, mayo.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Portland Pesto Caprese</span><span class="pr">$11</span></div><div class="desc">Pesto, tomato, lettuce &amp; balsamic glaze.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Caribou Chicken Salad Wrap</span><span class="pr">$12</span></div><div class="desc">Cranberry-walnut chicken salad &amp; lettuce.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Hot Dog</span><span class="pr">$5</span></div><div class="desc">Comes with everything — ketchup, mustard, onions, relish, celery salt or sauerkraut.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Berwick Classic Burger</span><span class="pr">$12</span></div><div class="desc">6 oz Maine beef. Simple. Classic. Delicious.</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Smoked Gouda Burger</span><span class="pr">$13</span></div><div class="desc">Gouda, caramelized onions &amp; a burger that means business.</div></div>
+      </div>
+    </div>
+
+    <div class="fm-addons">Add coleslaw or potato salad to any meal — $1</div>
+    <div class="fm-foot">Good food. Good people. Maine made.</div>
+    <div class="menu-note"><a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=order_pickup" target="_blank" rel="noopener" data-track="toast-order">Order for Pickup</a> <a class="btn dark" href="#drinks-menu">See the Bar &amp; Bourbon List</a></div>
+  </div>
+</section>
+
+<!-- DRINKS MENU -->
+<section id="drinks-menu" class="full-menu-section" style="background:var(--navy);color:#f6efe0;border-top:1px solid rgba(233,185,73,.18)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">It's in the name</div>
+      <h2 style="color:#fff">The Bar</h2>
+      <p style="color:rgba(246,239,224,.8)">70+ bourbons, rotating craft taps, wine &amp; the cold stuff. Pull up a stool.</p>
+    </div>
+
+    <style>
+      .fm-bourbon-list{columns:3;column-gap:30px}
+      .fm-bourbon-list .bn{break-inside:avoid;display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(246,239,224,.08);font-size:.9rem}
+      .fm-bourbon-list .bn .no{font-family:Oswald,sans-serif;color:var(--gold);font-size:.8rem;min-width:22px;opacity:.85}
+      .fm-bourbon-list .bn .nm{color:#fff;font-weight:600}
+      @media(max-width:820px){.fm-bourbon-list{columns:1}.fm-cols[style]{grid-template-columns:1fr!important}}
+      @media(min-width:821px) and (max-width:1040px){.fm-bourbon-list{columns:2}}
+    </style>
+
+    <div class="fm-feature">
+      <div class="fm-hero">
+        <div class="fm-top"><h3>Bourbon Flights</h3><span class="price">$20</span></div>
+        <p>Choose any 4 (½ oz each). One of the deepest whiskey lists on the Seacoast — poured by the glass or as a flight.</p>
+        <div class="tag">Any pour neat or rocks $13 · Friday: all pours $9</div>
+      </div>
+      <div class="fm-hero">
+        <div class="fm-top"><h3>Craft Taps &amp; Cans</h3><span class="price">Ask</span></div>
+        <p>Maine-leaning and always changing — Orono, Mast Landing &amp; friends. Drink in, or take a four-pack home.</p>
+        <div class="tag">Rotating selection · Cans to go</div>
+      </div>
+    </div>
+
+    <div class="fm-cat" style="margin-bottom:34px">
+      <h3>The Bourbon &amp; Whiskey List</h3>
+      <div class="fm-bourbon-list">
+        <div class="bn"><span class="no">1</span><span class="nm">Rebel Cask Strength Single Barrel</span></div>
+        <div class="bn"><span class="no">2</span><span class="nm">Longford Reserve Straight Bourbon</span></div>
+        <div class="bn"><span class="no">3</span><span class="nm">Cynthia Crossing Single Barrel Canadian</span></div>
+        <div class="bn"><span class="no">4</span><span class="nm">Dickel Tennessee Sour Mash</span></div>
+        <div class="bn"><span class="no">5</span><span class="nm">Maker's Mark 46 French Oaked</span></div>
+        <div class="bn"><span class="no">6</span><span class="nm">Wild Turkey Rare Breed</span></div>
+        <div class="bn"><span class="no">7</span><span class="nm">Wyoming Whiskey</span></div>
+        <div class="bn"><span class="no">8</span><span class="nm">Elijah Craig Kentucky Straight</span></div>
+        <div class="bn"><span class="no">9</span><span class="nm">Ashley Gray 10 Year Single Malt Scotch</span></div>
+        <div class="bn"><span class="no">10</span><span class="nm">Russell's Reserve Kentucky Straight</span></div>
+        <div class="bn"><span class="no">11</span><span class="nm">Bulleit Bourbon Kentucky Straight</span></div>
+        <div class="bn"><span class="no">12</span><span class="nm">Four Roses Small Batch</span></div>
+        <div class="bn"><span class="no">13</span><span class="nm">Powers Gold Label Irish Whiskey</span></div>
+        <div class="bn"><span class="no">14</span><span class="nm">Breckenridge Bourbon</span></div>
+        <div class="bn"><span class="no">15</span><span class="nm">Monkey Shoulder Blended Malt Scotch</span></div>
+        <div class="bn"><span class="no">16</span><span class="nm">Stranahan's Whiskey</span></div>
+        <div class="bn"><span class="no">17</span><span class="nm">Lux Row Distillers Double Single Barrel</span></div>
+        <div class="bn"><span class="no">18</span><span class="nm">Wiggly Bridge Small Batch Bourbon</span></div>
+        <div class="bn"><span class="no">19</span><span class="nm">Clyde May's Straight Bourbon</span></div>
+        <div class="bn"><span class="no">20</span><span class="nm">Larceny Kentucky Straight</span></div>
+        <div class="bn"><span class="no">21</span><span class="nm">Jefferson's Straight Bourbon</span></div>
+        <div class="bn"><span class="no">22</span><span class="nm">The Glenlivet Single Malt Scotch</span></div>
+        <div class="bn"><span class="no">23</span><span class="nm">New England Barrel Company</span></div>
+        <div class="bn"><span class="no">24</span><span class="nm">Basil Hayden Toast</span></div>
+        <div class="bn"><span class="no">25</span><span class="nm">Colonel E.H. Taylor Straight Rye</span></div>
+        <div class="bn"><span class="no">26</span><span class="nm">Stellum Bourbon</span></div>
+        <div class="bn"><span class="no">27</span><span class="nm">Tyrconnell Single Malt Irish</span></div>
+        <div class="bn"><span class="no">28</span><span class="nm">Buffalo Trace Kentucky Straight</span></div>
+        <div class="bn"><span class="no">29</span><span class="nm">Eagle Rare 10 Year Straight</span></div>
+        <div class="bn"><span class="no">30</span><span class="nm">Blanton's Kentucky Straight</span></div>
+        <div class="bn"><span class="no">31</span><span class="nm">Jameson Irish Whiskey</span></div>
+        <div class="bn"><span class="no">32</span><span class="nm">Putnam Rye Whiskey</span></div>
+        <div class="bn"><span class="no">33</span><span class="nm">Penelope "F*ck Cancer" Blend</span></div>
+        <div class="bn"><span class="no">34</span><span class="nm">Boondocks Barrel Strength</span></div>
+        <div class="bn"><span class="no">35</span><span class="nm">Weller Wheated Bourbon</span></div>
+        <div class="bn"><span class="no">36</span><span class="nm">Journeyman Distillery Bourbon</span></div>
+        <div class="bn"><span class="no">37</span><span class="nm">Redemption High Rye Single Barrel</span></div>
+        <div class="bn"><span class="no">38</span><span class="nm">Traveller Blended Whiskey</span></div>
+        <div class="bn"><span class="no">39</span><span class="nm">Old Ezra Kentucky Straight</span></div>
+        <div class="bn"><span class="no">40</span><span class="nm">Jefferson's Straight Bourbon</span></div>
+        <div class="bn"><span class="no">41</span><span class="nm">Bulleit 95 Rye</span></div>
+        <div class="bn"><span class="no">42</span><span class="nm">Split Rock Distilling Organic Bourbon</span></div>
+        <div class="bn"><span class="no">43</span><span class="nm">Wild Turkey Aged 8 Years</span></div>
+        <div class="bn"><span class="no">44</span><span class="nm">Yellowstone Single Barrel</span></div>
+        <div class="bn"><span class="no">45</span><span class="nm">1792 Full Proof Kentucky Straight</span></div>
+        <div class="bn"><span class="no">46</span><span class="nm">Old Fitzgerald Bottled in Bond</span></div>
+        <div class="bn"><span class="no">47</span><span class="nm">Fifth Stone Single Malt</span></div>
+        <div class="bn"><span class="no">48</span><span class="nm">Jameson Black Barrel</span></div>
+        <div class="bn"><span class="no">49</span><span class="nm">Jack Daniel's</span></div>
+        <div class="bn"><span class="no">50</span><span class="nm">Jim Beam</span></div>
+        <div class="bn"><span class="no">51</span><span class="nm">Maker's Mark</span></div>
+        <div class="bn"><span class="no">52</span><span class="nm">Crown Royal</span></div>
+        <div class="bn"><span class="no">53</span><span class="nm">Dingle Single Malt Irish</span></div>
+        <div class="bn"><span class="no">54</span><span class="nm">Green Spot Single Pot Still Irish</span></div>
+        <div class="bn"><span class="no">55</span><span class="nm">Redbreast 12 Year Irish</span></div>
+        <div class="bn"><span class="no">56</span><span class="nm">Ben Holladay Bottled in Bond</span></div>
+      </div>
+      <p class="note" style="margin-top:14px">List rotates — ask your bartender what's new this week.</p>
+    </div>
+
+    <div class="fm-cols" style="grid-template-columns:repeat(2,1fr)">
+      <div class="fm-cat">
+        <h3>Wine</h3>
+        <div class="fm-item"><div class="fm-line"><span class="nm">White</span><span class="pr">By the glass</span></div><div class="desc">Pinot Grigio · Chardonnay · Sauvignon Blanc · Prosecco</div></div>
+        <div class="fm-item"><div class="fm-line"><span class="nm">Red</span><span class="pr">By the glass</span></div><div class="desc">Pinot Noir · Cabernet Sauvignon</div></div>
+      </div>
+
+      <div class="fm-cat">
+        <h3>Soft Drinks</h3>
+        <div class="fm-item"><div class="desc" style="margin-top:0;font-size:.92rem;color:rgba(246,239,224,.82)">Root Beer · Blueberry · Ginger Beer · Pepsi · Diet Pepsi · Ginger Ale · Sprite · Iced Tea · Seltzer · Lemonade · Cranberry · Orange Juice · Milk · Chocolate Milk</div></div>
+      </div>
+    </div>
+
+    <div class="fm-foot">Butter-fueled, bourbon-powered. Maine made.</div>
+  </div>
+</section>
+
+<!-- BEER & BOURBON -->
+<section class="beer" id="beer">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">It's in the name</div>
+      <h2>Craft Beer &amp; 70+ Bourbons</h2>
+      <p>An incredible, ever-changing lineup — and one of the Seacoast's deepest bourbon lists. The reason regulars keep coming back.</p>
+    </div>
+    <div class="beer-grid">
+      <div class="beer-card"><img class="thumb" src="/assets/photos/Beer2-4a8c48d-1024x1018.webp" alt="Fresh pour of Orono Brewing beer" loading="lazy"><div class="bc-body"><h3>Rotating Craft Taps</h3><p>Maine-leaning and always changing — Orono, Mast Landing, and friends. Ask what's pouring today.</p></div></div>
+      <div class="beer-card"><img class="thumb" src="/assets/photos/Beer1-702c60f-1024x683.webp" alt="Craft beer cans and a fresh pour" loading="lazy"><div class="bc-body"><h3>Cans To Go</h3><p>A deep fridge of craft cans and ciders — drink in, or take a four-pack home.</p></div></div>
+      <div class="beer-card"><img class="thumb" src="/assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="A flight of bourbons at Dave's Maine Cafe" loading="lazy"><div class="bc-body"><h3>70+ Bourbons</h3><p>One of the deepest whiskey selections on the Seacoast — over 70 bourbons, poured by the glass or as a flight. Pull up a stool.</p></div></div>
+    </div>
+    <div class="menu-note" style="margin-top:8px"><a class="btn gold" href="#drinks-menu">See the Full Bourbon List</a></div>
+  </div>
+</section>
+
+<!-- WHAT'S ON -->
+<section class="whatson" id="whatson">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Every week on Route 1</div>
+      <h2>What's On</h2>
+      <p>More than a meal — there's almost always a reason to stick around.</p>
+    </div>
+    <div class="events-grid">
+      <div class="event">
+        <div class="day">Every Wednesday · 3–6:30 PM</div>
+        <h3>Bucks for Shucks Oysters</h3>
+        <p>Fresh-shucked oysters on the half shell every Wednesday afternoon. Pull up to the bar or grab a seat on the patio and slurp your way through the week.</p>
+        <span class="pricetag">Every Wednesday · 3–6:30 PM</span>
+      </div>
+      <div class="event">
+        <div class="day">The Legendary Happy Hour</div>
+        <h3>$1 Cocktail Shrimp &amp; Drink Specials</h3>
+        <p>Chilled cocktail shrimp for a buck and specials on drafts, wine &amp; shots — the easiest reason to pull up a stool after work.</p>
+        <span class="pricetag">$1 cocktail shrimp</span>
+      </div>
+      <div class="event">
+        <div class="day">Every Thursday · all day</div>
+        <h3>$18 Lobster Roll Day</h3>
+        <p>Dave's fresh-picked Maine lobster roll drops to $18 — hot with butter or cold, Maine-style. Make it a meal deal for $10 more.</p>
+        <span class="pricetag">$18 all day · Thursdays</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT DAVE -->
+<section class="about" id="dave">
+  <div class="wrap about-grid">
+    <img class="dave-photo" src="/assets/photos/IMG_2887.jpg_1682373771.jpeg" alt="Dave, owner of Dave's Maine Cafe, with his wife" loading="lazy" />
+    <div>
+      <div class="eyebrow" style="color:var(--lobster)">11th season · Family-run · Chef-driven</div>
+      <h2>Hi, I'm Dave.</h2>
+      <p>Eleven seasons in, and we opened as a beer café — a cozy spot near the Kittery outlets with rotating taps and a bourbon list I'm genuinely proud of. Then folks tried the lobster rolls, and word got around. Today we're Dave's Maine Cafe, and that lobster-shaped flight board on the bar says it all: a real Maine lobster shack with a beer-café heart.</p>
+      <p>It's still my family running the place. I cook the food I'd want to eat — honest, generous, unmistakably Maine — and there's no hurry to push you out the door. Board games on the shelf, room for the whole family, the game on if there's a game on.</p>
+      <div class="promise">
+        <div class="p"><span>●</span> Fresh, Never Frozen</div>
+        <div class="p"><span>●</span> Family-Run</div>
+        <div class="p"><span>●</span> Come As You Are</div>
+      </div>
+      <a class="btn" href="#visit">Come See Us</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- SOCIAL — LIVE FROM THE CAFE -->
+<section class="social" id="social">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Straight from the bar</div>
+      <h2>Live From the Cafe</h2>
+      <p>The taps change, the specials change, and Dave posts it all. Follow along for what's pouring, what's fresh, and what's happening this week.</p>
+      <div class="handle">@davesmainecafe</div>
+    </div>
+    <div class="social-cta">
+      <a class="igbtn ig" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener">📸 Follow on Instagram</a>
+      <a class="igbtn fb" href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">👍 Facebook</a>
+      <a class="igbtn th" href="https://www.threads.com/@davesmainecafe" target="_blank" rel="noopener">@ Threads</a>
+    </div>
+
+    <!-- ============================================================
+         LIVE INSTAGRAM FEED — one-time, no-code connect (≈5 min):
+         1. Go to behold.so (free) → sign in with the cafe's Instagram.
+         2. Create a feed, copy the <div data-behold-id> + <script> snippet.
+         3. Paste it right here, replacing the .ig-grid block below.
+         The feed then auto-updates every time Dave posts — zero site edits.
+         (SnapWidget / LightWidget work the same way if you prefer.)
+         Until then, the curated grid below shows real photos and links to IG.
+         ============================================================ -->
+    <div class="ig-grid">
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="/assets/photos/2BF33665-B41D-4693-AECB-E4FBD2683E8E.jpeg_1682373941-1024x987.jpeg" alt="Lobster-shaped flight board at Dave's Maine Cafe" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="/assets/photos/daves-lobster-roll.jpeg" alt="Dave's Maine lobster roll, fresh-picked on a buttered roll with chips" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="/assets/photos/Bourbon-Flights-22a9868-1024x766.webp" alt="Bourbon flight" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="/assets/photos/Whoopie.JPG_1682373917-1024x1024.jpeg" alt="Classic Maine whoopie pie" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="/assets/photos/D88CFC32-389F-4A5B-BDB1-4A3D8D15D6DB-d0b7216-1024x683.webp" alt="New England clam chowder" loading="lazy"></a>
+      <a class="ig-tile" href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener"><img src="/assets/photos/Beer2-4a8c48d-1024x1018.webp" alt="Fresh craft beer pour" loading="lazy"></a>
+    </div>
+    <p class="feed-note">Tap any photo to see the latest on Instagram · 2,500+ followers and counting</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold)">Regulars &amp; first-timers agree</div>
+      <h2>What People Are Saying</h2>
+      <p style="color:var(--cream-2)">★ 4.5 on Google · 80+ reviews on Yelp · loved across the Seacoast.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"The lobster roll was outstanding — buttered roll, light mayo, just perfect!"</p>
+        <cite>— Recent Seacoast review</cite>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"One of the better lobster rolls that we've each had on the Seacoast in a while."</p>
+        <cite>— Recent Seacoast review</cite>
+      </div>
+    </div>
+    <div class="rev-cta">
+      <a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=Dave%27s%20Maine%20Cafe%2C%20439%20US-1%2C%20Kittery%2C%20ME" target="_blank" rel="noopener">Had a Great Time? Leave a Google Review →</a>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN THE LIST -->
+<section class="signup" id="list">
+  <div class="wrap signup-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--navy)">Never miss a lobster drop</div>
+      <h2>Join Dave's List</h2>
+      <p>Be first to know when the Thursday lobster roll is on, what's pouring, and when something special is happening. No spam — just the good stuff, from Dave.</p>
+    </div>
+    <form action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
+      <input type="hidden" name="_subject" value="New signup — Dave's List (website)" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style="display:none" />
+      <div>
+        <label class="lbl">Name</label>
+        <input type="text" name="Name" placeholder="First name" />
+      </div>
+      <div class="row">
+        <div>
+          <label class="lbl">Email</label>
+          <input type="email" name="Email" placeholder="you@email.com" required />
+        </div>
+        <div>
+          <label class="lbl">Phone <span style="font-weight:400;text-transform:none">(for text alerts)</span></label>
+          <input type="tel" name="Phone" placeholder="optional" />
+        </div>
+      </div>
+      <button type="submit" class="btn dark" style="margin-top:4px">Sign Me Up</button>
+      <span class="field-note">We'll only use this to tell you about specials and events. Unsubscribe anytime.</span>
+    </form>
+  </div>
+</section>
+
+<!-- CATERING -->
+<section class="catering" id="catering">
+  <div class="wrap cat-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--lobster)">Bring Dave's to your event</div>
+      <h2>Catering &amp; Private Events</h2>
+      <p>From a backyard party to an office lunch to a full lobster bake — Dave will put together something your guests actually remember. Tell us what you've got in mind and we'll send a quote.</p>
+      <ul class="cat-list">
+        <li>Lobster rolls &amp; seafood for a crowd</li>
+        <li>Party platters, trays &amp; comfort-food spreads</li>
+        <li>Private gatherings &amp; group bookings</li>
+      </ul>
+    </div>
+    <form class="cat-form" action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
+      <input type="hidden" name="_subject" value="New catering inquiry (website)" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style="display:none" />
+      <div class="row">
+        <div><label class="lbl">Name</label><input type="text" name="Name" required /></div>
+        <div><label class="lbl">Phone</label><input type="tel" name="Phone" /></div>
+      </div>
+      <div class="row">
+        <div><label class="lbl">Email</label><input type="email" name="Email" required /></div>
+        <div><label class="lbl">Guests</label><input type="text" name="Guests" placeholder="approx." /></div>
+      </div>
+      <div><label class="lbl">Event Date</label><input type="text" name="Event Date" placeholder="e.g. Sat Aug 16" /></div>
+      <div><label class="lbl">What are you thinking?</label><textarea name="Message" placeholder="Tell Dave about your event…"></textarea></div>
+      <button type="submit" class="btn">Request a Catering Quote</button>
+    </form>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Right on Route 1</div>
+      <h2>Find Us</h2>
+    </div>
+    <div class="visit-grid">
+      <div>
+        <ul class="hours-list">
+          <li class="closed"><b>Monday</b><span>Closed</span></li>
+          <li class="closed"><b>Tuesday</b><span>Closed</span></li>
+          <li><b>Wednesday</b><span>11:30 AM – 7:00 PM</span></li>
+          <li><b>Thursday</b><span>11:30 AM – 7:00 PM</span></li>
+          <li><b>Friday</b><span>11:30 AM – 7:00 PM</span></li>
+          <li><b>Saturday</b><span>11:30 AM – 5:00 PM</span></li>
+          <li><b>Sunday</b><span>11:30 AM – 5:00 PM</span></li>
+        </ul>
+        <div style="margin-top:22px">
+          <div class="info-line"><span class="ic">📍</span><span>439 US Route 1, Ste 1<br>Kittery, ME 03904</span></div>
+          <div class="info-line"><span class="ic">📞</span><a href="tel:+12074755655">(207) 475-5655</a></div>
+          <div class="info-line"><span class="ic">✉️</span><a href="mailto:dave@mainebeercafe.com">dave@mainebeercafe.com</a></div>
+        </div>
+        <a class="btn" style="margin-top:18px" href="https://www.google.com/maps/dir/?api=1&destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <a class="map-card" href="https://www.google.com/maps/dir/?api=1&destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener" aria-label="Open directions to Dave's Maine Cafe in Google Maps">
+        <div class="map-card-in">
+          <h3>Dave's Maine Cafe</h3>
+          <p>439 US Route 1, Ste 1 · Kittery, ME 03904</p>
+          <span>Open Directions</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Hungry Yet?</h2>
+    <p>Skip the line — order online for pickup, or just swing by. We'll have the taps cold and the lobster fresh.</p>
+    <div class="final-cta">
+      <a class="btn gold" href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=order_online_footer" target="_blank" rel="noopener" data-track="toast-order">Order Online Now</a>
+      <a class="btn ghost" href="#list">Join Dave's List</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="font-size:20px">Dave's Maine <span style="color:var(--gold)">Cafe</span></div>
+        <p style="margin:10px 0 0;max-width:30ch">Fresh Maine lobster, cold craft beer, and good bourbon on Route 1 in Kittery. Family-run.</p>
+        <p style="margin:12px 0 0"><a href="https://www.instagram.com/davesmainecafe/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.threads.com/@davesmainecafe" target="_blank" rel="noopener">Threads</a></p>
+      </div>
+      <div>
+        <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">VISIT</strong>
+        <p style="margin:8px 0 0">439 US Route 1, Ste 1<br>Kittery, ME 03904<br><a href="tel:+12074755655">(207) 475-5655</a></p>
+      </div>
+      <div>
+        <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">ORDER &amp; MORE</strong>
+        <p style="margin:8px 0 0"><a href="https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=order_online_footer" target="_blank" rel="noopener" data-track="toast-order">Order online &rarr;</a><br><a href="#catering">Catering &amp; events</a><br><a href="#list">Join Dave's list</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Dave's Maine Cafe · Kittery, Maine</span>
+      <span>Fresh. Local. Never frozen.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // close mobile nav on link tap
+  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
