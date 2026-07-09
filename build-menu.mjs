@@ -12,7 +12,7 @@ const menu = JSON.parse(readFileSync(join(ROOT, "menu.json"), "utf8"));
 const htmlPath = join(ROOT, "staging", "index.html");
 let html = readFileSync(htmlPath, "utf8");
 
-const TOAST = "https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=order_online";
+const TOAST = "https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=order_online";
 const e = (v) => String(v ?? "").replace(/&(?!amp;|lt;|gt;|#)/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 const item = (it) =>

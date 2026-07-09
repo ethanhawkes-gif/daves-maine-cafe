@@ -16,7 +16,7 @@ const s = data.specials.find((x) => x.id === data.active);
 if (!s) { console.error(`Active special "${data.active}" not found in specials.json`); process.exit(1); }
 
 const esc = (v) => String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const TOAST = "https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3?utm_source=davesmainecafe.com&utm_medium=special&utm_campaign=special_page";
+const TOAST = "https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=special&utm_campaign=special_page";
 const robots = PROD ? "" : '\n<meta name="robots" content="noindex" />';
 
 const html = `<!DOCTYPE html>
@@ -49,7 +49,7 @@ const html = `<!DOCTYPE html>
     "price": ${JSON.stringify(s.priceNumeric)},
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "url": "https://www.toasttab.com/maine-beer-cafe-439-us-rt-1-ste-1/v3"
+    "url": "https://www.toasttab.com/davesmainecafe/v3"
   },
   "isPartOf": {
     "@type": "Restaurant",
