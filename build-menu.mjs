@@ -50,7 +50,7 @@ const combos = bar.combos.items
   .map((c) => `        <div class="combo"><div class="no">${c.n}<small>EXIT</small></div><div class="body"><div class="nm">${e(c.name)}${c.price ? ` <span class="pr">${e(c.price)}</span>` : ""}</div><div class="desc">${e(c.desc)}</div></div></div>`)
   .join("\n");
 const taps = bar.taps.items
-  .map((t) => `          <div class="tap"><span class="nm">${e(t.name)}</span><span class="meta">${e(t.meta)}</span></div>`)
+  .map((t) => `          <div class="tap"><span class="nm">${t.no ? `#${e(t.no)} ` : ""}${e(t.name)}</span><span class="meta">${e(t.meta)}</span></div>`)
   .join("\n");
 const bourbonsBlock = bar.bourbons
   ? `\n\n    <div class="exit-cat" style="margin-top:30px">\n        <h3>${e(bar.bourbons.name)}</h3>\n        <p class="note">${e(bar.bourbons.note)}</p>\n        <details style="margin-top:2px">\n        <summary style="cursor:pointer;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-size:.86rem;padding:6px 0">See the full list (${bar.bourbons.list.length}) &#9662;</summary>\n        <div class="taps" style="columns:3;margin-top:14px">\n${bar.bourbons.list.map((n) => `          <div class="tap"><span class="nm">${e(n)}</span></div>`).join("\n")}\n        </div>\n        <p class="note" style="margin-top:12px">${e(bar.bourbons.footnote)}</p>\n        </details>\n    </div>`
@@ -86,6 +86,27 @@ ${bar.groups.map(itemsGroup).join("\n")}
   </div>
 </section>`;
 
+// ---- WEEKLY FEATURES section ----
+const wf = menu.weeklyFeatures;
+const weeklySection = wf && wf.items && wf.items.length
+  ? `<section class="menu-band" id="weekly" style="background:var(--navy);color:var(--cream);border-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" style="color:var(--gold)">Every Week on Route 1</span>
+      <h2 style="color:#fff">The Weekly Lineup</h2>
+      <p style="color:rgba(247,239,221,.85)">Five reasons to make it a habit — same roadside chaos, a different flavor every day.</p>
+    </div>
+    <div class="week-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px;margin-top:8px">
+${wf.items.map((d) => `      <div style="background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 var(--ink);padding:16px 16px 18px">
+        <div style="font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1.5px;font-size:12px;color:var(--lobster-2)">${e(d.day)}</div>
+        <h3 style="font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:19px;margin:4px 0 7px;line-height:1.05">${e(d.name)}</h3>
+        <p style="margin:0;font-size:14px;color:var(--ink-soft);line-height:1.5">${e(d.desc)}</p>
+      </div>`).join("\n")}
+    </div>
+  </div>
+</section>`
+  : "";
+
 function replaceRegion(src, startTag, endTag, replacement) {
   const re = new RegExp(`(${startTag}[^]*?-->)[\\s\\S]*?(${endTag})`);
   if (!re.test(src)) { console.error(`Marker not found: ${startTag}`); process.exit(1); }
@@ -93,6 +114,9 @@ function replaceRegion(src, startTag, endTag, replacement) {
   return src.replace(re, (_m, g1, g2) => `${g1}\n${replacement}\n${g2}`);
 }
 
+if (/<!-- MENU:WEEKLY:START/.test(html) && weeklySection) {
+  html = replaceRegion(html, "<!-- MENU:WEEKLY:START", "<!-- MENU:WEEKLY:END -->", weeklySection);
+}
 html = replaceRegion(html, "<!-- MENU:EATS:START", "<!-- MENU:EATS:END -->", eatsSection);
 html = replaceRegion(html, "<!-- MENU:BAR:START", "<!-- MENU:BAR:END -->", barSection);
 writeFileSync(htmlPath, html);
