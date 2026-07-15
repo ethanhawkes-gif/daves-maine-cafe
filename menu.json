@@ -15,7 +15,7 @@
     "items": [
       { "day": "Tuesday", "name": "Dave's Day", "desc": "Limited menu. Open 11:30–3 PM. Lobster rolls locked & loaded. Soups on." },
       { "day": "Wednesday", "name": "Shell Yeah Wednesday", "desc": "Nearly buck-a-shuck oysters! Dollar shrimp. $3 Jonah crab claws. $5 Miller Lite tall boys." },
-      { "day": "Thursday", "name": "Thursday Tradition", "desc": "It's Thursday — enough said. Open 11:30 AM sharp. The brochures won't tell you. If you know, you know." },
+      { "day": "Thursday", "name": "Dave's Lobster Roll Day", "desc": "Our weekly celebration of the roll that made us — every Thursday. Open 11:30 AM sharp. If you know, you know." },
       { "day": "Friday", "name": "Bourbon & Bugs Friday", "desc": "$25 twin Maine bugs, starts at 3 PM — until we run out. Local catch; we get what we get. $9 bourbons all day." },
       { "day": "Saturday & Sunday", "name": "Tourist Revenge Weekend", "desc": "Dylan's 7 oz jumbo lobster roll. Free whoopie pie! $37 every day." }
     ]
