@@ -9,8 +9,9 @@ import { dirname, join } from "node:path";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const menu = JSON.parse(readFileSync(join(ROOT, "menu.json"), "utf8"));
-const htmlPath = join(ROOT, "staging", "index.html");
-let html = readFileSync(htmlPath, "utf8");
+// Build BOTH production (index.html) and staging/index.html from the master.
+// Weekly section only injects where the MENU:WEEKLY markers exist; merch lives only in staging's HTML, untouched here.
+const TARGETS = [join(ROOT, "index.html"), join(ROOT, "staging", "index.html")];
 
 const TOAST = "https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=order_online";
 const e = (v) => String(v ?? "").replace(/&(?!amp;|lt;|gt;|#)/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -114,12 +115,15 @@ function replaceRegion(src, startTag, endTag, replacement) {
   return src.replace(re, (_m, g1, g2) => `${g1}\n${replacement}\n${g2}`);
 }
 
-if (/<!-- MENU:WEEKLY:START/.test(html) && weeklySection) {
-  html = replaceRegion(html, "<!-- MENU:WEEKLY:START", "<!-- MENU:WEEKLY:END -->", weeklySection);
+for (const target of TARGETS) {
+  let html = readFileSync(target, "utf8");
+  if (/<!-- MENU:WEEKLY:START/.test(html) && weeklySection) {
+    html = replaceRegion(html, "<!-- MENU:WEEKLY:START", "<!-- MENU:WEEKLY:END -->", weeklySection);
+  }
+  html = replaceRegion(html, "<!-- MENU:EATS:START", "<!-- MENU:EATS:END -->", eatsSection);
+  html = replaceRegion(html, "<!-- MENU:BAR:START", "<!-- MENU:BAR:END -->", barSection);
+  writeFileSync(target, html);
 }
-html = replaceRegion(html, "<!-- MENU:EATS:START", "<!-- MENU:EATS:END -->", eatsSection);
-html = replaceRegion(html, "<!-- MENU:BAR:START", "<!-- MENU:BAR:END -->", barSection);
-writeFileSync(htmlPath, html);
 
 const count = (o) => (o.items ? o.items.length : 0) + (o.subgroup ? o.subgroup.items.length : 0);
 const eatsN = eats.groups.reduce((a, g) => a + count(g), 0);
