@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Toast Rebuild — Decision Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#182b33;--red:#b83a2b;--cream:#f7efdd;--gold:#d79a37;--ink:#241d15;--green:#2f7d4f;--amber:#c2872a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#f4efe4;color:var(--ink);font-family:Inter,sans-serif;line-height:1.45;padding:18px 14px 60px}
+  .wrap{max-width:640px;margin:0 auto}
+  h1{font-family:Anton,sans-serif;text-transform:uppercase;font-size:30px;color:var(--navy);letter-spacing:.5px;line-height:1}
+  .sub{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--red);margin:4px 0 14px}
+  h2{font-family:Anton,sans-serif;text-transform:uppercase;font-size:20px;color:var(--navy);margin:22px 0 8px;border-bottom:3px solid var(--gold);padding-bottom:4px}
+  h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:13px;margin:14px 0 6px;color:#6b5d47}
+  .row{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;margin:4px 0;font-size:15px;background:#fff;border:1px solid #e4d9c2}
+  .pill{flex:none;font-family:Oswald,sans-serif;font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#fff;padding:3px 7px;border-radius:20px;margin-top:1px}
+  .keep{background:var(--green)}.decide{background:var(--amber)}.del{background:var(--red)}.oos{background:#7a6b52}
+  .legend{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+  .legend span{font-family:Oswald,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#fff;padding:4px 9px;border-radius:20px}
+  .note{background:var(--navy);color:var(--cream);padding:14px 16px;border-radius:12px;font-size:14px;margin:16px 0}
+  .note b{color:var(--gold)}
+  .price{color:#8a7a5e;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Toast Rebuild</h1>
+  <div class="sub">Decision Sheet · go down the AMBER list, tell Chipper keep or cut</div>
+  <div class="legend">
+    <span style="background:#2f7d4f">✅ KEEP (on printed menu)</span>
+    <span style="background:#c2872a">🔶 YOUR CALL</span>
+    <span style="background:#b83a2b">🗑️ DELETE</span>
+    <span style="background:#7a6b52">🚫 LATER</span>
+  </div>
+
+  <div class="note">The <b>✅ green</b> items are locked keepers. Just decide the <b>🔶 amber</b> ones — keep on the register or cut. <b>Cocktails + bourbon</b> are a separate later project.</div>
+
+  <h2>🍔 Food</h2>
+  <h3>Keep — on your printed menu</h3>
+  <div class="row"><span class="pill keep">Keep</span>Dave's Lobster Roll <span class="price">$20</span> · Meal Deal <span class="price">$30</span> · Tourist's Revenge <span class="price">$37</span> · Jumbo Meal Deal <span class="price">$47</span></div>
+  <div class="row"><span class="pill keep">Keep</span>Caribou Wrap · Pulled Pork · Acadia Turkey Club <span class="price">$13 ea</span> · Berwick Burger <span class="price">$12</span> · Hot Dog <span class="price">$5</span></div>
+  <div class="row"><span class="pill keep">Keep</span>Soups — cup $8 / bowl $12 / Gumbo Rice Bowl $18 · Chips&Dip $9 · Pretzel Sticks $9 · Pigs in Blanket $14 · Chicken Tenders $15</div>
+  <div class="row"><span class="pill keep">Keep</span>Whoopie Pie $4 · Strawberry Shortcake <span class="price">(price: $6 or $8? pick one)</span></div>
+  <h3>Your call — not on the printed menu</h3>
+  <div class="row"><span class="pill decide">Call</span>Portland Pesto Caprese <span class="price">$13</span></div>
+  <div class="row"><span class="pill decide">Call</span>Shepherd's Pie <span class="price">$15</span></div>
+  <div class="row"><span class="pill decide">Call</span>Twin Lobster $25 + Meal Deal $35 <span class="price">(Fri special)</span></div>
+  <div class="row"><span class="pill decide">Call</span>Smoked Gouda Burger $13 · Build-Own Burger $12</div>
+  <div class="row"><span class="pill decide">Call</span>Pulled Pork Nacho <span class="price">$18</span></div>
+  <div class="row"><span class="pill decide">Call</span>Kids menu (Mac, Turkey, Dog, Nugget — $9 ea)</div>
+  <div class="row"><span class="pill decide">Call</span>Wed/HH apps: Oysters, Jonah Crab, Dollah Shrimp, Cocktail Shrimp, Stuffed Clams</div>
+  <div class="row"><span class="pill del">Del</span>Stray "a" button</div>
+
+  <h2>🍺 Beverage (in scope)</h2>
+  <div class="row"><span class="pill keep">Keep</span>Draft taps #9–24 · Wine Red/White · Canned: Wild Maine, Suncruiser, THC Seltzer</div>
+  <div class="row"><span class="pill decide">Call</span>All Canned Cider (8) · rest of Canned Beer (Domestic, Bissell, High Life, Poundah…)</div>
+  <div class="row"><span class="pill decide">Call</span>N/A sodas (Pepsi, Maine Root, lemonade, coffee, Shirley Temple…) — keep which?</div>
+  <div class="row"><span class="pill decide">Call</span>Happy Hour Stuff — <b>13 overlapping HH price buttons</b> (big cleanup)</div>
+  <div class="row"><span class="pill decide">Call</span>Shot & Beer Combos — Toast names ≠ your printed Exits 1–7 <span class="price">(reconcile)</span></div>
+
+  <h2>🚫 Separate later project</h2>
+  <div class="row"><span class="pill oos">Later</span>Cocktails (19) · Liquor / Bourbon (9) — you'll give new lists</div>
+
+  <h2>🗑️ Junk to delete now</h2>
+  <div class="row"><span class="pill del">Del</span>"a" · HALF TUNA $0 · DoorDash "New $0" · Harvey Woods $550 (test?) · $0 BOGO flatbreads (if promo dead)</div>
+
+  <h2>✅ Modifier logic — LOCKED</h2>
+  <div class="note">
+    <b>Sandwich side:</b> chips free · slaw/potato +$1 · both +$2 — auto-charged, no forgotten button.<br><br>
+    <b>Meal Deal +$10:</b> free choice of side (chips/slaw/potato) + soup + whoopie. Rare double side +$1. One roll button, guided, always right.
+  </div>
+
+  <div class="sub" style="margin-top:20px">Reply to Chipper with your keep/cut calls on the amber rows and the button map gets built.</div>
+</div>
+</body>
+</html>
