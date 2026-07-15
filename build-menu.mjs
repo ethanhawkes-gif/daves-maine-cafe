@@ -64,7 +64,7 @@ const barSection = `<section class="menu-band" id="bar" style="border-top:0">
       <p>${e(bar.blurb)}</p>
     </div>
 
-    <div class="exit-cols" style="grid-template-columns:1.15fr .85fr">
+    <div class="exit-cols barsplit">
       <div class="exit-cat">
         <h3>${e(bar.combos.name)}</h3>
         <p class="note">${e(bar.combos.note)}</p>
@@ -81,7 +81,7 @@ ${taps}
       </div>
     </div>
 
-    <div class="exit-cols" style="grid-template-columns:1.15fr .85fr;margin-top:26px">
+    <div class="exit-cols barsplit" style="margin-top:26px">
 ${bar.groups.map(itemsGroup).join("\n")}
     </div>${bourbonsBlock}
   </div>
