@@ -43,7 +43,7 @@
           { "name": "Acadia Turkey Club", "price": "$13", "desc": "Turkey, cheese, lettuce, tomato, bacon & mayo." },
           { "name": "Baxter BBQ Pulled Pork", "price": "$13", "desc": "Slow-roasted & slathered in house BBQ sauce." },
           { "name": "Hot Dog", "price": "$5", "desc": "Ketchup, mustard, onion, relish, celery salt or sauerkraut." },
-          { "name": "Berwick Classic Burger", "price": "$12", "desc": "6 oz Maine beef with lettuce, pickle & tomato." }
+          { "name": "The Landlubber", "price": "$12", "desc": "6 oz Maine Angus, lettuce, tomato, pickle. The turf in surf-&-turf — for the dry-land crowd who skip the surf." }
         ]
       },
       {
