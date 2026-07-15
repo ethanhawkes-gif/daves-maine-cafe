@@ -45,6 +45,13 @@
           { "name": "Hot Dog", "price": "$5", "desc": "Ketchup, mustard, onion, relish, celery salt or sauerkraut." },
           { "name": "Berwick Classic Burger", "price": "$12", "desc": "6 oz Maine beef with lettuce, pickle & tomato." }
         ]
+      },
+      {
+        "name": "🛣️ Detour", "type": "items",
+        "items": [
+          { "name": "Dave-oux Gumbo Rice Bowl", "price": "$18", "desc": "Where New Orleans took a wrong turn onto Route 1 — andouille, chicken, secret spices & a little Maine magic over rice. Add lobster +$8." }
+        ],
+        "subgroup": { "name": "🍓 Sweet Detour", "items": [ { "name": "Strawberry Shortcake Parfait", "price": "$6", "desc": "Layers of strawberries, cake, whipped cream & poor decision-making." }, { "name": "Classic Maine Whoopie Pie", "price": "$4", "desc": "The official state treat — soft chocolate cake, sweet cream filling." } ] }
       }
     ]
   },
