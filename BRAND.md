@@ -53,8 +53,9 @@ Signature items carry an **iconic coastal/marine Maine place name**; the descrip
 - **Signature composed items get a Maine place name** — prefer RECOGNIZABLE coastal / Route 1 towns (Kittery, York, Ogunquit, Wells, Kennebunk, Portland, Camden, Bar Harbor, Boothbay), NOT obscure inland ones. Alliteration where it sings.
 - **Plain staples stay plain**: Hot Dog · Chicken Tenders · Pretzel Sticks · Whoopie Pie.
 - Fun name on top, plain-English description under ("Berwick Burger — 6 oz Maine Angus…").
-- **The Burger = the deliberate "turf" of surf-&-turf** — a pronounced statement piece for the meat crowd / seafood-haters. Name PENDING (front-runner: "The Landlubber").
+- **The Burger = "THE LANDLUBBER"** (LOCKED) — the deliberate "turf" of surf-&-turf; a statement piece for the dry-land crowd / seafood-haters in a lobster joint. Line: "The Landlubber — 6 oz Maine Angus, for the surf-&-turf crowd who skip the surf." Burgers can ROTATE in/out for fun (limited-run specials) under the Landlubber banner.
 - Locked names: Acadia Turkey Club · Caribou Cranberry Walnut Wrap · Baxter BBQ Pulled Pork · Portland Pesto Caprese · Bangor Buffalo · Rangeley Roast Beef.
+- **Category names are standardized everywhere (menu, online ordering, Toast): STARTERS · MAINS · KIDS · DESSERT.** "Mains" (not "Sandwiches & Mains") — matches Toast, keeps it streamlined. Lobster rolls may be featured up top but belong to Mains.
 
 ## 6. Standing brand rules
 - **10 Years Strong · EST. 2016** (consistent everywhere; not 2015).
