@@ -45,6 +45,8 @@ All free (Google Fonts). **LOCKED (4 core fonts).** PENDING only: whether merch/
 ## 5. Voice & tone
 Warm, funny, local, Route 1 roadside wit. A trusted café regular who's great at the back office. Never corporate, never slop. "If you know, you know" insider energy for locals; curiosity for tourists.
 
+**Positioning vibe (Dave's words, 2026-07-15):** road-trip · lobster shack · Route 1 *destination*. The place you pull over for — a stop worth the drive, not a roadside afterthought. Everything should feel like a classic New England shack you'd detour for.
+
 ## 6. Standing brand rules
 - **10 Years Strong · EST. 2016** (consistent everywhere; not 2015).
 - **$20** is the public face price for the lobster roll everywhere.
