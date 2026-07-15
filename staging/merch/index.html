@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Merch Preview — Dave's Maine Café | Staging</title>
+<meta name="description" content="Staging preview of the Dave's Maine Café merch line. Not public." />
+<meta name="theme-color" content="#b23a2e" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%A6%9E%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f2e7cf; --paper-2:#ecdcbb; --paper-edge:#e4d2a9;
+    --ink:#241d15; --ink-soft:#4a3f30;
+    --navy:#182b33; --navy-2:#203b45;
+    --lobster:#b83a2b; --lobster-2:#9c2f22;
+    --forest:#2f5b3f; --forest-2:#26492f;
+    --gold:#d79a37; --gold-2:#c2872a;
+    --cream:#f7efdd;
+    --maxw:1120px; --navh:66px;
+    --shadow:0 14px 40px rgba(24,20,12,.18);
+    --shadow-sm:0 6px 18px rgba(24,20,12,.12);
+    --stitch:2px dashed rgba(36,29,21,.28);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(rgba(120,90,45,.05) 1px, transparent 1px),
+      radial-gradient(rgba(120,90,45,.04) 1px, transparent 1px);
+    background-size:9px 9px, 13px 13px;
+    background-position:0 0, 4px 6px;
+  }
+  h1,h2,h3{font-family:Anton,Oswald,Impact,sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02;text-transform:uppercase;margin:0}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .sign{font-family:'Special Elite',monospace;text-transform:uppercase;letter-spacing:2px;font-size:13px;color:var(--lobster-2)}
+  .kicker{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:2.5px;font-size:13px;color:var(--gold-2)}
+
+  header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:3px solid var(--gold);box-shadow:0 6px 18px rgba(0,0,0,.28)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:var(--navh)}
+  .brand{font-family:Anton,sans-serif;color:#fff;font-size:23px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .brand span{color:var(--gold)}
+  .brand::before{content:"🦞";font-size:18px}
+  .stagingtag{font-family:Oswald,sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:5px 12px;border-radius:6px;border:2px solid var(--ink)}
+
+  .hero{padding:56px 0 30px;text-align:center}
+  .hero h1{font-size:clamp(38px,6vw,64px);color:var(--navy)}
+  .hero h1 em{font-style:normal;color:var(--lobster)}
+  .hero p{max-width:640px;margin:16px auto 0;color:var(--ink-soft)}
+  .notice{max-width:720px;margin:26px auto 0;background:var(--cream);border:2px solid var(--ink);border-radius:12px;box-shadow:var(--shadow-sm);padding:14px 20px;font-size:14.5px;color:var(--ink-soft);text-align:left}
+  .notice b{color:var(--lobster-2)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;padding:34px 0 70px}
+  .card{background:var(--cream);border:3px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .12s ease,box-shadow .12s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card.hero-item{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+  .card.hero-item .imgs{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--paper-2)}
+  .card .img{aspect-ratio:1/1.15;background:var(--paper-2);overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .card.hero-item .img{aspect-ratio:auto;height:100%}
+  .card .img img{width:100%;height:100%;object-fit:cover}
+  .card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card.hero-item .body{justify-content:center;padding:34px}
+  .titleline{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+  .card h2{font-size:22px;color:var(--navy)}
+  .card.hero-item h2{font-size:clamp(26px,3vw,36px)}
+  .price{font-family:Anton,sans-serif;font-size:24px;color:var(--lobster);white-space:nowrap}
+  .desc{font-size:14.5px;color:var(--ink-soft);margin:0}
+  .meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:8px}
+  .chip{font-family:Oswald,sans-serif;font-weight:600;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;background:var(--paper);border:2px solid rgba(36,29,21,.35);border-radius:999px;padding:3px 11px;color:var(--ink-soft)}
+  .chip.gold{background:var(--gold);color:var(--ink);border-color:var(--ink)}
+  .badge-hero{position:absolute;margin:14px;background:var(--lobster);color:#fff;font-family:Oswald,sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 13px;border-radius:7px;border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
+
+  footer{background:var(--navy);color:var(--cream);padding:30px 0;text-align:center;font-size:13.5px}
+  footer .sign{color:var(--gold)}
+  @media (max-width:840px){
+    .card.hero-item{grid-template-columns:1fr}
+    .card.hero-item .imgs{grid-template-columns:1fr 1fr}
+    .card.hero-item .img{aspect-ratio:1/1.1}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/staging/">Dave's <span>Maine Café</span></a>
+    <span class="stagingtag">Staging Preview</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="sign">Drop 1 — Scooter Lobster Series</div>
+    <h1>The <em>Merch</em> Line</h1>
+    <p>Butter-fueled. Bourbon-powered. Lobster-loaded. Six pieces, one scooter-riding lobster, Kittery&nbsp;•&nbsp;Maine, EST.&nbsp;2016.</p>
+    <div class="notice">
+      <b>Dave — this is the staging preview.</b> These six items mirror what's sitting in Shopify as <b>drafts</b> (nothing is customer-visible yet). Review here, then publish from Shopify Admin when you're happy. Prices and variants below match the drafts exactly.
+    </div>
+  </section>
+
+  <section class="grid">
+
+    <!-- HERO: Shucked tee -->
+    <article class="card hero-item">
+      <div class="imgs">
+        <div class="img"><span class="badge-hero">Ships First</span><img src="/assets/merch/tee-shucked-heather-web.jpg" alt="I Got Shucked at Dave's tee — heather mockup" loading="lazy"></div>
+        <div class="img"><img src="/assets/merch/tee-shucked-navy-web.jpg" alt="I Got Shucked at Dave's tee — navy mockup" loading="lazy"></div>
+      </div>
+      <div class="body">
+        <div class="kicker">The Hero Tee</div>
+        <div class="titleline"><h2>I Got Shucked at Dave's — Tee</h2><span class="price">$28</span></div>
+        <p class="desc">The one people actually wear. A cartoon lobster peeling out on a Vespa, and the line every Kittery visitor earns: I&nbsp;GOT&nbsp;SHUCKED&nbsp;AT&nbsp;DAVE'S. Vintage screen-print on a Bella+Canvas staple tee.</p>
+        <div class="meta">
+          <span class="chip gold">18 variants</span>
+          <span class="chip">Heather Prism Natural</span><span class="chip">Athletic Heather</span><span class="chip">Navy</span>
+          <span class="chip">S–3XL</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Score tee -->
+    <article class="card">
+      <div class="img"><img src="/assets/merch/tee-score-web.jpg" alt="Does Anyone Know the Score? tee art" loading="lazy"></div>
+      <div class="body">
+        <div class="titleline"><h2>Does Anyone Know the Score? — Tee</h2><span class="price">$28</span></div>
+        <p class="desc">For the pickleball faithful. Same scooter lobster, ripping across the court, asking the only question that matters.</p>
+        <div class="meta">
+          <span class="chip gold">18 variants</span>
+          <span class="chip">3 colors</span><span class="chip">S–3XL</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Sticker -->
+    <article class="card">
+      <div class="img"><img src="/assets/merch/scooter-mark-web.jpg" alt="Dave's scooter lobster mark" loading="lazy"></div>
+      <div class="body">
+        <div class="titleline"><h2>Scooter Lobster — Sticker</h2><span class="price">$5</span></div>
+        <p class="desc">The scooter lobster, kiss-cut for the cooler, the truck, the laptop. The easiest yes at checkout.</p>
+        <div class="meta"><span class="chip">3×3"</span><span class="chip">4×4"</span></div>
+      </div>
+    </article>
+
+    <!-- Koozie -->
+    <article class="card">
+      <div class="img"><img src="/assets/merch/scooter-mark-web.jpg" alt="Scooter lobster mark — can koozie art" loading="lazy"></div>
+      <div class="body">
+        <div class="titleline"><h2>Scooter Lobster — Can Koozie</h2><span class="price">$8</span></div>
+        <p class="desc">Keeps the can cold and the lobster loud. Scooter lock-up on one side, KITTERY&nbsp;•&nbsp;MAINE&nbsp;EST.&nbsp;2016 on the other.</p>
+        <div class="meta"><span class="chip">Standard 12oz</span></div>
+      </div>
+    </article>
+
+    <!-- Coffee mug -->
+    <article class="card">
+      <div class="img"><img src="/assets/merch/scooter-mark-web.jpg" alt="Scooter lobster mark — coffee mug art" loading="lazy"></div>
+      <div class="body">
+        <div class="titleline"><h2>Dave's Coffee Mug</h2><span class="price">$16</span></div>
+        <p class="desc">Start the day with Dave's. Hot, strong, scooter-lobster energy at home. White glossy mug, wrap print.</p>
+        <div class="meta"><span class="chip">11oz</span><span class="chip">15oz</span></div>
+      </div>
+    </article>
+
+    <!-- Beer mug -->
+    <article class="card">
+      <div class="img"><img src="/assets/merch/scooter-mark-web.jpg" alt="Scooter lobster mark — beer mug art" loading="lazy"></div>
+      <div class="body">
+        <div class="titleline"><h2>Dave's Beer Mug</h2><span class="price">$22</span></div>
+        <p class="desc">Bourbon-powered, lobster-loaded. The Dave's glass beer mug for the home bar.</p>
+        <div class="meta"><span class="chip">16oz glass</span></div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="sign">Staging preview — not linked from the public site</div>
+    <div style="margin-top:8px">Mirrors the Shopify drafts at davesmainecafe.myshopify.com · Koozie, mugs &amp; sticker show the shared scooter mark until final product art lands</div>
+  </div>
+</footer>
+
+</body>
+</html>
