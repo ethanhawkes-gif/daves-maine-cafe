@@ -47,6 +47,15 @@ Warm, funny, local, Route 1 roadside wit. A trusted café regular who's great at
 
 **Positioning vibe (Dave's words, 2026-07-15):** road-trip · lobster shack · Route 1 *destination*. The place you pull over for — a stop worth the drive, not a roadside afterthought. Everything should feel like a classic New England shack you'd detour for.
 
+## 5b. Menu naming convention (LOCKED 2026-07-15)
+Signature items carry an **iconic coastal/marine Maine place name**; the description underneath stays plain-English so tourists get it. Tiered:
+- **Anchors stay clean** (don't town-ify the icons): Dave's Lobster Roll · Tourist's Revenge · Dave-oux Gumbo.
+- **Signature composed items get a Maine place name** — prefer RECOGNIZABLE coastal / Route 1 towns (Kittery, York, Ogunquit, Wells, Kennebunk, Portland, Camden, Bar Harbor, Boothbay), NOT obscure inland ones. Alliteration where it sings.
+- **Plain staples stay plain**: Hot Dog · Chicken Tenders · Pretzel Sticks · Whoopie Pie.
+- Fun name on top, plain-English description under ("Berwick Burger — 6 oz Maine Angus…").
+- **The Burger = the deliberate "turf" of surf-&-turf** — a pronounced statement piece for the meat crowd / seafood-haters. Name PENDING (front-runner: "The Landlubber").
+- Locked names: Acadia Turkey Club · Caribou Cranberry Walnut Wrap · Baxter BBQ Pulled Pork · Portland Pesto Caprese · Bangor Buffalo · Rangeley Roast Beef.
+
 ## 6. Standing brand rules
 - **10 Years Strong · EST. 2016** (consistent everywhere; not 2015).
 - **$20** is the public face price for the lobster roll everywhere.
