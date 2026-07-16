@@ -95,6 +95,21 @@
   .sign{font-family:'Special Elite',monospace;text-transform:uppercase;letter-spacing:2px;font-size:13px;color:var(--lobster-2)}
   .kicker{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:2.5px;font-size:13px;color:var(--gold-2)}
 
+  .news-ribbon{display:block;padding:12px 20px;background:var(--gold);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);color:var(--ink);text-align:center;text-decoration:none;font-family:Oswald,sans-serif;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+  .news-ribbon span{color:var(--lobster-2)}
+  .hidden-proof{padding:58px 0 66px}
+  .proof-card{display:grid;grid-template-columns:.9fr 1.1fr;overflow:hidden;border:3px solid var(--ink);border-radius:16px;background:var(--cream);box-shadow:8px 8px 0 var(--ink)}
+  .proof-photo{min-height:440px;background:#c9b797}
+  .proof-photo img{width:100%;height:100%;object-fit:cover}
+  .proof-copy{display:flex;flex-direction:column;justify-content:center;padding:44px}
+  .proof-stamp{align-self:flex-start;margin-bottom:18px;padding:7px 13px 5px;border:2px solid var(--lobster);color:var(--lobster);font-family:'Special Elite',monospace;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;transform:rotate(-2deg)}
+  .hidden-proof h2{max-width:620px;font-size:clamp(38px,5vw,62px)}
+  .hidden-proof h2 span{color:var(--lobster)}
+  .proof-dek{max-width:580px;margin:18px 0 8px;font-family:'Special Elite',monospace;font-size:18px;color:var(--ink-soft)}
+  .proof-source{margin:5px 0 25px;color:#6d604f;font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
+  .proof-actions{display:flex;flex-wrap:wrap;gap:14px}
+  .proof-note{margin:26px 0 0;padding-left:15px;border-left:3px solid var(--gold);color:var(--ink-soft);font-size:14px}
+
   .shield{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:70px;
     background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:10px 10px 22px 22px/10px 10px 30px 30px;
     font-family:Anton,sans-serif;line-height:.86;text-align:center;box-shadow:var(--shadow-sm)}
@@ -316,6 +331,9 @@
     .hero-art{order:-1;min-height:340px;flex-direction:column;gap:6px}
     .special-card{position:relative;bottom:auto;left:auto;transform:rotate(-2deg);margin:14px auto 0}
     .ig-grid{grid-template-columns:repeat(3,1fr)}
+    .proof-card{grid-template-columns:1fr}
+    .proof-photo{min-height:300px}
+    .proof-copy{padding:32px 24px 35px}
   }
   @media(max-width:560px){
     .exit-cols,.cards,.spec-grid{grid-template-columns:1fr}
@@ -333,6 +351,8 @@
 </style>
 </head>
 <body>
+
+<a class="news-ribbon" href="#hidden-gem"><span>The secret's out:</span> Named one of the Seacoast's 24 hidden-gem restaurants →</a>
 
 <header>
   <div class="wrap nav">
@@ -392,6 +412,27 @@
     <span>Butter-fueled, bourbon-powered, lobster-loaded</span>
   </div>
 </div>
+
+<section class="hidden-proof" id="hidden-gem">
+  <div class="wrap">
+    <article class="proof-card">
+      <div class="proof-photo">
+        <img src="/assets/photos/dave-owner-2026.jpg" alt="Dave at Dave's Maine Cafe" loading="lazy" />
+      </div>
+      <div class="proof-copy">
+        <div class="proof-stamp">Evidence recovered</div>
+        <h2>Apparently we've been <span>discovered.</span></h2>
+        <p class="proof-dek">Dave's Maine Café was named one of 24 hidden-gem restaurants across the Seacoast of New Hampshire and Maine.</p>
+        <p class="proof-source">Featured by Foster's Daily Democrat / Seacoast coverage</p>
+        <div class="proof-actions">
+          <a class="btn" href="https://www.facebook.com/FostersDailyDemocrat/posts/1714968289945987/" target="_blank" rel="noopener">Read the Feature</a>
+          <a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+        <p class="proof-note"><strong>Case status:</strong> Route 1's worst-kept secret. The lobster is still picked fresh. Dave is still only one person. Sellouts remain legally permissible.</p>
+      </div>
+    </article>
+  </div>
+</section>
 
 <!-- DAILY SPECIALS -->
 <section class="specials" id="specials">
