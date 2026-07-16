@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Hidden Gem Homepage Treatment — Dave's Maine Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Oswald:wght@500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:#f2e7cf;
+      --cream:#f7efdd;
+      --ink:#241d15;
+      --navy:#182b33;
+      --red:#b83a2b;
+      --red-dark:#9c2f22;
+      --gold:#d79a37;
+      --green:#2f5b3f;
+      --max:1120px;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:Inter,system-ui,sans-serif;
+      line-height:1.55;
+      background-image:radial-gradient(rgba(120,90,45,.05) 1px,transparent 1px);
+      background-size:9px 9px;
+    }
+    h1,h2,h3 { margin:0; font-family:Anton,Impact,sans-serif; font-weight:400; line-height:1; text-transform:uppercase; }
+    a { color:inherit; }
+    .wrap { width:min(var(--max),calc(100% - 40px)); margin:auto; }
+    .preview {
+      padding:9px 16px;
+      background:#111;
+      color:#fff;
+      font-family:'Special Elite',monospace;
+      font-size:12px;
+      text-align:center;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+    .news-ribbon {
+      display:block;
+      padding:13px 20px;
+      background:var(--gold);
+      border-top:3px solid var(--ink);
+      border-bottom:3px solid var(--ink);
+      text-decoration:none;
+      text-align:center;
+      font-family:Oswald,sans-serif;
+      font-weight:700;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+    }
+    .news-ribbon span { color:var(--red-dark); }
+    header { background:var(--navy); border-bottom:3px solid var(--gold); }
+    .nav { height:66px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:#fff; font-family:Anton,sans-serif; font-size:23px; letter-spacing:1px; text-decoration:none; text-transform:uppercase; }
+    .brand span { color:var(--gold); }
+    .nav-links { display:flex; gap:22px; align-items:center; color:var(--cream); font-family:Oswald,sans-serif; font-size:14px; text-transform:uppercase; }
+    .nav-links a { text-decoration:none; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 23px;
+      border:2px solid var(--ink);
+      border-radius:8px;
+      background:var(--red);
+      color:#fff;
+      box-shadow:3px 3px 0 var(--ink);
+      font-family:Oswald,sans-serif;
+      font-weight:600;
+      letter-spacing:1px;
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+    .btn.gold { background:var(--gold); color:var(--ink); }
+    .btn.cream { background:var(--cream); color:var(--ink); }
+    .hero { overflow:hidden; background:radial-gradient(circle at 82% 18%,rgba(215,154,55,.2),transparent 42%),var(--navy); color:var(--cream); }
+    .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:42px; align-items:center; padding:54px 0 62px; }
+    .eyebrow { color:var(--gold); font-family:'Special Elite',monospace; font-size:13px; letter-spacing:2px; text-transform:uppercase; }
+    .hero h1 { max-width:700px; margin:14px 0 10px; color:#fff; font-size:clamp(46px,7vw,84px); text-shadow:3px 3px 0 rgba(0,0,0,.35); }
+    .hero h1 em { color:var(--red); font-style:normal; }
+    .hero p { max-width:42ch; margin:14px 0 25px; color:rgba(247,239,221,.85); font-size:18px; }
+    .actions { display:flex; flex-wrap:wrap; gap:14px; }
+    .hero-art { position:relative; }
+    .hero-art::before { content:""; position:absolute; inset:5% 1%; border:6px solid var(--gold); border-radius:50%; background:var(--paper); }
+    .hero-art img { position:relative; width:100%; filter:drop-shadow(0 18px 20px rgba(0,0,0,.35)); }
+    .ticker { padding:11px 16px; overflow:hidden; background:var(--red); color:#fff; border-block:3px solid var(--ink); font-family:Oswald,sans-serif; font-weight:600; letter-spacing:2px; text-align:center; text-transform:uppercase; }
+    .proof { padding:58px 0 66px; }
+    .proof-card { display:grid; grid-template-columns:.9fr 1.1fr; overflow:hidden; border:3px solid var(--ink); border-radius:16px; background:var(--cream); box-shadow:8px 8px 0 var(--ink); }
+    .proof-photo { min-height:440px; background:#c9b797; }
+    .proof-photo img { width:100%; height:100%; object-fit:cover; }
+    .proof-copy { position:relative; display:flex; flex-direction:column; justify-content:center; padding:44px; }
+    .stamp { align-self:flex-start; margin-bottom:18px; padding:7px 13px 5px; border:2px solid var(--red); color:var(--red); font-family:'Special Elite',monospace; font-size:12px; letter-spacing:1.6px; text-transform:uppercase; transform:rotate(-2deg); }
+    .proof h2 { max-width:620px; font-size:clamp(38px,5vw,62px); }
+    .proof h2 span { color:var(--red); }
+    .proof .dek { max-width:580px; margin:18px 0 8px; font-family:'Special Elite',monospace; font-size:18px; color:#4a3f30; }
+    .source { margin:5px 0 25px; color:#6d604f; font-size:13px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; }
+    .proof-note { margin:26px 0 0; padding-left:15px; border-left:3px solid var(--gold); color:#4a3f30; font-size:14px; }
+    .why { padding:46px 0; background:var(--green); color:var(--cream); border-top:3px solid var(--ink); }
+    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .why h3 { margin-bottom:8px; color:var(--gold); font-family:Oswald,sans-serif; font-size:17px; letter-spacing:1px; }
+    .why p { margin:0; color:rgba(247,239,221,.82); font-size:14px; }
+    footer { padding:22px; background:var(--navy); color:rgba(247,239,221,.7); font-family:'Special Elite',monospace; font-size:11px; letter-spacing:1px; text-align:center; text-transform:uppercase; }
+    @media (max-width:780px) {
+      .nav-links a:not(.btn) { display:none; }
+      .hero-grid { grid-template-columns:1fr; padding:42px 0 50px; }
+      .hero-art { max-width:420px; margin:auto; }
+      .proof-card { grid-template-columns:1fr; }
+      .proof-photo { min-height:300px; }
+      .proof-copy { padding:32px 24px 35px; }
+      .why-grid { grid-template-columns:1fr; }
+      .news-ribbon { font-size:13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview">Private staging proof · Nothing on the live homepage has changed</div>
+  <a class="news-ribbon" href="#hidden-gem"><span>The secret's out:</span> Named one of the Seacoast's 24 hidden-gem restaurants →</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#">🦞 Dave's <span>Maine Café</span></a>
+      <nav class="nav-links" aria-label="Preview navigation">
+        <a href="#hidden-gem">The story</a>
+        <a href="https://www.toasttab.com/davesmainecafe/v3" target="_blank" rel="noopener">Menu</a>
+        <a class="btn gold" href="https://www.toasttab.com/davesmainecafe/v3" target="_blank" rel="noopener">Order Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Route 1's most questionable business model</div>
+          <h1>Butter-fueled.<br>Bourbon-powered.<br><em>Lobster-loaded.</em></h1>
+          <p>A Maine lobster shack with a road-house soul—fresh-picked rolls, cold drinks and a tiny room apparently no longer qualified as a secret.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.toasttab.com/davesmainecafe/v3" target="_blank" rel="noopener">Order Online</a>
+            <a class="btn cream" href="#hidden-gem">See What Got Out</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="../../assets/daves-lobster-mascot.webp" alt="Dave's Maine Cafe lobster mascot riding a moped">
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker">Fresh picked daily · $20 lobster roll-palooza · 439 US Route 1, Kittery · Crustacean Nation</div>
+
+    <section class="proof" id="hidden-gem">
+      <div class="wrap">
+        <article class="proof-card">
+          <div class="proof-photo">
+            <img src="https://www.fosters.com/gcdn/authoring/authoring-images/2025/12/18/NFDD/87833008007-dave-5.jpg?width=1200&amp;height=800&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="Dave at Dave's Maine Cafe, as featured by Foster's Daily Democrat" loading="eager">
+          </div>
+          <div class="proof-copy">
+            <div class="stamp">Evidence recovered</div>
+            <h2>Apparently we've been <span>discovered.</span></h2>
+            <p class="dek">Dave's Maine Café was named one of 24 hidden-gem restaurants across the Seacoast of New Hampshire and Maine.</p>
+            <p class="source">Featured by Foster's Daily Democrat / Seacoast coverage</p>
+            <div class="actions">
+              <a class="btn" href="https://www.facebook.com/FostersDailyDemocrat/posts/1714968289945987/" target="_blank" rel="noopener">Read the Feature</a>
+              <a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener">Get Directions</a>
+            </div>
+            <p class="proof-note"><strong>Case status:</strong> Route 1's worst-kept secret. The lobster is still picked fresh. Dave is still only one person. Sellouts remain legally permissible.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="wrap why-grid">
+        <div><h3>1 · Lobster stays the hero</h3><p>The article supports the reason people stop. It does not shove the food out of the spotlight.</p></div>
+        <div><h3>2 · Proof lands immediately</h3><p>The ribbon is visible before a visitor scrolls; the full feature appears directly after the hero.</p></div>
+        <div><h3>3 · Every click has a job</h3><p>Read the story, get directions or order online—tourist attention turns into a visit.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Dave's Maine Café · 439 US Route 1, Kittery, Maine · Community first. Profits second.</footer>
+</body>
+</html>
