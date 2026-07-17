@@ -29,12 +29,12 @@ const html = `<!DOCTYPE html>
 <meta name="description" content="${esc(s.title)} at Dave's Maine Café in Kittery, Maine — ${esc(s.blurb)}" />
 <meta name="keywords" content="${esc(s.seoKeywords)}" />
 <meta name="theme-color" content="#b23a2e" />
-<link rel="canonical" href="https://davesmainecafe.com/special/" />
+<link rel="canonical" href="https://www.davesmainecafe.com/special/" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%A6%9E%3C/text%3E%3C/svg%3E" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="${esc(s.title)} — ${esc(s.price)} at Dave's Maine Café" />
 <meta property="og:description" content="${esc(s.blurb)}" />
-<meta property="og:url" content="https://davesmainecafe.com/special/" />
+<meta property="og:url" content="https://www.davesmainecafe.com/special/" />
 <meta property="og:image" content="${esc(s.image)}" />
 <meta name="twitter:card" content="summary_large_image" />
 <script type="application/ld+json">
@@ -54,8 +54,8 @@ const html = `<!DOCTYPE html>
   "isPartOf": {
     "@type": "Restaurant",
     "name": "Dave's Maine Café",
-    "@id": "https://davesmainecafe.com",
-    "url": "https://davesmainecafe.com",
+    "@id": "https://www.davesmainecafe.com",
+    "url": "https://www.davesmainecafe.com",
     "telephone": "+1-207-475-5655",
     "address": { "@type": "PostalAddress", "streetAddress": "439 US Route 1, Ste 1", "addressLocality": "Kittery", "addressRegion": "ME", "postalCode": "03904", "addressCountry": "US" }
   }
