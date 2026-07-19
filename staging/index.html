@@ -789,10 +789,12 @@
       <h2>Join Dave's List</h2>
       <p>Be first to know when the Thursday lobster roll is on, what's pouring, and when something special is happening. No spam — just the good stuff, from Dave.</p>
     </div>
-    <form class="card-form" action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
+    <form class="card-form" action="https://formsubmit.co/4a962d50a7a5736503be918c8d08c540" method="POST">
       <input type="hidden" name="_subject" value="New signup — Dave's List (website)" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://www.davesmainecafe.com/thanks/?form=list" />
+      <input type="hidden" name="Form" value="Dave's List signup" />
       <input type="text" name="_honey" style="display:none" />
       <div>
         <label class="lbl">Name</label>
@@ -821,10 +823,12 @@
         <li>Private gatherings &amp; group bookings</li>
       </ul>
     </div>
-    <form class="card-form" action="https://formsubmit.co/dave@mainebeercafe.com" method="POST">
+    <form class="card-form" action="https://formsubmit.co/4a962d50a7a5736503be918c8d08c540" method="POST">
       <input type="hidden" name="_subject" value="New catering inquiry (website)" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://www.davesmainecafe.com/thanks/?form=catering" />
+      <input type="hidden" name="Form" value="Catering inquiry" />
       <input type="text" name="_honey" style="display:none" />
       <div class="row">
         <div><label class="lbl">Name</label><input type="text" name="Name" required /></div>
@@ -959,6 +963,14 @@
 
 <script>
   document.querySelectorAll('#navlinks a').forEach(function(a){a.addEventListener('click',function(){var n=document.getElementById('navlinks');n.classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false')})});
+  document.querySelectorAll('form.card-form').forEach(function(form){
+    form.addEventListener('submit',function(){
+      var button=form.querySelector('button[type="submit"]');
+      if(!button||button.disabled)return;
+      button.disabled=true;
+      button.textContent='Sending…';
+    });
+  });
 </script>
 </body>
 </html>
