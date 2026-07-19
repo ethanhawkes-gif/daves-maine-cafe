@@ -14,10 +14,10 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif}img{display:block;max-width:100%}button,select{font:inherit}.wrap{width:min(920px,calc(100% - 28px));margin:auto}
     .top{background:var(--ink);color:white;border-bottom:4px solid var(--gold)}.nav{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font:400 22px Anton,sans-serif;letter-spacing:.7px;text-transform:uppercase}.brand b{color:var(--gold);font-weight:400}.stage{font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;background:var(--gold);color:var(--ink);border-radius:999px;padding:7px 10px}
     .hero{text-align:center;padding:42px 0 34px}.eyebrow{color:var(--red);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font:400 clamp(48px,10vw,76px)/.94 Anton,sans-serif;text-transform:uppercase;margin:11px 0}.hero p{margin:0 auto;color:#554e44;font-size:16px;max-width:540px}.jump{display:inline-block;margin-top:20px;padding:11px 18px;border:2px solid var(--ink);border-radius:999px;background:var(--white);font-size:12px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.7px}
-    .product{background:var(--white);border:2px solid var(--ink);border-radius:18px;overflow:hidden;margin:0 0 34px;box-shadow:7px 7px 0 #d4a03d55}.photo{background:#e9dfcd;border-bottom:2px solid var(--ink)}.photo img{width:100%;aspect-ratio:1/1;object-fit:cover}.info{padding:24px}.head{display:flex;align-items:start;justify-content:space-between;gap:18px}.number{font-size:10px;font-weight:800;color:var(--red);letter-spacing:1.7px;text-transform:uppercase}.info h2{font:400 clamp(31px,6vw,48px)/1 Anton,sans-serif;text-transform:uppercase;margin:6px 0 5px}.price{font:400 40px/1 Anton,sans-serif;color:var(--red);white-space:nowrap}.description{color:var(--muted);font-size:13px;margin:0}.choices{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-top:20px}.swatches{display:flex;gap:14px}.swatch{display:grid;justify-items:center;gap:6px;color:var(--muted);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}.dot{width:34px;height:34px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px var(--line)}.dot.chosen{box-shadow:0 0 0 3px var(--red)}.buy{display:flex;gap:8px;align-items:end}.field label{display:block;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}select{min-width:92px;border:2px solid var(--ink);border-radius:8px;background:white;padding:11px}.cart{border:2px solid var(--ink);border-radius:8px;background:var(--ink);color:white;padding:11px 18px;font-weight:800;white-space:nowrap}.cart:disabled{opacity:.72}.preview{font-size:10px;text-align:right;color:var(--muted);margin:7px 0 0}
+    .product{background:var(--white);border:2px solid var(--ink);border-radius:18px;overflow:hidden;margin:0 0 34px;box-shadow:7px 7px 0 #d4a03d55}.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--ink);border-bottom:2px solid var(--ink)}.photo-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#e9dfcd}.info{padding:24px}.head{display:flex;align-items:start;justify-content:space-between;gap:18px}.number{font-size:10px;font-weight:800;color:var(--red);letter-spacing:1.7px;text-transform:uppercase}.info h2{font:400 clamp(31px,6vw,48px)/1 Anton,sans-serif;text-transform:uppercase;margin:6px 0 5px}.price{font:400 40px/1 Anton,sans-serif;color:var(--red);white-space:nowrap}.description{color:var(--muted);font-size:13px;margin:0}.choices{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-top:20px}.swatches{display:flex;gap:14px}.swatch{display:grid;justify-items:center;gap:6px;color:var(--muted);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}.dot{width:34px;height:34px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px var(--line)}.buy{display:flex;gap:8px;align-items:end}.field label{display:block;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}select{min-width:92px;border:2px solid var(--ink);border-radius:8px;background:white;padding:11px}.cart{border:2px solid var(--ink);border-radius:8px;background:var(--ink);color:white;padding:11px 18px;font-weight:800;white-space:nowrap}.cart:disabled{opacity:.72}.preview{font-size:10px;text-align:right;color:var(--muted);margin:7px 0 0}
     .extras{padding:28px 0 60px}.extras-head{text-align:center;margin-bottom:22px}.extras-head h2{font:400 42px/1 Anton,sans-serif;text-transform:uppercase;margin:7px 0}.cups{display:grid;grid-template-columns:1fr 1fr;gap:20px}.cup{background:var(--white);border:2px solid var(--ink);border-radius:16px;overflow:hidden}.cup img{width:100%;aspect-ratio:1/1;object-fit:cover;border-bottom:2px solid var(--ink)}.cup-body{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px}.cup h3{font:400 26px/1 Anton,sans-serif;text-transform:uppercase;margin:0}.cup .price{font-size:29px}
     .foot{text-align:center;background:var(--ink);color:#eee5d5;padding:24px 14px;font-size:12px}.foot b{color:var(--gold)}
-    @media(max-width:640px){.wrap{width:min(100% - 20px,920px)}.hero{padding:31px 6px 27px}.hero p{font-size:14px}.product{margin-bottom:25px;border-radius:13px;box-shadow:5px 5px 0 #d4a03d55}.info{padding:18px}.head{gap:10px}.price{font-size:34px}.choices{display:block}.swatches{margin-bottom:18px;justify-content:flex-start}.buy{display:grid;grid-template-columns:90px 1fr}.cart{padding-inline:10px}.preview{text-align:left}.cups{grid-template-columns:1fr}.cup-body{padding:15px}.stage{font-size:8px}.brand{font-size:19px}.dot{width:32px;height:32px}}
+    @media(max-width:640px){.wrap{width:min(100% - 20px,920px)}.hero{padding:31px 6px 27px}.hero p{font-size:14px}.product{margin-bottom:25px;border-radius:13px;box-shadow:5px 5px 0 #d4a03d55}.photo-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.photo-grid::-webkit-scrollbar{display:none}.photo-grid img{flex:0 0 88%;scroll-snap-align:start}.info{padding:18px}.head{gap:10px}.price{font-size:34px}.choices{display:block}.swatches{margin-bottom:18px;justify-content:flex-start}.buy{display:grid;grid-template-columns:90px 1fr}.cart{padding-inline:10px}.preview{text-align:left}.cups{grid-template-columns:1fr}.cup-body{padding:15px}.stage{font-size:8px}.brand{font-size:19px}.dot{width:32px;height:32px}}
   </style>
 </head>
 <body>
@@ -32,7 +32,11 @@
 
     <section id="shirts" aria-label="Drop No. 1 shirts">
       <article class="product">
-        <div class="photo"><img src="/assets/merch/realistic/dmc-shucked-sandstone-realistic-v2.png" alt="Sandstone I Got Shucked at Dave's T-shirt, front and back"></div>
+        <div class="photo-grid" aria-label="I Got Shucked shirt color comparisons">
+          <img src="/assets/merch/drop-one-mockups/dmc-shucked-ivory-front-back.webp" alt="Ivory I Got Shucked at Dave's T-shirt, front and back">
+          <img src="/assets/merch/drop-one-mockups/dmc-shucked-sandstone-front-back.webp" alt="Sandstone I Got Shucked at Dave's T-shirt, front and back">
+          <img src="/assets/merch/drop-one-mockups/dmc-shucked-khaki-front-back.webp" alt="Khaki I Got Shucked at Dave's T-shirt, front and back">
+        </div>
         <div class="info">
           <div class="head"><div><div class="number">Shirt No. 1</div><h2>I Got Shucked at Dave's</h2><p class="description">Comfort Colors heavyweight tee · front and back print</p></div><div class="price">$28</div></div>
           <div class="choices">
@@ -47,7 +51,11 @@
       </article>
 
       <article class="product">
-        <div class="photo"><img src="/assets/merch/realistic/dmc-score-blue-jean-realistic-v1.png" alt="Blue Jean Does Anyone Know the Score T-shirt, front and back"></div>
+        <div class="photo-grid" aria-label="Score shirt color comparisons">
+          <img src="/assets/merch/drop-one-mockups/dmc-score-chambray-front-back.webp" alt="Chambray Does Anyone Know the Score T-shirt, front and back">
+          <img src="/assets/merch/drop-one-mockups/dmc-score-blue-jean-front-back.webp" alt="Blue Jean Does Anyone Know the Score T-shirt, front and back">
+          <img src="/assets/merch/drop-one-mockups/dmc-score-flo-blue-front-back.webp" alt="Flo Blue Does Anyone Know the Score T-shirt, front and back">
+        </div>
         <div class="info">
           <div class="head"><div><div class="number">Shirt No. 2</div><h2>Does Anyone Know the Score?</h2><p class="description">Comfort Colors heavyweight tee · front and back print</p></div><div class="price">$28</div></div>
           <div class="choices">
@@ -62,7 +70,11 @@
       </article>
 
       <article class="product">
-        <div class="photo"><img src="/assets/merch/realistic/dmc-bourbon-pepper-realistic-v1.png" alt="Pepper Butter-Fueled Bourbon-Powered T-shirt, front and back"></div>
+        <div class="photo-grid" aria-label="Butter-Fueled Bourbon-Powered shirt color comparisons">
+          <img src="/assets/merch/drop-one-mockups/dmc-bourbon-yam-front-back.webp" alt="Yam Butter-Fueled Bourbon-Powered T-shirt, front and back">
+          <img src="/assets/merch/drop-one-mockups/dmc-bourbon-pepper-front-back.webp" alt="Pepper Butter-Fueled Bourbon-Powered T-shirt, front and back">
+          <img src="/assets/merch/drop-one-mockups/dmc-bourbon-espresso-front-back.webp" alt="Espresso Butter-Fueled Bourbon-Powered T-shirt, front and back">
+        </div>
         <div class="info">
           <div class="head"><div><div class="number">Shirt No. 3</div><h2>Butter-Fueled. Bourbon-Powered.</h2><p class="description">Comfort Colors heavyweight tee · front and back print</p></div><div class="price">$28</div></div>
           <div class="choices">
