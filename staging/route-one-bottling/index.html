@@ -33,6 +33,12 @@
     .co{font:400 clamp(26px,5vw,54px)/1.1 Special Elite,serif;display:block;margin-top:14px;color:#fff3d0}
     .hero-dek{max-width:680px;margin:30px auto 0;font:400 clamp(18px,2.8vw,28px)/1.3 Special Elite,serif;color:#fff8e7}
     .no-plastic{display:inline-block;margin-top:30px;border:3px double var(--gold);padding:14px 22px;transform:rotate(-3deg);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#f3d389}
+    /* LABEL HERO */
+    .label-hero{background:var(--cream);border-bottom:5px solid var(--navy);padding:60px 22px;text-align:center}
+    .label-hero img{max-width:480px;width:100%;display:block;margin:0 auto;filter:drop-shadow(0 16px 40px rgba(20,41,54,.35));border-radius:4px}
+    .label-taglines{margin-top:30px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .label-taglines span{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--navy);opacity:.7}
+    .label-taglines span:not(:last-child){padding-right:32px;border-right:1px solid var(--navy)}
 
     /* MAIN */
     main{max-width:1100px;margin:auto;padding:72px 22px 100px}
@@ -69,9 +75,12 @@
     .label-text h3{font:400 clamp(32px,4vw,52px)/1 Anton,sans-serif;text-transform:uppercase;margin:0 0 18px;color:var(--navy)}
     .label-text p{font:400 17px/1.6 Special Elite,serif;color:#344750;margin:0 0 14px}
     .label-text p:last-child{margin-bottom:0}
+    .dave-approved{display:inline-block;margin-top:18px;border:3px solid var(--red);padding:8px 16px;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red)}
     @media(max-width:700px){
       .label-feature{grid-template-columns:1fr;gap:24px;padding:24px}
       .label-feature img{max-width:280px}
+      .label-hero img{max-width:320px}
+      .label-taglines{gap:16px}
     }
 
     /* COCKTAILS */
@@ -118,12 +127,24 @@
     <div class="route-lines"></div>
     <div class="hero-inner">
       <img src="../../assets/daves-lobster-mascot.webp" alt="Dave's Maine Cafe" class="brand-logo">
-      <div class="eyebrow">Born on Route 1 · Kittery, Maine</div>
+      <div class="eyebrow">Est. Somewhere Between Here &amp; There</div>
       <h1>Route One<span class="co">Bottling Co.</span></h1>
       <p class="hero-dek">The soda worth pulling over for. Seven old-school flavors. Glass bottles. No plastic. One very questionable roadside authority.</p>
       <div class="no-plastic">No Plastic. Not Negotiable.</div>
     </div>
   </header>
+
+  <!-- Label showcase -->
+  <div class="label-hero">
+    <img src="images/root-beer-label.jpg" alt="Route One Bottling Co. — Double D's Root Beer label">
+    <div class="label-taglines">
+      <span>Small Batch</span>
+      <span>Kettle Brewed</span>
+      <span>Cane Sugar</span>
+      <span>Pure Maine Attitude</span>
+      <span>Dave Approved</span>
+    </div>
+  </div>
 
   <main>
 
@@ -149,10 +170,11 @@
       <div class="label-feature">
         <img src="images/root-beer-label.jpg" alt="Route One Bottling Co. — Double D's Root Beer label">
         <div class="label-text">
-          <div class="tag">The flagship</div>
+          <div class="tag">The flagship · Est. 2016</div>
           <h3>Double D's Root Beer</h3>
-          <p>Old fashioned. Kettle brewed. Made with cane sugar and pure Maine attitude. Bold flavor, smooth finish — the one that set the standard for everything else in the lineup.</p>
-          <p>Small batch. Glass only. Dave approved. Obviously.</p>
+          <p>Old fashioned. Kettle brewed goodness. Made with cane sugar and pure Maine attitude. Bold flavor, smooth finish, Maine made — the one that set the standard for everything that came after it.</p>
+          <p>Small batch. Glass only. Crafted for Dave's Maine Cafe.</p>
+          <div class="dave-approved">✓ Dave Approved</div>
         </div>
       </div>
 
@@ -235,6 +257,6 @@
 
   </main>
 
-  <footer>Route One Bottling Co. · Made for Dave's Maine Cafe · Bottled in New Hampshire. Approved by Dave. · No plastic was harmed in the making of this soda.</footer>
+  <footer>Route One Bottling Co. · Made for Dave's Maine Cafe · Small Batch · Est. 2016 · No plastic was harmed in the making of this soda.</footer>
 </body>
 </html>
