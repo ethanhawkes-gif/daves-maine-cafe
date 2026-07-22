@@ -62,6 +62,18 @@
     .bottle p{font-size:14px;font-family:Special Elite,serif;line-height:1.45;color:#546269;margin:8px 0 0}
     .stock{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);opacity:.7}
 
+    /* LABEL FEATURE */
+    .label-feature{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:48px;padding:40px;background:var(--cream);border:3px solid var(--navy);box-shadow:8px 8px 0 var(--navy)}
+    .label-feature img{width:100%;max-width:360px;display:block;margin:auto;filter:drop-shadow(0 12px 28px rgba(0,0,0,.28))}
+    .label-text .tag{font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+    .label-text h3{font:400 clamp(32px,4vw,52px)/1 Anton,sans-serif;text-transform:uppercase;margin:0 0 18px;color:var(--navy)}
+    .label-text p{font:400 17px/1.6 Special Elite,serif;color:#344750;margin:0 0 14px}
+    .label-text p:last-child{margin-bottom:0}
+    @media(max-width:700px){
+      .label-feature{grid-template-columns:1fr;gap:24px;padding:24px}
+      .label-feature img{max-width:280px}
+    }
+
     /* COCKTAILS */
     .cocktails{border-top:5px solid var(--navy);padding-top:60px;margin-bottom:80px}
     .cocktails-head{margin-bottom:40px}
@@ -133,9 +145,19 @@
         <h2>The lineup.</h2>
         <p>Seven flavors. Pick a favorite, change your mind, and conduct additional field research. All glass. All ice cold. No subscriptions required.</p>
       </div>
+      <!-- Featured label card -->
+      <div class="label-feature">
+        <img src="images/root-beer-label.jpg" alt="Route One Bottling Co. — Double D's Root Beer label">
+        <div class="label-text">
+          <div class="tag">The flagship</div>
+          <h3>Double D's Root Beer</h3>
+          <p>Old fashioned. Kettle brewed. Made with cane sugar and pure Maine attitude. Bold flavor, smooth finish — the one that set the standard for everything else in the lineup.</p>
+          <p>Small batch. Glass only. Dave approved. Obviously.</p>
+        </div>
+      </div>
+
       <div class="grid">
         <article class="bottle">
-          <img src="../../assets/daves-lobster-mascot.webp" alt="" class="rootbeer-logo">
           <h3>Root Beer</h3>
           <p>The one that started it all. Pairs with everything. Judges nothing.</p>
         </article>
