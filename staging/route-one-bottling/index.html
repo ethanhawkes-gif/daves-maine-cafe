@@ -59,6 +59,7 @@
     .num{font-size:10px;letter-spacing:3px;font-weight:700;color:var(--red);text-transform:uppercase}
     .bottle h3{font:400 clamp(26px,3vw,34px)/1 Anton,sans-serif;text-transform:uppercase;margin:10px 0 0;color:var(--navy)}
     .bottle p{font-size:14px;font-family:Special Elite,serif;line-height:1.45;color:#546269;margin:8px 0 0}
+    .stock{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);opacity:.7}
 
     /* COCKTAILS */
     .cocktails{border-top:5px solid var(--navy);padding-top:60px;margin-bottom:80px}
@@ -66,7 +67,7 @@
     .cocktails-head .kicker{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
     .cocktails-head h2{font:400 clamp(44px,7vw,74px)/.9 Anton,sans-serif;text-transform:uppercase;margin:0;color:var(--navy)}
     .cocktails-head p{font:400 18px/1.5 Special Elite,serif;color:#546269;margin:14px 0 0;max-width:580px}
-    .cocktail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .cocktail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .cocktail{padding:28px 24px;background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
     .cocktail:before{content:"";position:absolute;top:-40px;right:-40px;width:120px;height:120px;border:3px solid rgba(243,234,215,.08);border-radius:50%}
     .cocktail .c-num{font-size:10px;letter-spacing:3px;font-weight:700;color:#efc86d;text-transform:uppercase}
@@ -88,6 +89,7 @@
       .flavors-head{flex-direction:column;align-items:flex-start}
       .grid{grid-template-columns:1fr 1fr}
       .cocktail-grid{grid-template-columns:1fr}
+
     }
     @media(max-width:480px){
       .grid{grid-template-columns:1fr}
@@ -134,36 +136,43 @@
           <span class="num">Route 01</span>
           <h3>Root Beer</h3>
           <p>Route 1's favorite non-alcoholic co-pilot. Pairs with everything. Judges nothing.</p>
+          <div class="stock">4 cases in stock</div>
         </article>
         <article class="bottle">
           <span class="num">Route 02</span>
           <h3>Ginger Beer</h3>
           <p>Spicy, sharp, not messing around. Makes a great mixer. Also great on its own when you're pretending to be responsible.</p>
+          <div class="stock">2 cases in stock</div>
         </article>
         <article class="bottle">
           <span class="num">Route 03</span>
           <h3>Cream Soda</h3>
           <p>Vanilla forward, cold, and unapologetically sweet. The one you don't expect to love. You'll love it.</p>
+          <div class="stock">2 cases in stock</div>
         </article>
         <article class="bottle">
           <span class="num">Route 04</span>
           <h3>Lemonade</h3>
           <p>Real lemon flavor. Cold. Done. Doesn't need the paragraph.</p>
+          <div class="stock">3 cases in stock</div>
         </article>
         <article class="bottle">
           <span class="num">Route 05</span>
           <h3>Orange</h3>
           <p>The one that tastes like what orange soda was supposed to taste like before orange soda became a metaphor for disappointment.</p>
+          <div class="stock">2 cases in stock</div>
         </article>
         <article class="bottle">
           <span class="num">Route 06</span>
           <h3>Raspberry Lime Rickey</h3>
           <p>Tart, bright, a little sharp. The pop shop original that survived everything. For good reason.</p>
+          <div class="stock">2 cases in stock</div>
         </article>
         <article class="bottle">
           <span class="num">Route 07</span>
           <h3>Ginger Ale</h3>
           <p>Smooth ginger, easy carbonation. Choose your ginger destiny — this is the approachable one.</p>
+          <div class="stock">3 cases in stock</div>
         </article>
       </div>
     </section>
@@ -194,6 +203,13 @@
           <h3>The Dark &amp; Rickey</h3>
           <div class="ingredients">Dark Rum · Route 06 Raspberry Lime Rickey · A General Optimism</div>
           <p>The Rickey was already doing most of the work. Dark rum just showed up and took credit, which honestly is very on-brand for dark rum. Tart, fruity, cold, and more drinkable than it has any right to be. Proceed at your own pace.</p>
+          <div class="price">Market · Ask your server</div>
+        </div>
+        <div class="cocktail">
+          <div class="c-num">Cocktail 04</div>
+          <h3>The Sunburn</h3>
+          <div class="ingredients">Tequila · Route 05 Orange · Lime · Zero Regrets (Yet)</div>
+          <p>Maine doesn't really do sunburns until the first genuinely warm day of the year — then everyone gets one simultaneously and acts surprised. This is that drink. Tequila, Route 05 orange, lime, ice cold. Whether you call it a Tequila Sunrise or a Route 1 problem, the orange is doing the work and it knows it.</p>
           <div class="price">Market · Ask your server</div>
         </div>
       </div>
