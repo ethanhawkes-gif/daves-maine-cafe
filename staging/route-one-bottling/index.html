@@ -56,7 +56,8 @@
     .bottle:nth-child(2n){background:var(--pale)}
     .bottle:nth-child(3n){border-color:var(--red);box-shadow:5px 5px 0 var(--red)}
     .bottle:nth-child(5n){background:var(--cream)}
-    .num{font-size:10px;letter-spacing:3px;font-weight:700;color:var(--red);text-transform:uppercase}
+    .brand-logo{display:block;margin:0 auto 24px;width:clamp(80px,12vw,120px);opacity:.92;filter:drop-shadow(0 4px 12px rgba(0,0,0,.35))}
+    .rootbeer-logo{display:block;margin:0 0 12px;width:52px;opacity:.85}
     .bottle h3{font:400 clamp(26px,3vw,34px)/1 Anton,sans-serif;text-transform:uppercase;margin:10px 0 0;color:var(--navy)}
     .bottle p{font-size:14px;font-family:Special Elite,serif;line-height:1.45;color:#546269;margin:8px 0 0}
     .stock{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);opacity:.7}
@@ -104,6 +105,7 @@
   <header class="hero">
     <div class="route-lines"></div>
     <div class="hero-inner">
+      <img src="../../assets/daves-lobster-mascot.webp" alt="Dave's Maine Cafe" class="brand-logo">
       <div class="eyebrow">Born on Route 1 · Kittery, Maine</div>
       <h1>Route One<span class="co">Bottling Co.</span></h1>
       <p class="hero-dek">The soda worth pulling over for. Seven old-school flavors. Glass bottles. No plastic. One very questionable roadside authority.</p>
@@ -133,37 +135,31 @@
       </div>
       <div class="grid">
         <article class="bottle">
-          <span class="num">Route 01</span>
+          <img src="../../assets/daves-lobster-mascot.webp" alt="" class="rootbeer-logo">
           <h3>Root Beer</h3>
-          <p>Route 1's favorite non-alcoholic co-pilot. Pairs with everything. Judges nothing.</p>
+          <p>The one that started it all. Pairs with everything. Judges nothing.</p>
         </article>
         <article class="bottle">
-          <span class="num">Route 02</span>
           <h3>Ginger Beer</h3>
           <p>Spicy, sharp, not messing around. Makes a great mixer. Also great on its own when you're pretending to be responsible.</p>
         </article>
         <article class="bottle">
-          <span class="num">Route 03</span>
           <h3>Cream Soda</h3>
           <p>Vanilla forward, cold, and unapologetically sweet. The one you don't expect to love. You'll love it.</p>
         </article>
         <article class="bottle">
-          <span class="num">Route 04</span>
           <h3>Lemonade</h3>
           <p>Real lemon flavor. Cold. Done. Doesn't need the paragraph.</p>
         </article>
         <article class="bottle">
-          <span class="num">Route 05</span>
           <h3>Orange</h3>
           <p>The one that tastes like what orange soda was supposed to taste like before orange soda became a metaphor for disappointment.</p>
         </article>
         <article class="bottle">
-          <span class="num">Route 06</span>
           <h3>Raspberry Lime Rickey</h3>
           <p>Tart, bright, a little sharp. The pop shop original that survived everything. For good reason.</p>
         </article>
         <article class="bottle">
-          <span class="num">Route 07</span>
           <h3>Ginger Ale</h3>
           <p>Smooth ginger, easy carbonation. Choose your ginger destiny — this is the approachable one.</p>
         </article>
@@ -180,29 +176,29 @@
         <div class="cocktail">
           <div class="c-num">Cocktail 01</div>
           <h3>The Yard Sale</h3>
-          <div class="ingredients">Bourbon · Route 01 Root Beer · A Regret</div>
+          <div class="ingredients">Bourbon · Root Beer · A Regret</div>
           <p>A proper bourbon float in a cold glass bottle. Dave had a theory that root beer and good bourbon were basically the same food group. Three years of research confirms he was right. Garnish: the bourbon list is 70 bottles long — pick carefully.</p>
           <div class="price">Market · Ask your server</div>
         </div>
         <div class="cocktail">
           <div class="c-num">Cocktail 02</div>
           <h3>The Crustacean Mule</h3>
-          <div class="ingredients">Vodka · Route 02 Ginger Beer · Lime · Regionally Earned Confidence</div>
+          <div class="ingredients">Vodka · Ginger Beer · Lime · Regionally Earned Confidence</div>
           <p>Maine's answer to a Moscow Mule — except we didn't invent it, we just made it better by doing it in a roadside cafe 400 feet from the ocean. Copper mug optional. Glass bottle required. Crustacean Nation approved.</p>
           <div class="price">Market · Ask your server</div>
         </div>
         <div class="cocktail">
           <div class="c-num">Cocktail 03</div>
           <h3>The Dark &amp; Rickey</h3>
-          <div class="ingredients">Dark Rum · Route 06 Raspberry Lime Rickey · A General Optimism</div>
+          <div class="ingredients">Dark Rum · Raspberry Lime Rickey · A General Optimism</div>
           <p>The Rickey was already doing most of the work. Dark rum just showed up and took credit, which honestly is very on-brand for dark rum. Tart, fruity, cold, and more drinkable than it has any right to be. Proceed at your own pace.</p>
           <div class="price">Market · Ask your server</div>
         </div>
         <div class="cocktail">
           <div class="c-num">Cocktail 04</div>
           <h3>The Sunburn</h3>
-          <div class="ingredients">Tequila · Route 05 Orange · Lime · Zero Regrets (Yet)</div>
-          <p>Maine doesn't really do sunburns until the first genuinely warm day of the year — then everyone gets one simultaneously and acts surprised. This is that drink. Tequila, Route 05 orange, lime, ice cold. Whether you call it a Tequila Sunrise or a Route 1 problem, the orange is doing the work and it knows it.</p>
+          <div class="ingredients">Tequila · Orange Soda · Lime · Zero Regrets (Yet)</div>
+          <p>Maine doesn't really do sunburns until the first genuinely warm day of the year — then everyone gets one simultaneously and acts surprised. This is that drink. Tequila, orange soda, lime, ice cold. Whether you call it a Tequila Sunrise or a Route 1 problem, the orange is doing the work and it knows it.</p>
           <div class="price">Market · Ask your server</div>
         </div>
       </div>
