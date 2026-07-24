@@ -154,10 +154,14 @@
   .special-card .price{font-family:Anton,sans-serif;font-size:34px;color:var(--lobster);line-height:1}
   .special-card small{display:block;color:var(--ink-soft);margin-top:6px;font-size:12.5px}
 
-  .ticker{background:var(--lobster);color:#fff;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);overflow:hidden;white-space:nowrap}
-  .ticker-in{display:inline-flex;gap:44px;padding:11px 0;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:14px;animation:scroll 26s linear infinite}
-  .ticker-in span::before{content:"🦞  ";}
-  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .more-strip{display:flex;align-items:stretch;background:var(--gold);color:var(--ink);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);overflow:hidden}
+  .more-strip-label{position:relative;z-index:2;display:flex;align-items:center;flex:0 0 auto;background:var(--navy);color:#fff;padding:10px 20px;font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:1.2px;text-decoration:none;box-shadow:7px 0 0 rgba(24,43,51,.22)}
+  .more-strip-label::before{content:"★";color:var(--gold);margin-right:8px}
+  .more-strip-window{display:flex;align-items:center;min-width:0;overflow:hidden;white-space:nowrap}
+  .more-strip-track{--more-half-gap:22px;display:inline-flex;gap:44px;padding:10px 0;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;font-size:14px;animation:scroll 28s linear infinite}
+  .more-strip-track span::before{content:"★  ";color:var(--lobster-2)}
+  .more-strip:hover .more-strip-track,.more-strip:focus-within .more-strip-track{animation-play-state:paused}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - var(--more-half-gap)))}}
 
   section{padding:66px 0}
   .sec-head{text-align:center;max-width:760px;margin:0 auto 40px}
@@ -325,11 +329,14 @@
     .mbar{display:block}
     body{padding-bottom:76px}
     .hero-inner{padding:40px 0 46px}
+    .more-strip-label{max-width:132px;padding:9px 12px;font-size:13px;line-height:1.05}
+    .more-strip-track{--more-half-gap:16px;gap:32px;padding:9px 0;font-size:12px}
   }
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
     .btn:hover,.igbtn:hover,.ig-tile:hover img{transform:none!important}
+    .more-strip-track{animation:none!important}
   }
 </style>
 </head>
@@ -382,18 +389,25 @@
   <div class="road" aria-hidden="true"></div>
 </section>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-in">
-    <span>You can't drink all day unless you start at lunch</span>
-    <span>Fresh · Never frozen · Picked daily</span>
-    <span>16 taps on the Draft Highway</span>
-    <span>Butter-fueled, bourbon-powered, lobster-loaded</span>
-    <span>You can't drink all day unless you start at lunch</span>
-    <span>Fresh · Never frozen · Picked daily</span>
-    <span>16 taps on the Draft Highway</span>
-    <span>Butter-fueled, bourbon-powered, lobster-loaded</span>
+<aside class="more-strip" aria-label="More than lobster at Dave's Maine Cafe">
+  <a class="more-strip-label" href="#specials">More Than Lobster</a>
+  <div class="more-strip-window">
+    <div class="more-strip-track">
+      <span>Shell Yeah seafood happy hour</span>
+      <span>$1 cocktail shrimp · daily 3–5</span>
+      <span>$9 bourbon pours</span>
+      <span>$7 Double D's cocktails</span>
+      <span>Rotating craft taps on the Draft Highway</span>
+      <span>Burgers, chowders &amp; good trouble</span>
+      <span aria-hidden="true">Shell Yeah seafood happy hour</span>
+      <span aria-hidden="true">$1 cocktail shrimp · daily 3–5</span>
+      <span aria-hidden="true">$9 bourbon pours</span>
+      <span aria-hidden="true">$7 Double D's cocktails</span>
+      <span aria-hidden="true">Rotating craft taps on the Draft Highway</span>
+      <span aria-hidden="true">Burgers, chowders &amp; good trouble</span>
+    </div>
   </div>
-</div>
+</aside>
 
 <!-- DAILY SPECIALS -->
 <section class="specials" id="specials">
@@ -795,17 +809,22 @@
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value="https://www.davesmainecafe.com/thanks/?form=list" />
       <input type="hidden" name="Form" value="Dave's List signup" />
+      <input type="hidden" name="Email Marketing Consent" value="Yes — submitted Dave's List form" />
+      <input type="hidden" name="Consent Version" value="2026-07-19" />
+      <input type="hidden" name="Source Page" value="" />
+      <input type="hidden" name="Referrer" value="" />
+      <input type="hidden" name="UTM Source" value="" />
+      <input type="hidden" name="UTM Medium" value="" />
+      <input type="hidden" name="UTM Campaign" value="" />
+      <input type="hidden" name="Consent Captured At" value="" />
       <input type="text" name="_honey" style="display:none" />
       <div>
         <label class="lbl">Name</label>
         <input type="text" name="Name" placeholder="First name" />
       </div>
-      <div class="row">
-        <div><label class="lbl">Email</label><input type="email" name="Email" placeholder="you@email.com" required /></div>
-        <div><label class="lbl">Phone <span style="font-weight:400;text-transform:none">(for texts)</span></label><input type="tel" name="Phone" placeholder="optional" /></div>
-      </div>
+      <div><label class="lbl">Email</label><input type="email" name="Email" placeholder="you@email.com" required /></div>
       <button type="submit" class="btn forest" style="margin-top:4px">Sign Me Up</button>
-      <span class="field-note">We'll only use this to tell you about specials and events. Unsubscribe anytime.</span>
+      <span class="field-note">By signing up, you agree to get Dave's emails about specials, events, and products. Unsubscribe anytime. Texts will have their own separate opt-in later.</span>
     </form>
   </div>
 </section>
@@ -816,12 +835,13 @@
     <div>
       <span class="kicker">Bring Dave's to your event</span>
       <h2>Catering &amp; Private Events</h2>
-      <p>From a backyard party to an office lunch to a full lobster bake — Dave will put together something your guests actually remember. Tell us what you've got in mind and we'll send a quote.</p>
+      <p>From 25 lobster rolls for the office to holiday parties and family celebrations — Dave will put together something your guests actually remember. See the full large-order guide or send the quick form here.</p>
       <ul class="cat-list">
         <li>Lobster rolls &amp; seafood for a crowd</li>
         <li>Party platters, trays &amp; comfort-food spreads</li>
         <li>Private gatherings &amp; group bookings</li>
       </ul>
+      <a class="btn forest" href="/staging/catering/">Explore Catering &amp; Large Orders</a>
     </div>
     <form class="card-form" action="https://formsubmit.co/4a962d50a7a5736503be918c8d08c540" method="POST">
       <input type="hidden" name="_subject" value="New catering inquiry (website)" />
@@ -829,6 +849,13 @@
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value="https://www.davesmainecafe.com/thanks/?form=catering" />
       <input type="hidden" name="Form" value="Catering inquiry" />
+      <input type="hidden" name="Email Marketing Consent" value="No — inquiry only unless checkbox selected" />
+      <input type="hidden" name="Consent Version" value="2026-07-19" />
+      <input type="hidden" name="Source Page" value="" />
+      <input type="hidden" name="Referrer" value="" />
+      <input type="hidden" name="UTM Source" value="" />
+      <input type="hidden" name="UTM Medium" value="" />
+      <input type="hidden" name="UTM Campaign" value="" />
       <input type="text" name="_honey" style="display:none" />
       <div class="row">
         <div><label class="lbl">Name</label><input type="text" name="Name" required /></div>
@@ -840,6 +867,7 @@
       </div>
       <div><label class="lbl">Event Date</label><input type="text" name="Event Date" placeholder="e.g. Sat Aug 16" /></div>
       <div><label class="lbl">What are you thinking?</label><textarea name="Message" placeholder="Tell Dave about your event…"></textarea></div>
+      <label class="field-note"><input type="checkbox" name="Also Join Dave's List" value="Yes" /> Also send me Dave's specials, events, and new products by email. Unsubscribe anytime.</label>
       <button type="submit" class="btn">Request a Catering Quote</button>
     </form>
   </div>
@@ -935,7 +963,7 @@
       </div>
       <div>
         <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">ORDER &amp; MORE</strong>
-        <p style="margin:8px 0 0"><a href="/staging/order/?go=1">Order online →</a><br><a href="#catering">Catering &amp; events</a><br><a href="#list">Join Dave's list</a></p>
+        <p style="margin:8px 0 0"><a href="/staging/order/?go=1">Order online →</a><br><a href="/staging/catering/">Catering &amp; large orders</a><br><a href="#list">Join Dave's list</a></p>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin:12px 0 22px">
@@ -964,6 +992,16 @@
 <script>
   document.querySelectorAll('#navlinks a').forEach(function(a){a.addEventListener('click',function(){var n=document.getElementById('navlinks');n.classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false')})});
   document.querySelectorAll('form.card-form').forEach(function(form){
+    var params=new URLSearchParams(window.location.search);
+    var fields={
+      'Source Page':window.location.href,
+      'Referrer':document.referrer,
+      'UTM Source':params.get('utm_source')||'',
+      'UTM Medium':params.get('utm_medium')||'',
+      'UTM Campaign':params.get('utm_campaign')||'',
+      'Consent Captured At':new Date().toISOString()
+    };
+    Object.keys(fields).forEach(function(name){var input=form.querySelector('[name="'+name+'"]');if(input)input.value=fields[name]});
     form.addEventListener('submit',function(){
       var button=form.querySelector('button[type="submit"]');
       if(!button||button.disabled)return;
