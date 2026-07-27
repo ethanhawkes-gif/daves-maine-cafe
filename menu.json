@@ -13,7 +13,7 @@
   "weeklyFeatures": {
     "_note": "Weekly rhythm from the current printed menu. NOT yet rendered on the website — pending a Weekly Features section build (offered to Dave 2026-07-14).",
     "items": [
-      { "day": "Tuesday", "name": "Dave's Day", "desc": "Limited menu. Open 11:30–3 PM. Lobster rolls locked & loaded. Soups on." },
+      { "day": "Monday + Tuesday", "name": "Closed", "desc": "The crustaceans negotiated a two-day weekend. Back Wednesday at 11:30 AM." },
       { "day": "Wednesday", "name": "Shell Yeah Wednesday", "desc": "Nearly buck-a-shuck oysters! Dollar shrimp. $3 Jonah crab claws. $5 Miller Lite tall boys." },
       { "day": "Thursday", "name": "Dave's Lobster Roll Day", "desc": "Our weekly celebration of the roll that made us — every Thursday. Open 11:30 AM sharp. If you know, you know." },
       { "day": "Friday", "name": "Wicked Good Friday", "desc": "$11 Maine Bugs, sold by the each, starting at 3 PM — until we run out. Plus $9 bourbons and $7 Double D's cocktails." },
