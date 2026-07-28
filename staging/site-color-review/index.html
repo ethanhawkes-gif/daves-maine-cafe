@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Dave's Maine Cafe — Site Color Review</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#182b33}
+    iframe{display:block;width:100%;height:100%;border:0;background:#f7efdd}
+  </style>
+</head>
+<body>
+  <iframe
+    id="site-proof"
+    src="/"
+    title="Dave's Maine Cafe current site with unified brand colors"
+  ></iframe>
+  <script>
+    document.getElementById('site-proof').addEventListener('load', function () {
+      var frameDocument = this.contentDocument;
+      if (!frameDocument || frameDocument.getElementById('dmc-color-proof')) return;
+
+      var palette = frameDocument.createElement('style');
+      palette.id = 'dmc-color-proof';
+      palette.textContent = [
+        ':root{',
+        '--paper:#f7efdd;',
+        '--paper-2:#f1e2c4;',
+        '--paper-edge:#e4d2a9;',
+        '--navy:#182b33;',
+        '--navy-2:#203b45;',
+        '--forest:#203b45;',
+        '--forest-2:#182b33;',
+        '--lobster:#b6322f;',
+        '--lobster-2:#9c2f2b;',
+        '--gold:#d79a37;',
+        '--gold-2:#c2872a;',
+        '--cream:#f7efdd;',
+        '}'
+      ].join('');
+      frameDocument.head.appendChild(palette);
+    });
+  </script>
+</body>
+</html>
