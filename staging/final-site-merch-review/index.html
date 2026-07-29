@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Dave's Maine Cafe — Final Site + Merch Review</title>
+  <style>
+    :root{
+      --navy:#182b33;
+      --blue:#203b45;
+      --cream:#f7efdd;
+      --gold:#d79a37;
+      --red:#b6322f;
+      --ink:#241d15;
+    }
+    *{box-sizing:border-box}
+    html,body{width:100%;height:100%;margin:0}
+    body{overflow:hidden;background:var(--navy);font-family:Arial,sans-serif}
+    .review-shell{display:flex;flex-direction:column;width:100%;height:100vh;height:100dvh}
+    .review-bar{
+      position:relative;z-index:2;display:flex;align-items:center;gap:16px;
+      min-height:72px;padding:9px 16px;background:var(--navy);color:var(--cream);
+      border-bottom:4px solid var(--gold);box-shadow:0 4px 16px rgba(0,0,0,.28)
+    }
+    .review-title{flex:1;min-width:0}
+    .review-title strong{display:block;font-size:16px;line-height:1.1;letter-spacing:.8px;text-transform:uppercase}
+    .review-title span{display:block;margin-top:4px;color:var(--gold);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+    .tabs{display:flex;flex:0 0 auto;gap:8px}
+    .tab{
+      min-height:44px;padding:0 18px;border:2px solid var(--cream);border-radius:7px;
+      background:transparent;color:var(--cream);font-weight:800;letter-spacing:.7px;
+      text-transform:uppercase;cursor:pointer
+    }
+    .tab[aria-selected="true"]{border-color:var(--gold);background:var(--gold);color:var(--ink)}
+    .panel{display:none;flex:1;min-height:0;background:var(--cream)}
+    .panel.active{display:block}
+    iframe{display:block;width:100%;height:100%;border:0;background:var(--cream)}
+    @media(max-width:620px){
+      .review-bar{min-height:88px;gap:8px;padding:8px}
+      .review-title strong{font-size:12px}
+      .review-title span{font-size:9px}
+      .tabs{gap:5px}
+      .tab{min-height:42px;padding:0 10px;font-size:11px}
+    }
+  </style>
+</head>
+<body>
+  <main class="review-shell">
+    <header class="review-bar">
+      <div class="review-title">
+        <strong>Final Site + Merch Review</strong>
+        <span>Staging only · Nothing below changes production</span>
+      </div>
+      <nav class="tabs" aria-label="Choose a proof">
+        <button class="tab" type="button" id="tab-cafe" aria-controls="panel-cafe" aria-selected="true">Cafe Site</button>
+        <button class="tab" type="button" id="tab-merch" aria-controls="panel-merch" aria-selected="false">Merch Store</button>
+      </nav>
+    </header>
+
+    <section class="panel active" id="panel-cafe" role="tabpanel" aria-labelledby="tab-cafe">
+      <iframe src="/staging/site-color-review/" title="Color-updated Dave's Maine Cafe website proof"></iframe>
+    </section>
+
+    <section class="panel" id="panel-merch" role="tabpanel" aria-labelledby="tab-merch">
+      <iframe src="/staging/merch/" title="Exact approved Dave's Maine Cafe merch-store proof"></iframe>
+    </section>
+  </main>
+
+  <script>
+    var tabs = Array.from(document.querySelectorAll('.tab'));
+    var panels = Array.from(document.querySelectorAll('.panel'));
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        tabs.forEach(function(item){ item.setAttribute('aria-selected', String(item === tab)); });
+        panels.forEach(function(panel){ panel.classList.toggle('active', panel.id === tab.getAttribute('aria-controls')); });
+      });
+    });
+  </script>
+</body>
+</html>
