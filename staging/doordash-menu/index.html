@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>DoorDash Toast Menu — Staging</title>
+  <style>
+    :root { --navy:#14283d; --red:#a43b32; --cream:#f5eddf; --gold:#c9973c; --ink:#19212a; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--cream); color:var(--ink); font:16px/1.45 system-ui,sans-serif; }
+    main { max-width:980px; margin:auto; padding:24px 16px 48px; }
+    .flag { display:inline-block; padding:7px 11px; background:var(--red); color:white; font-weight:800; letter-spacing:.08em; }
+    h1 { margin:.55rem 0 .15rem; color:var(--navy); font-size:clamp(2rem,7vw,4rem); line-height:.95; }
+    .sub { margin:0 0 1.5rem; font-weight:700; color:#5b4937; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+    .card { background:white; border:2px solid var(--navy); border-radius:10px; padding:14px; box-shadow:4px 4px 0 var(--gold); }
+    .card h2 { margin:0 0 5px; color:var(--navy); font-size:1.05rem; }
+    .price { color:var(--red); font-size:1.7rem; font-weight:900; }
+    .meta { color:#665; font-size:.9rem; }
+    section { margin-top:28px; }
+    table { width:100%; border-collapse:collapse; background:white; font-size:.92rem; }
+    th,td { padding:9px 8px; border-bottom:1px solid #d8cfbf; text-align:right; }
+    th:first-child,td:first-child { text-align:left; }
+    th { background:var(--navy); color:white; }
+    .warning { background:#fff4d6; border-left:6px solid var(--gold); padding:14px; font-weight:650; }
+    .blocked { color:#8d2f28; font-weight:800; }
+    ul { padding-left:1.2rem; }
+    @media(max-width:650px) { table { display:block; overflow-x:auto; white-space:nowrap; } }
+  </style>
+</head>
+<body>
+<main>
+  <span class="flag">STAGING · DO NOT PUBLISH</span>
+  <h1>DoorDash on Route 1</h1>
+  <p class="sub">Curated Toast menu · Dave-locked pricing · Thursday closed</p>
+
+  <div class="cards">
+    <article class="card"><h2>Dave's Lobster Roll</h2><div class="price">$27.00</div><div class="meta">4 oz hand-picked Maine lobster</div></article>
+    <article class="card"><h2>Tourist's Revenge</h2><div class="price">$44.00</div><div class="meta">7 oz Maine lobster</div></article>
+    <article class="card"><h2>Meal Deal + Drink</h2><div class="price">$41.00</div><div class="meta">Lobster roll, soup, side, whoopie pie and drink</div></article>
+    <article class="card"><h2>Caribou Chicken Salad Wrap</h2><div class="price">$16.00</div></article>
+    <article class="card"><h2>Acadia Turkey Club</h2><div class="price">$16.00</div></article>
+    <article class="card"><h2>Baxter BBQ Pulled Pork</h2><div class="price">$16.00</div></article>
+    <article class="card"><h2>Route One Soda</h2><div class="price">$4.80</div><div class="meta">All seven current flavors</div></article>
+    <article class="card"><h2>Unsweetened Iced Tea</h2><div class="price">$4.20</div></article>
+  </div>
+
+  <section>
+    <h2>Known contribution after commission</h2>
+    <table>
+      <thead><tr><th>Item</th><th>Price</th><th>Cost</th><th>First 20 / 0%</th><th>15%</th><th>30%</th></tr></thead>
+      <tbody>
+        <tr><td>Lobster Roll</td><td>$27.00</td><td>$10.55</td><td>$16.45</td><td>$12.40</td><td>$8.35</td></tr>
+        <tr><td>Tourist's Revenge</td><td>$44.00</td><td>$18.06</td><td>$25.94</td><td>$19.34</td><td>$12.74</td></tr>
+        <tr><td>Meal Deal + drink</td><td>$41.00</td><td>$16.29</td><td>$24.71</td><td>$18.56</td><td>$12.41</td></tr>
+        <tr><td>Caribou wrap</td><td>$16.00</td><td>$4.67</td><td>$11.33</td><td>$8.93</td><td>$6.53</td></tr>
+        <tr><td>Turkey club</td><td>$16.00</td><td>$5.74</td><td>$10.26</td><td>$7.86</td><td>$5.46</td></tr>
+        <tr><td>Pulled pork</td><td>$16.00</td><td>$4.75</td><td>$11.25</td><td>$8.85</td><td>$6.45</td></tr>
+        <tr><td>Stuffed clams — 2</td><td>$12.00</td><td>$5.50</td><td>$6.50</td><td>$4.70</td><td>$2.90</td></tr>
+        <tr><td>Pepsi-family soda</td><td>$4.80</td><td>$0.65</td><td>$4.15</td><td>$3.43</td><td>$2.71</td></tr>
+        <tr><td>Unsweet iced tea</td><td>$4.20</td><td>$1.00</td><td>$3.20</td><td>$2.57</td><td>$1.94</td></tr>
+        <tr><td>Route One soda</td><td>$4.80</td><td>$1.37</td><td>$3.43</td><td>$2.71</td><td>$1.99</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="warning">Contribution equals price minus commission minus known product/takeout cost. It excludes labor, rent, tax, refunds, promotions and unconfirmed DoorDash fees.</section>
+
+  <section>
+    <h2>Toast rebuild controls</h2>
+    <ul>
+      <li>DoorDash ordering partner only; regular Toast online ordering off.</li>
+      <li>Monday, Tuesday and Thursday closed.</li>
+      <li>Wednesday, Friday, Saturday and Sunday only, with pause control retained.</li>
+      <li>Independent DoorDash item copies and reporting identities.</li>
+      <li class="blocked">Do not publish until service hours and final DoorDash plan terms are verified.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
