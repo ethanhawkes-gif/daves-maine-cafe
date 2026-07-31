@@ -13,11 +13,6 @@
     .flag { display:inline-block; padding:7px 11px; background:var(--red); color:white; font-weight:800; letter-spacing:.08em; }
     h1 { margin:.55rem 0 .15rem; color:var(--navy); font-size:clamp(2rem,7vw,4rem); line-height:.95; }
     .sub { margin:0 0 1.5rem; font-weight:700; color:#5b4937; }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
-    .card { background:white; border:2px solid var(--navy); border-radius:10px; padding:14px; box-shadow:4px 4px 0 var(--gold); }
-    .card h2 { margin:0 0 5px; color:var(--navy); font-size:1.05rem; }
-    .price { color:var(--red); font-size:1.7rem; font-weight:900; }
-    .meta { color:#665; font-size:.9rem; }
     section { margin-top:28px; }
     table { width:100%; border-collapse:collapse; background:white; font-size:.92rem; }
     th,td { padding:9px 8px; border-bottom:1px solid #d8cfbf; text-align:right; }
@@ -30,9 +25,9 @@
     .numbers div { background:#fff; padding:10px 6px 12px; text-align:center; }
     .numbers span { display:block; color:#665; font-size:.78rem; font-weight:800; text-transform:uppercase; }
     .numbers strong { display:block; margin-top:2px; color:var(--navy); font-size:1.22rem; }
-    .numbers .plan strong { color:var(--red); }
-    .price-cost { display:flex; gap:18px; padding:4px 14px 11px; font-size:.95rem; }
-    .price-cost strong { color:var(--red); }
+    .numbers .contribution strong { color:var(--red); }
+    .scoreboard { background:var(--navy); color:white; padding:15px; border-radius:10px; font-size:1.1rem; font-weight:850; }
+    .scoreboard strong { color:#ffd278; font-size:1.3rem; }
     .warning { background:#fff4d6; border-left:6px solid var(--gold); padding:14px; font-weight:650; }
     .blocked { color:#8d2f28; font-weight:800; }
     ul { padding-left:1.2rem; }
@@ -40,11 +35,6 @@
       main { padding:18px 12px 40px; }
       h1 { font-size:2.55rem; }
       .sub { margin-bottom:1rem; }
-      .cards { grid-template-columns:1fr 1fr; gap:9px; }
-      .card { padding:11px; box-shadow:3px 3px 0 var(--gold); }
-      .card h2 { font-size:.95rem; }
-      .price { font-size:1.45rem; }
-      .meta { font-size:.78rem; }
       .desktop-table { display:none; }
       .mobile-margins { display:block; }
       section { margin-top:22px; }
@@ -57,60 +47,46 @@
   <h1>DoorDash on Route 1</h1>
   <p class="sub">Curated Toast menu · Dave-locked pricing · Thursday closed</p>
 
-  <div class="cards">
-    <article class="card"><h2>Dave's Lobster Roll</h2><div class="price">$27.00</div><div class="meta">4 oz hand-picked Maine lobster</div></article>
-    <article class="card"><h2>Tourist's Revenge</h2><div class="price">$44.00</div><div class="meta">7 oz Maine lobster</div></article>
-    <article class="card"><h2>Meal Deal + Drink</h2><div class="price">$41.00</div><div class="meta">Lobster roll, soup, side, whoopie pie and drink</div></article>
-    <article class="card"><h2>Caribou Chicken Salad Wrap</h2><div class="price">$16.00</div></article>
-    <article class="card"><h2>Acadia Turkey Club</h2><div class="price">$16.00</div></article>
-    <article class="card"><h2>Baxter BBQ Pulled Pork</h2><div class="price">$16.00</div></article>
-    <article class="card"><h2>Double D's Stuffed Clams</h2><div class="price">$12.00</div><div class="meta">Two stuffed clams</div></article>
-    <article class="card"><h2>Clam Chowder</h2><div class="price">$9.60</div><div class="meta">Cup</div></article>
-    <article class="card"><h2>Dave-oux Gumbo</h2><div class="price">$9.60</div><div class="meta">Cup</div></article>
-    <article class="card"><h2>Whoopie Pie</h2><div class="price">$4.80</div></article>
-    <article class="card"><h2>Pepsi-family Soda</h2><div class="price">$4.80</div></article>
-    <article class="card"><h2>Route One Soda</h2><div class="price">$4.80</div><div class="meta">All seven current flavors</div></article>
-    <article class="card"><h2>Unsweetened Iced Tea</h2><div class="price">$4.20</div></article>
-  </div>
+  <div class="scoreboard"><strong>≈ $9 contribution</strong> = one fewer lobster roll needed to cover fixed overhead. DoorDash commission is already baked into every number below.</div>
 
   <section>
-    <h2>Known contribution after commission</h2>
+    <h2>Contribution dollars by SKU</h2>
     <table class="desktop-table">
-      <thead><tr><th>Item</th><th>Price</th><th>Cost</th><th>0% / trial</th><th>15%</th><th>30%</th></tr></thead>
+      <thead><tr><th>Item</th><th>Sell</th><th>Known cost</th><th>Contribution</th></tr></thead>
       <tbody>
-        <tr><td>Lobster Roll</td><td>$27.00</td><td>$10.55</td><td>$16.45</td><td>$12.40</td><td>$8.35</td></tr>
-        <tr><td>Tourist's Revenge</td><td>$44.00</td><td>$18.06</td><td>$25.94</td><td>$19.34</td><td>$12.74</td></tr>
-        <tr><td>Meal Deal + drink</td><td>$41.00</td><td>$16.29</td><td>$24.71</td><td>$18.56</td><td>$12.41</td></tr>
-        <tr><td>Caribou wrap</td><td>$16.00</td><td>$4.67</td><td>$11.33</td><td>$8.93</td><td>$6.53</td></tr>
-        <tr><td>Turkey club</td><td>$16.00</td><td>$5.74</td><td>$10.26</td><td>$7.86</td><td>$5.46</td></tr>
-        <tr><td>Pulled pork</td><td>$16.00</td><td>$4.75</td><td>$11.25</td><td>$8.85</td><td>$6.45</td></tr>
-        <tr><td>Stuffed clams — 2</td><td>$12.00</td><td>$5.50</td><td>$6.50</td><td>$4.70</td><td>$2.90</td></tr>
-        <tr><td>Clam chowder — cup</td><td>$9.60</td><td>$2.05</td><td>$7.55</td><td>$6.11</td><td>$4.67</td></tr>
-        <tr><td>Dave-oux gumbo — cup</td><td>$9.60</td><td>$1.44</td><td>$8.16</td><td>$6.72</td><td>$5.28</td></tr>
-        <tr><td>Whoopie pie</td><td>$4.80</td><td>$1.83</td><td>$2.97</td><td>$2.25</td><td>$1.53</td></tr>
-        <tr><td>Pepsi-family soda</td><td>$4.80</td><td>$0.65</td><td>$4.15</td><td>$3.43</td><td>$2.71</td></tr>
-        <tr><td>Unsweet iced tea</td><td>$4.20</td><td>$1.00</td><td>$3.20</td><td>$2.57</td><td>$1.94</td></tr>
-        <tr><td>Route One soda</td><td>$4.80</td><td>$1.37</td><td>$3.43</td><td>$2.71</td><td>$1.99</td></tr>
+        <tr><td>Lobster Roll</td><td>$27.00</td><td>$10.55</td><td>$8.35</td></tr>
+        <tr><td>Tourist's Revenge</td><td>$44.00</td><td>$18.06</td><td>$12.74</td></tr>
+        <tr><td>Meal Deal + drink</td><td>$41.00</td><td>$16.29</td><td>$12.41</td></tr>
+        <tr><td>Caribou wrap</td><td>$16.00</td><td>$4.67</td><td>$6.53</td></tr>
+        <tr><td>Turkey club</td><td>$16.00</td><td>$5.74</td><td>$5.46</td></tr>
+        <tr><td>Pulled pork</td><td>$16.00</td><td>$4.75</td><td>$6.45</td></tr>
+        <tr><td>Stuffed clams — 2</td><td>$12.00</td><td>$5.50</td><td>$2.90</td></tr>
+        <tr><td>Clam chowder — cup</td><td>$9.60</td><td>$2.05</td><td>$4.67</td></tr>
+        <tr><td>Dave-oux gumbo — cup</td><td>$9.60</td><td>$1.44</td><td>$5.28</td></tr>
+        <tr><td>Whoopie pie</td><td>$4.80</td><td>$1.83</td><td>$1.53</td></tr>
+        <tr><td>Pepsi-family soda</td><td>$4.80</td><td>$0.65</td><td>$2.71</td></tr>
+        <tr><td>Unsweet iced tea</td><td>$4.20</td><td>$1.00</td><td>$1.94</td></tr>
+        <tr><td>Route One soda</td><td>$4.80</td><td>$1.37</td><td>$1.99</td></tr>
       </tbody>
     </table>
     <div class="mobile-margins" aria-label="Contribution margin by item">
-      <article class="margin-card"><h3>Lobster Roll</h3><div class="price-cost"><span>Price <strong>$27.00</strong></span><span>Cost $10.55</span></div><div class="numbers"><div><span>0% fee</span><strong>$16.45</strong></div><div class="plan"><span>15% fee</span><strong>$12.40</strong></div><div><span>30% fee</span><strong>$8.35</strong></div></div></article>
-      <article class="margin-card"><h3>Tourist's Revenge</h3><div class="price-cost"><span>Price <strong>$44.00</strong></span><span>Cost $18.06</span></div><div class="numbers"><div><span>0% fee</span><strong>$25.94</strong></div><div class="plan"><span>15% fee</span><strong>$19.34</strong></div><div><span>30% fee</span><strong>$12.74</strong></div></div></article>
-      <article class="margin-card"><h3>Meal Deal + Drink</h3><div class="price-cost"><span>Price <strong>$41.00</strong></span><span>Cost $16.29</span></div><div class="numbers"><div><span>0% fee</span><strong>$24.71</strong></div><div class="plan"><span>15% fee</span><strong>$18.56</strong></div><div><span>30% fee</span><strong>$12.41</strong></div></div></article>
-      <article class="margin-card"><h3>Caribou Chicken Wrap</h3><div class="price-cost"><span>Price <strong>$16.00</strong></span><span>Cost $4.67</span></div><div class="numbers"><div><span>0% fee</span><strong>$11.33</strong></div><div class="plan"><span>15% fee</span><strong>$8.93</strong></div><div><span>30% fee</span><strong>$6.53</strong></div></div></article>
-      <article class="margin-card"><h3>Acadia Turkey Club</h3><div class="price-cost"><span>Price <strong>$16.00</strong></span><span>Cost $5.74</span></div><div class="numbers"><div><span>0% fee</span><strong>$10.26</strong></div><div class="plan"><span>15% fee</span><strong>$7.86</strong></div><div><span>30% fee</span><strong>$5.46</strong></div></div></article>
-      <article class="margin-card"><h3>Baxter Pulled Pork</h3><div class="price-cost"><span>Price <strong>$16.00</strong></span><span>Cost $4.75</span></div><div class="numbers"><div><span>0% fee</span><strong>$11.25</strong></div><div class="plan"><span>15% fee</span><strong>$8.85</strong></div><div><span>30% fee</span><strong>$6.45</strong></div></div></article>
-      <article class="margin-card"><h3>Two Stuffed Clams</h3><div class="price-cost"><span>Price <strong>$12.00</strong></span><span>Cost $5.50</span></div><div class="numbers"><div><span>0% fee</span><strong>$6.50</strong></div><div class="plan"><span>15% fee</span><strong>$4.70</strong></div><div><span>30% fee</span><strong>$2.90</strong></div></div></article>
-      <article class="margin-card"><h3>Clam Chowder · Cup</h3><div class="price-cost"><span>Price <strong>$9.60</strong></span><span>Cost $2.05</span></div><div class="numbers"><div><span>0% fee</span><strong>$7.55</strong></div><div class="plan"><span>15% fee</span><strong>$6.11</strong></div><div><span>30% fee</span><strong>$4.67</strong></div></div></article>
-      <article class="margin-card"><h3>Dave-oux Gumbo · Cup</h3><div class="price-cost"><span>Price <strong>$9.60</strong></span><span>Cost $1.44</span></div><div class="numbers"><div><span>0% fee</span><strong>$8.16</strong></div><div class="plan"><span>15% fee</span><strong>$6.72</strong></div><div><span>30% fee</span><strong>$5.28</strong></div></div></article>
-      <article class="margin-card"><h3>Whoopie Pie</h3><div class="price-cost"><span>Price <strong>$4.80</strong></span><span>Cost $1.83</span></div><div class="numbers"><div><span>0% fee</span><strong>$2.97</strong></div><div class="plan"><span>15% fee</span><strong>$2.25</strong></div><div><span>30% fee</span><strong>$1.53</strong></div></div></article>
-      <article class="margin-card"><h3>Pepsi-family Soda</h3><div class="price-cost"><span>Price <strong>$4.80</strong></span><span>Cost $0.65</span></div><div class="numbers"><div><span>0% fee</span><strong>$4.15</strong></div><div class="plan"><span>15% fee</span><strong>$3.43</strong></div><div><span>30% fee</span><strong>$2.71</strong></div></div></article>
-      <article class="margin-card"><h3>Unsweet Iced Tea</h3><div class="price-cost"><span>Price <strong>$4.20</strong></span><span>Cost $1.00</span></div><div class="numbers"><div><span>0% fee</span><strong>$3.20</strong></div><div class="plan"><span>15% fee</span><strong>$2.57</strong></div><div><span>30% fee</span><strong>$1.94</strong></div></div></article>
-      <article class="margin-card"><h3>Route One Soda</h3><div class="price-cost"><span>Price <strong>$4.80</strong></span><span>Cost $1.37</span></div><div class="numbers"><div><span>0% fee</span><strong>$3.43</strong></div><div class="plan"><span>15% fee</span><strong>$2.71</strong></div><div><span>30% fee</span><strong>$1.99</strong></div></div></article>
+      <article class="margin-card"><h3>Lobster Roll</h3><div class="numbers"><div><span>Sell</span><strong>$27.00</strong></div><div><span>Cost</span><strong>$10.55</strong></div><div class="contribution"><span>Contribution</span><strong>$8.35</strong></div></div></article>
+      <article class="margin-card"><h3>Tourist's Revenge</h3><div class="numbers"><div><span>Sell</span><strong>$44.00</strong></div><div><span>Cost</span><strong>$18.06</strong></div><div class="contribution"><span>Contribution</span><strong>$12.74</strong></div></div></article>
+      <article class="margin-card"><h3>Meal Deal + Drink</h3><div class="numbers"><div><span>Sell</span><strong>$41.00</strong></div><div><span>Cost</span><strong>$16.29</strong></div><div class="contribution"><span>Contribution</span><strong>$12.41</strong></div></div></article>
+      <article class="margin-card"><h3>Caribou Chicken Wrap</h3><div class="numbers"><div><span>Sell</span><strong>$16.00</strong></div><div><span>Cost</span><strong>$4.67</strong></div><div class="contribution"><span>Contribution</span><strong>$6.53</strong></div></div></article>
+      <article class="margin-card"><h3>Acadia Turkey Club</h3><div class="numbers"><div><span>Sell</span><strong>$16.00</strong></div><div><span>Cost</span><strong>$5.74</strong></div><div class="contribution"><span>Contribution</span><strong>$5.46</strong></div></div></article>
+      <article class="margin-card"><h3>Baxter Pulled Pork</h3><div class="numbers"><div><span>Sell</span><strong>$16.00</strong></div><div><span>Cost</span><strong>$4.75</strong></div><div class="contribution"><span>Contribution</span><strong>$6.45</strong></div></div></article>
+      <article class="margin-card"><h3>Two Stuffed Clams</h3><div class="numbers"><div><span>Sell</span><strong>$12.00</strong></div><div><span>Cost</span><strong>$5.50</strong></div><div class="contribution"><span>Contribution</span><strong>$2.90</strong></div></div></article>
+      <article class="margin-card"><h3>Clam Chowder · Cup</h3><div class="numbers"><div><span>Sell</span><strong>$9.60</strong></div><div><span>Cost</span><strong>$2.05</strong></div><div class="contribution"><span>Contribution</span><strong>$4.67</strong></div></div></article>
+      <article class="margin-card"><h3>Dave-oux Gumbo · Cup</h3><div class="numbers"><div><span>Sell</span><strong>$9.60</strong></div><div><span>Cost</span><strong>$1.44</strong></div><div class="contribution"><span>Contribution</span><strong>$5.28</strong></div></div></article>
+      <article class="margin-card"><h3>Whoopie Pie</h3><div class="numbers"><div><span>Sell</span><strong>$4.80</strong></div><div><span>Cost</span><strong>$1.83</strong></div><div class="contribution"><span>Contribution</span><strong>$1.53</strong></div></div></article>
+      <article class="margin-card"><h3>Pepsi-family Soda</h3><div class="numbers"><div><span>Sell</span><strong>$4.80</strong></div><div><span>Cost</span><strong>$0.65</strong></div><div class="contribution"><span>Contribution</span><strong>$2.71</strong></div></div></article>
+      <article class="margin-card"><h3>Unsweet Iced Tea</h3><div class="numbers"><div><span>Sell</span><strong>$4.20</strong></div><div><span>Cost</span><strong>$1.00</strong></div><div class="contribution"><span>Contribution</span><strong>$1.94</strong></div></div></article>
+      <article class="margin-card"><h3>Route One Soda</h3><div class="numbers"><div><span>Sell</span><strong>$4.80</strong></div><div><span>Cost</span><strong>$1.37</strong></div><div class="contribution"><span>Contribution</span><strong>$1.99</strong></div></div></article>
     </div>
   </section>
 
-  <section class="warning">Contribution equals price minus commission minus known product/takeout cost. It excludes labor, rent, tax, refunds, promotions and unconfirmed DoorDash fees.</section>
+  <section class="warning">Contribution equals sell price minus DoorDash commission minus known product/takeout cost. Free-order allowances can absorb refunds, mistakes and other channel friction; they are not counted as recurring contribution.</section>
 
   <section>
     <h2>Toast rebuild controls</h2>
