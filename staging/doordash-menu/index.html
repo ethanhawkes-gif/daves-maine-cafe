@@ -21,6 +21,7 @@
     .mobile-margins { display:none; }
     .margin-card { background:#fff; border:2px solid var(--navy); border-radius:12px; margin:0 0 14px; overflow:hidden; box-shadow:4px 4px 0 var(--gold); }
     .margin-card h3 { margin:0; padding:12px 14px 4px; color:var(--navy); font-size:1.15rem; }
+    .margin-card .meta { margin:0; padding:9px 12px 11px; border-top:1px solid #d8cfbf; color:#5b4937; font-size:.84rem; font-weight:700; }
     .numbers { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#d8cfbf; border-top:1px solid #d8cfbf; }
     .numbers div { background:#fff; padding:10px 6px 12px; text-align:center; }
     .numbers span { display:block; color:#665; font-size:.78rem; font-weight:800; text-transform:uppercase; }
@@ -62,8 +63,8 @@
         <tr><td>Pulled pork</td><td>$16.00</td><td>$4.75</td><td>$6.45</td></tr>
         <tr><td>Clam chowder — cup</td><td>$9.60</td><td>$2.05</td><td>$4.67</td></tr>
         <tr><td>Dave-oux gumbo — cup</td><td>$9.60</td><td>$1.44</td><td>$5.28</td></tr>
-        <tr><td>Pretzel sticks</td><td>$10.80</td><td>Portion check</td><td>Pending</td></tr>
-        <tr><td>Chips &amp; dip</td><td>$10.80</td><td>Portion check</td><td>Pending</td></tr>
+        <tr><td>Pretzel sticks</td><td>$10.80</td><td>$2.76 yellow mustard</td><td>$4.80</td></tr>
+        <tr><td>Chips &amp; dip</td><td>$10.80</td><td>$2.21 + dip</td><td>Pending dip price</td></tr>
         <tr><td>Whoopie pie</td><td>$4.80</td><td>$1.83</td><td>$1.53</td></tr>
         <tr><td>Pepsi-family soda</td><td>$4.00</td><td>$0.65</td><td>$2.15</td></tr>
         <tr><td>Unsweet iced tea</td><td>$4.00</td><td>$1.00</td><td>$1.80</td></tr>
@@ -79,8 +80,8 @@
       <article class="margin-card"><h3>Baxter Pulled Pork</h3><div class="numbers"><div><span>Sell</span><strong>$16.00</strong></div><div><span>Cost</span><strong>$4.75</strong></div><div class="contribution"><span>Contribution</span><strong>$6.45</strong></div></div></article>
       <article class="margin-card"><h3>Clam Chowder · Cup</h3><div class="numbers"><div><span>Sell</span><strong>$9.60</strong></div><div><span>Cost</span><strong>$2.05</strong></div><div class="contribution"><span>Contribution</span><strong>$4.67</strong></div></div></article>
       <article class="margin-card"><h3>Dave-oux Gumbo · Cup</h3><div class="numbers"><div><span>Sell</span><strong>$9.60</strong></div><div><span>Cost</span><strong>$1.44</strong></div><div class="contribution"><span>Contribution</span><strong>$5.28</strong></div></div></article>
-      <article class="margin-card"><h3>Pretzel Sticks</h3><div class="numbers"><div><span>Sell</span><strong>$10.80</strong></div><div><span>Cost</span><strong>Portion check</strong></div><div class="contribution"><span>Contribution</span><strong>Pending</strong></div></div></article>
-      <article class="margin-card"><h3>Chips &amp; Dip</h3><div class="numbers"><div><span>Sell</span><strong>$10.80</strong></div><div><span>Cost</span><strong>Portion check</strong></div><div class="contribution"><span>Contribution</span><strong>Pending</strong></div></div></article>
+      <article class="margin-card"><h3>Pretzel Sticks</h3><div class="numbers"><div><span>Sell</span><strong>$10.80</strong></div><div><span>Cost</span><strong>$2.76</strong></div><div class="contribution"><span>Contribution</span><strong>$4.80</strong></div></div><p class="meta">Yellow-mustard build. Brown mustard price is on the punch list.</p></article>
+      <article class="margin-card"><h3>Chips &amp; Dip</h3><div class="numbers"><div><span>Sell</span><strong>$10.80</strong></div><div><span>Known cost</span><strong>$2.21 + dip</strong></div><div class="contribution"><span>Contribution</span><strong>Pending</strong></div></div><p class="meta">5 oz bulk chips + 4 oz dip. Need the 18 oz Market Basket tub price.</p></article>
       <article class="margin-card"><h3>Whoopie Pie</h3><div class="numbers"><div><span>Sell</span><strong>$4.80</strong></div><div><span>Cost</span><strong>$1.83</strong></div><div class="contribution"><span>Contribution</span><strong>$1.53</strong></div></div></article>
       <article class="margin-card"><h3>Pepsi-family Soda</h3><div class="numbers"><div><span>Sell</span><strong>$4.00</strong></div><div><span>Cost</span><strong>$0.65</strong></div><div class="contribution"><span>Contribution</span><strong>$2.15</strong></div></div></article>
       <article class="margin-card"><h3>Unsweet Iced Tea</h3><div class="numbers"><div><span>Sell</span><strong>$4.00</strong></div><div><span>Cost</span><strong>$1.00</strong></div><div class="contribution"><span>Contribution</span><strong>$1.80</strong></div></div></article>
@@ -89,6 +90,15 @@
   </section>
 
   <section class="warning">Contribution equals sell price minus DoorDash commission minus known product/takeout cost. Free-order allowances can absorb refunds, mistakes and other channel friction; they are not counted as recurring contribution.</section>
+
+  <section>
+    <h2>Missing-cost punch list</h2>
+    <ul>
+      <li>18 oz Market Basket dip shelf price.</li>
+      <li>Brown mustard brand, package size, and current price.</li>
+      <li>Cheese-sauce portion and cost only if still offered.</li>
+    </ul>
+  </section>
 
   <section>
     <h2>Toast rebuild controls</h2>
