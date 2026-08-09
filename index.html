@@ -23,7 +23,7 @@
 <meta property="og:title" content="Lobster Rolls in Kittery, Maine | Dave's Maine Cafe" />
 <meta property="og:description" content="Fresh-picked Maine lobster rolls on Route 1 in Kittery, served cold, lightly dressed, or hot with butter. Order online or pull over." />
 <meta property="og:url" content="https://www.davesmainecafe.com/" />
-<meta property="og:image" content="https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/dave-lobster-rolls-og-2026-07.jpg" />
+<meta property="og:image" content="https://www.davesmainecafe.com/assets/photos/dave-lobster-rolls-og-2026-07.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- LocalBusiness / Restaurant structured data.
@@ -33,7 +33,7 @@
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Dave's Maine Cafe",
-  "image": "https://ethanhawkes-gif.github.io/daves-maine-cafe/assets/photos/dave-lobster-rolls-og-2026-07.jpg",
+  "image": "https://www.davesmainecafe.com/assets/photos/dave-lobster-rolls-og-2026-07.jpg",
   "@id": "https://www.davesmainecafe.com",
   "url": "https://www.davesmainecafe.com",
   "telephone": "+1-207-475-5655",
@@ -41,7 +41,7 @@
   "priceRange": "$$",
   "servesCuisine": ["Seafood", "American", "Comfort Food", "Lobster Rolls"],
   "menu": "https://www.toasttab.com/davesmainecafe/v3",
-  "acceptsReservations": "False",
+  "acceptsReservations": false,
   "sameAs": [
     "https://www.instagram.com/davesmainecafe/",
     "https://www.facebook.com/davesmainecafe/",
@@ -320,7 +320,8 @@
   footer a{color:var(--gold);text-decoration:none}
   .foot-bottom{margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);opacity:.75;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:'Special Elite',monospace;letter-spacing:1px}
 
-  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--navy);border-top:3px solid var(--gold);box-shadow:0 -6px 18px rgba(0,0,0,.3)}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1.45fr 1fr 1fr;gap:8px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));background:var(--navy);border-top:3px solid var(--gold);box-shadow:0 -6px 18px rgba(0,0,0,.3)}
+  .mbar .btn{min-height:48px;padding:10px 8px;justify-content:center;font-size:12px;letter-spacing:.5px;box-shadow:2px 2px 0 var(--ink)}
   .mbar a{width:100%;justify-content:center}
 
   @media(max-width:900px){
@@ -347,7 +348,7 @@
     .exit-cols,.cards,.spec-grid{grid-template-columns:1fr}
     .row{grid-template-columns:1fr}
     .nav-cta .btn{display:none}
-    .mbar{display:block}
+    .mbar{display:grid}
     body{padding-bottom:76px}
     .hero-inner{padding:40px 0 46px}
   }
@@ -374,7 +375,7 @@
       <a href="/route-one-bottling/">Soda Preview</a>
       <a href="#specials">Specials</a>
       <a href="#dave">Our Story</a>
-      <a href="#visit">Visit</a>
+      <a href="/visit-kittery/">Visit Kittery</a>
     </nav>
     <div class="nav-cta">
       <a class="btn" href="https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=order_online" target="_blank" rel="noopener">Order Online</a>
@@ -824,12 +825,12 @@
       <input type="hidden" name="Form" value="Dave's List signup" />
       <input type="text" name="_honey" style="display:none" />
       <div>
-        <label class="lbl">Name</label>
-        <input type="text" name="Name" placeholder="First name" />
+        <label class="lbl" for="list-name">Name</label>
+        <input id="list-name" type="text" name="Name" placeholder="First name" autocomplete="given-name" />
       </div>
       <div class="row">
-        <div><label class="lbl">Email</label><input type="email" name="Email" placeholder="you@email.com" required /></div>
-        <div><label class="lbl">Phone <span style="font-weight:400;text-transform:none">(for texts)</span></label><input type="tel" name="Phone" placeholder="optional" /></div>
+        <div><label class="lbl" for="list-email">Email</label><input id="list-email" type="email" name="Email" placeholder="you@email.com" autocomplete="email" required /></div>
+        <div><label class="lbl" for="list-phone">Phone <span style="font-weight:400;text-transform:none">(for texts)</span></label><input id="list-phone" type="tel" name="Phone" placeholder="optional" autocomplete="tel" /></div>
       </div>
       <button type="submit" class="btn forest" style="margin-top:4px">Sign Me Up</button>
       <span class="field-note">We'll only use this to tell you about specials and events. Unsubscribe anytime.</span>
@@ -859,15 +860,15 @@
       <input type="hidden" name="Form" value="Catering inquiry" />
       <input type="text" name="_honey" style="display:none" />
       <div class="row">
-        <div><label class="lbl">Name</label><input type="text" name="Name" required /></div>
-        <div><label class="lbl">Phone</label><input type="tel" name="Phone" /></div>
+        <div><label class="lbl" for="catering-name">Name</label><input id="catering-name" type="text" name="Name" autocomplete="name" required /></div>
+        <div><label class="lbl" for="catering-phone">Phone</label><input id="catering-phone" type="tel" name="Phone" autocomplete="tel" /></div>
       </div>
       <div class="row">
-        <div><label class="lbl">Email</label><input type="email" name="Email" required /></div>
-        <div><label class="lbl">Guests</label><input type="text" name="Guests" placeholder="approx." /></div>
+        <div><label class="lbl" for="catering-email">Email</label><input id="catering-email" type="email" name="Email" autocomplete="email" required /></div>
+        <div><label class="lbl" for="catering-guests">Guests</label><input id="catering-guests" type="text" name="Guests" inputmode="numeric" placeholder="approx." /></div>
       </div>
-      <div><label class="lbl">Event Date</label><input type="text" name="Event Date" placeholder="e.g. Sat Aug 16" /></div>
-      <div><label class="lbl">What are you thinking?</label><textarea name="Message" placeholder="Tell Dave about your event…"></textarea></div>
+      <div><label class="lbl" for="catering-date">Event Date</label><input id="catering-date" type="text" name="Event Date" placeholder="e.g. Sat Aug 16" /></div>
+      <div><label class="lbl" for="catering-message">What are you thinking?</label><textarea id="catering-message" name="Message" placeholder="Tell Dave about your event…"></textarea></div>
       <button type="submit" class="btn">Request a Catering Quote</button>
     </form>
   </div>
@@ -964,7 +965,7 @@
       </div>
       <div>
         <strong style="font-family:Oswald,sans-serif;color:#fff;letter-spacing:1px">ORDER &amp; MORE</strong>
-        <p style="margin:8px 0 0"><a href="https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=order_online" target="_blank" rel="noopener">Order online →</a><br><a href="https://davesmainecafe.myshopify.com/collections/drop-one-pick-your-maine-crime?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=merch_store_launch" target="_blank" rel="noopener">Shop Dave's merch →</a><br><a href="https://t.me/dave_maine_cafe_bot?start=website" target="_blank" rel="noopener">Ask the café bot →</a><br><a href="#catering">Catering &amp; events</a><br><a href="#list">Join Dave's list</a></p>
+        <p style="margin:8px 0 0"><a href="https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=order_online" target="_blank" rel="noopener">Order online →</a><br><a href="/visit-kittery/">Visit Kittery →</a><br><a href="https://davesmainecafe.myshopify.com/collections/drop-one-pick-your-maine-crime?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=merch_store_launch" target="_blank" rel="noopener">Shop Dave's merch →</a><br><a href="https://t.me/dave_maine_cafe_bot?start=website" target="_blank" rel="noopener">Ask the café bot →</a><br><a href="#catering">Catering &amp; events</a><br><a href="#list">Join Dave's list</a></p>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin:12px 0 22px">
@@ -988,7 +989,11 @@
   </div>
 </footer>
 
-<div class="mbar"><a class="btn gold" href="https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=order_online" target="_blank" rel="noopener">🦞 Order Online</a></div>
+<nav class="mbar" aria-label="Quick cafe actions">
+  <a class="btn gold" href="https://www.toasttab.com/davesmainecafe/v3?utm_source=davesmainecafe.com&utm_medium=website&utm_campaign=mobile_quick_actions" target="_blank" rel="noopener">🦞 Order</a>
+  <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME" target="_blank" rel="noopener">📍 Directions</a>
+  <a class="btn ghost" href="tel:+12074755655">☎ Call</a>
+</nav>
 
 <script>
   document.querySelectorAll('#navlinks a').forEach(function(a){a.addEventListener('click',function(){var n=document.getElementById('navlinks');n.classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false')})});
