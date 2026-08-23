@@ -20,7 +20,10 @@ for (const id of ['list-name', 'list-email', 'list-phone', 'catering-name', 'cat
   assert.match(home, new RegExp(`id="${id}"`));
 }
 
-assert.match(visit, /<title>Visit Dave's Maine Cafe in Kittery, Maine \| Route 1<\/title>/);
+assert.match(visit, /<title>Lunch in Kittery Near the Outlets \| Dave's Maine Cafe<\/title>/);
+assert.match(visit, /<h1>Lunch in Kittery starts <span>here\.<\/span><\/h1>/);
+assert.match(visit, /fresh-picked lobster rolls, sandwiches, chowder and takeout/i);
+assert.match(home, /href="\/visit-kittery\/">Lunch in Kittery<\/a>/);
 assert.match(visit, /<link rel="canonical" href="https:\/\/www\.davesmainecafe\.com\/visit-kittery\/">/);
 assert.match(visit, /G-6JFFXXPBNG/);
 assert.match(visit, /dmc-conversions\.js/);
