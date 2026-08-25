@@ -30,7 +30,7 @@ assert.match(visit, /dmc-conversions\.js/);
 assert.match(visit, /Wednesday–Sunday/);
 assert.match(visit, /Closed Monday and Tuesday/);
 assert.match(visit, /google\.com\/maps\/dir/);
-assert.match(visit, /toasttab\.com\/davesmainecafe/);
+assert.match(visit, /order\.toasttab\.com\/online\/davesmainecafe/);
 assert.match(sitemap, /<loc>https:\/\/www\.davesmainecafe\.com\/visit-kittery\/<\/loc>/);
 
 for (const match of visit.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)) JSON.parse(match[1]);
