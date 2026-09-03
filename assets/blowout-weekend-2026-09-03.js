@@ -1,27 +1,21 @@
 (function () {
   var TZ = 'America/New_York';
-  var DATE = '2026-09-03';
-  var HIDE_AT_HOUR = 15; // banner disappears at 3:00 PM ET
+  var HIDE_AFTER = '2026-09-06'; // banner disappears once Sunday Sept 6 ends
 
-  function nowParts() {
+  function todayYMD() {
     var parts = new Intl.DateTimeFormat('en-US', {
       timeZone: TZ,
       year: 'numeric',
       month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false
+      day: '2-digit'
     }).formatToParts(new Date());
     var value = {};
     parts.forEach(function (part) { value[part.type] = part.value; });
-    return value;
+    return [value.year, value.month, value.day].join('-');
   }
 
   function expired() {
-    var v = nowParts();
-    if ([v.year, v.month, v.day].join('-') !== DATE) return true;
-    return Number(v.hour) >= HIDE_AT_HOUR;
+    return todayYMD() > HIDE_AFTER;
   }
 
   if (expired()) return;
@@ -33,10 +27,9 @@
   var notice = document.createElement('div');
   notice.className = 'dmc-lateopen';
   notice.setAttribute('role', 'status');
-  notice.innerHTML = '<strong>Sorry — opening at 2:00 PM today</strong>Late start on Thursday, September 3. Regular hours are back Friday at 11:30 AM.';
+  notice.innerHTML = '<strong>Closed today &mdash; back Friday</strong>Blow Out Weekend: Fri &bull; Sat &bull; Sun &mdash; $19 Lobster Rolls. See you then.';
   document.body.insertBefore(notice, document.body.firstChild);
 
-  // Pull the banner the moment 3:00 PM ET arrives, even on a page left open.
   var timer = setInterval(function () {
     if (!expired()) return;
     clearInterval(timer);
