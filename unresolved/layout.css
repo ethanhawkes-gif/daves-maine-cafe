@@ -217,83 +217,12 @@ section { padding: clamp(84px, 10vw, 150px) 7vw; }
   gap: clamp(70px, 10vw, 140px);
 }
 .shirt-card { min-width: 0; }
-.mockup-stage {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 3 / 2;
-  background: #d8d0c5;
-}
-.mockup-base {
+.finished-mockup {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  background: #d8d0c5;
 }
-.front-wordmark {
-  position: absolute;
-  z-index: 2;
-  top: 34.1%;
-  left: 10.1%;
-  width: 29.4%;
-  filter: drop-shadow(0 1px 1px #0007);
-}
-.sleeve-patch {
-  position: absolute;
-  z-index: 3;
-  top: 36.7%;
-  left: 41.4%;
-  width: 5.6%;
-  aspect-ratio: 1 / 1.16;
-  padding: .45%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: #e9e2d5;
-  border: 1px solid #191b1a;
-  border-radius: 28% 28% 42% 42%;
-  box-shadow: 0 2px 5px #0005;
-  transform: rotate(8deg);
-}
-.sleeve-patch img { display: block; width: 100%; height: auto; }
-.back-message {
-  position: absolute;
-  z-index: 2;
-  top: 40%;
-  left: 57.2%;
-  width: 35.6%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--bone);
-  text-align: center;
-  filter: drop-shadow(0 1px 1px #0008);
-}
-.back-message strong {
-  width: 100%;
-  padding-bottom: 1.2%;
-  border-bottom: 2px solid var(--bone);
-  letter-spacing: .1em;
-  font-family: "Arial Narrow", Arial, sans-serif;
-  font-size: clamp(.75rem, 2.7vw, 2.85rem);
-}
-.back-message i {
-  margin-top: 2.4%;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(.42rem, 1.25vw, 1.35rem);
-}
-.side-label {
-  position: absolute;
-  z-index: 4;
-  bottom: 4.5%;
-  padding: 8px 10px;
-  color: var(--bone);
-  background: #191b1ad9;
-  letter-spacing: .18em;
-  font-size: clamp(.42rem, .55vw, .62rem);
-  font-weight: 800;
-}
-.side-label-front { left: 2.8%; }
-.side-label-back { left: 52.8%; }
 .shirt-caption {
   display: grid;
   grid-template-columns: 70px 1fr 1.2fr;
@@ -400,14 +329,10 @@ footer small {
   .closing { min-height: 56svh; }
   .signal p,
   .closing > p { line-height: 1.8; }
-  .mockup-stage {
+  .finished-mockup {
     width: calc(100% + 44px);
     margin-left: -22px;
   }
-  .front-wordmark { top: 34.4%; }
-  .sleeve-patch { top: 36.8%; }
-  .back-message { top: 39.2%; }
-  .back-message strong { border-bottom-width: 1px; }
   .shirt-caption {
     grid-template-columns: 38px 1fr;
     gap: 12px;
