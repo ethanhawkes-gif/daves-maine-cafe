@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="220" viewBox="0 0 1320 220" role="img" aria-labelledby="title desc">
+  <title id="title">UNRESOLVED front wordmark</title>
+  <desc id="desc">A condensed uppercase UNRESOLVED wordmark with a quiet horizontal interruption.</desc>
+  <defs>
+    <mask id="interrupted">
+      <rect width="1320" height="220" fill="white"/>
+      <rect x="22" y="112" width="1276" height="8" fill="black"/>
+    </mask>
+  </defs>
+  <text x="24" y="166" fill="#E8E1D4" mask="url(#interrupted)" font-family="Arial Narrow, Liberation Sans Narrow, Arial, sans-serif" font-size="154" font-weight="800" letter-spacing="12">UNRESOLVED</text>
+</svg>
