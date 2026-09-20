@@ -352,11 +352,46 @@ h3{font-family:Oswald,"Arial Narrow",sans-serif;font-weight:600;letter-spacing:.
 
 /* ---------- marquee strip ---------- */
 .strip{
-  background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;
+  background:var(--red);color:#fff;display:grid;grid-template-columns:1fr 1fr;
   font-family:Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;
-  letter-spacing:.14em;font-size:13px;padding:11px 0;
+  letter-spacing:.11em;font-size:clamp(11px,3.2vw,14px);padding:0;
 }
-.strip span{padding:0 26px;}
+.strip span{padding:11px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.35);}
+.strip span:last-child{border-right:0;}
+
+/* ---------- Dave's world ---------- */
+.world{background:
+  radial-gradient(circle at 8% 8%,rgba(201,154,63,.18),transparent 24%),
+  repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 10px,transparent 10px 20px),
+  var(--navy-deep);color:var(--cream);overflow:hidden;}
+.world h2{color:#fff;font-size:clamp(34px,9.5vw,54px);}
+.world__intro{position:relative;z-index:1;}
+.world__intro .lede{color:rgba(245,239,226,.82);}
+.world__stamps{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px;}
+.world__stamps span{background:var(--cream);color:var(--navy-deep);border:2px solid var(--gold);border-radius:999px;padding:6px 9px 5px;font:700 10px/1 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.06em;transform:rotate(-1deg);}
+.world__stamps span:nth-child(even){transform:rotate(1.5deg);background:var(--gold);}
+.world__collage{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px;}
+.world-card{position:relative;margin:0;overflow:hidden;border:3px solid var(--cream);box-shadow:5px 6px 0 var(--gold);background:#111;min-height:190px;}
+.world-card--pie{transform:rotate(-1deg);}
+.world-card--soup{transform:rotate(1deg);}
+.world-card img{width:100%;height:100%;min-height:190px;object-fit:cover;}
+.world-card--pie img{object-position:center;}
+.world-card--soup img{object-position:center 46%;}
+.world-card figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(13,23,38,.96) 36%);padding:46px 10px 10px;color:#fff;font:700 14px/1.08 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.06em;}
+.world-card figcaption small{display:block;margin-top:5px;color:var(--gold);font:400 11px/1.25 "Special Elite",Courier,monospace;text-transform:none;letter-spacing:.02em;}
+.world__note{margin:19px 0 0;border-left:5px solid var(--gold);padding:10px 12px;background:var(--red);color:#fff;box-shadow:4px 4px 0 rgba(0,0,0,.28);font:700 13px/1.35 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.05em;transform:rotate(-.4deg);}
+
+/* ---------- Dave's personal story ---------- */
+.story{background:var(--cream-warm);}
+.story__photo{position:relative;border:4px solid #fff;box-shadow:7px 8px 0 var(--red);transform:rotate(-1deg);overflow:hidden;}
+.story__photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 34%;}
+.story__sticker{position:absolute;right:10px;bottom:10px;background:var(--gold);color:var(--navy-deep);border:3px solid #fff;border-radius:50%;width:92px;height:92px;display:grid;place-content:center;text-align:center;font:700 12px/1.05 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;transform:rotate(7deg);box-shadow:3px 4px 0 rgba(13,23,38,.45);}
+.story__copy{margin-top:34px;}
+.story__copy h2{font-size:clamp(34px,9vw,52px);color:var(--navy);}
+.story__copy p{font-size:16px;color:#2c3341;}
+.story__copy .story__lead{font-size:19px;line-height:1.4;color:var(--navy);font-weight:700;}
+.story__copy .btn{width:100%;margin-top:5px;}
+.story__sig{font-family:"Special Elite",Courier,monospace;font-size:18px!important;color:var(--red)!important;margin-top:16px;}
 
 /* ---------- cards ---------- */
 .grid{display:grid;gap:16px;margin-top:26px;}
@@ -540,6 +575,13 @@ h3{font-family:Oswald,"Arial Narrow",sans-serif;font-weight:600;letter-spacing:.
   .hero__photo{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lg);}
   .hero__photo img{aspect-ratio:4/5;}
   .hero__photo::after{display:none;}
+  .world__in{display:grid;grid-template-columns:.78fr 1.22fr;gap:42px;align-items:center;}
+  .world__collage{margin-top:0;}
+  .world-card{min-height:330px;}
+  .world-card img{min-height:330px;}
+  .story__in{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:center;}
+  .story__copy{margin-top:0;}
+  .story__copy .btn{width:auto;}
 
   .deal__in{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;}
   .deal__photo{margin-top:0;}
@@ -666,58 +708,73 @@ section[id]{scroll-margin-top:82px;}
   </div>
 </section>
 
-<div class="strip" aria-hidden="true">
-  <span>Football Saturdays</span><span>·</span>
-  <span>Football Sundays</span><span>·</span>
-  <span>House Sodas</span><span>·</span>
-  <span>Hot Sauce With Opinions</span><span>·</span>
-  <span>Community First. Profits Second.</span>
+<div class="strip" aria-label="Weekend football at Dave's">
+  <span>Football Saturdays</span>
+  <span>Football Sundays</span>
 </div>
 
-<!-- ============================================================ LOBSTER -->
-<section class="section" id="lobster">
-  <div class="wrap">
-    <p class="kicker">The main event</p>
-    <h2 style="font-size:clamp(30px,8vw,46px);color:var(--navy);">The roll that<br />built the place</h2>
-    <p class="lede">
-      We opened as a beer café. Then people tried the lobster roll and word got
-      around Route 1, which around here counts as a marketing department. It's
-      fresh picked daily — never frozen, no filler, no shortcuts —
-      and there's only so much of it each day. When it's gone, it's gone. We're
-      either generous or bad at math.
-    </p>
+<!-- ============================================================ DAVE'S WORLD -->
+<section class="section world" id="lobster">
+  <div class="wrap world__in">
+    <div class="world__intro">
+      <p class="kicker kicker--light">Past the lobster roll</p>
+      <h2>Then things got a little out of hand.</h2>
+      <p class="lede">
+        One tiny café. A serious lobster roll. Pot pies, soup flights, house sodas,
+        bourbon flights, football, and whatever Dave got excited about this week.
+      </p>
+      <div class="world__stamps" aria-label="The fun at Dave's">
+        <span>Soup flights</span><span>Pot pies</span><span>House sodas</span>
+        <span>Bourbon flights</span><span>Games on</span>
+      </div>
+      <p class="world__note">The menu has a plan. Dave has follow-up questions.</p>
+    </div>
 
-    <div class="grid grid--2">
-      <article class="card">
-        <img src="assets/photos/dave-lobster-rolls-og-2026-07.jpg"
-             alt="Dave holding two fresh-picked lobster rolls at the cafe" width="800" height="500" />
-        <div class="card__body">
-          <span class="tag tag--red">The one you came for</span>
-          <h3 style="margin-top:10px;">Dave's Lobster Roll</h3>
-          <p class="card__price">$20</p>
-          <p>
-            Fresh picked daily, light mayo, buttered New England roll.
-            Served cold. Hot with butter for $2 more.
-          </p>
-          <p class="card__note">$18 every Thursday · Meal Deal +$8</p>
-        </div>
-      </article>
+    <div class="world__collage" aria-label="Fall comfort food at Dave's">
+      <figure class="world-card world-card--pie">
+        <img src="assets/photos/chicken-pot-pie-real-2026-08-29.jpg"
+             alt="A golden chicken pot pie baked at Dave's Maine Cafe"
+             width="900" height="900" loading="lazy" />
+        <figcaption>Pot pies<small>Fall comfort, no restraint.</small></figcaption>
+      </figure>
+      <figure class="world-card world-card--soup">
+        <img src="assets/photos/dave-oux-gumbo-2026-07.jpg"
+             alt="A spoonful of Dave-oux gumbo over a bowl at Dave's Maine Cafe"
+             width="720" height="960" loading="lazy" />
+        <figcaption>Soup flights<small>Why pick one when three cups exist?</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-      <article class="card">
-        <img src="assets/photos/lobster-roll-sun-cruiser-2026-08-26.jpg"
-             alt="Dave's Lobster Roll with chips and a canned iced tea on newsprint"
-             width="800" height="500" />
-        <div class="card__body">
-          <span class="tag tag--gold">Thursday tradition</span>
-          <h3 style="margin-top:10px;">Thursday: $18</h3>
-          <p class="card__price">$18</p>
-          <p>
-            Same roll, same lobster, two dollars less, every Thursday we're open.
-            Our accountant has stopped returning calls.
-          </p>
-          <p class="card__note">Open 11:30 AM · Limited daily supply</p>
-        </div>
-      </article>
+<!-- ============================================================ DAVE'S STORY -->
+<section class="section story" id="dave">
+  <div class="wrap story__in">
+    <div class="story__photo">
+      <img src="assets/photos/dave-owner-2026.jpg"
+           alt="Dave smiling behind the bar with two fresh-picked lobster rolls"
+           width="900" height="1125" loading="lazy" />
+      <span class="story__sticker">The person<br />to blame</span>
+    </div>
+    <div class="story__copy">
+      <p class="kicker">The roll that built the place</p>
+      <h2>Hi, I'm Dave.<br />The roll changed the plan.</h2>
+      <p class="story__lead">
+        I left the corporate world because I wanted more time with Catherine and
+        our kids. Then I opened a little beer café because I loved craft beer.
+      </p>
+      <p>
+        The menu got bigger, the kitchen did not, and somewhere along the way the
+        lobster roll became the thing people told their friends about. Around here,
+        that counts as a marketing department.
+      </p>
+      <p>
+        I run the café the same way I show it on Facebook: in real time. What's
+        fresh, what sold out, what went sideways, and what I'm trying next. This
+        isn't a chain. Most days, I'm the guy making your lunch.
+      </p>
+      <a class="btn btn--primary" href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">Follow the daily story on Facebook</a>
+      <p class="story__sig">Community First. Profits Second. — Dave</p>
     </div>
   </div>
 </section>
@@ -1004,38 +1061,6 @@ section[id]{scroll-margin-top:82px;}
           <p class="card__note">Featured in Seacoast / Foster's coverage</p>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ DAVE -->
-<section class="section dave">
-  <div class="wrap dave__in">
-    <div class="dave__photo">
-      <img src="assets/photos/dave-owner-2026.jpg"
-           alt="Dave holding two of Dave's Lobster Rolls behind the bar at the cafe"
-           width="900" height="675" loading="lazy" />
-    </div>
-    <div class="dave__copy">
-      <p class="kicker">11th season · Family-run · Route 1</p>
-      <h2 style="font-size:clamp(28px,7.5vw,42px);color:var(--navy);">Hi, I'm Dave.</h2>
-      <p>
-        We opened as a beer café near the Kittery outlets — rotating taps, a bar I'm
-        proud of, and about 780 square feet to work with. Then folks tried the
-        lobster roll, and here we are.
-      </p>
-      <p>
-        It's still my family running the place. I cook the food I'd want to eat —
-        honest, generous, unmistakably Maine — and nobody's rushing you out the
-        door. The game's on if there's a game on. Pull over, stay a while.
-      </p>
-      <p class="dave__sig">Community First. Profits Second.</p>
-      <div class="badges">
-        <span class="tag">Fresh, Never Frozen</span>
-        <span class="tag">Family-Run</span>
-        <span class="tag">Come As You Are</span>
-        <span class="tag tag--gold">Crustacean Nation</span>
-      </div>
     </div>
   </div>
 </section>
