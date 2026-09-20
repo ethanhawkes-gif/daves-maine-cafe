@@ -15,5 +15,14 @@
     "Community First. Profits Second."
   ],
   "publicationGate": "Dave exact approval required before any production homepage change",
-  "productionChanged": false
+  "productionChanged": false,
+  "reviewRevision": "v2 — September 20 hero crop and coastal-color correction",
+  "revisionNotes": [
+    "removed the white Route 1 shield",
+    "separated hero copy from the mobile photo so the full lobster roll stays visible",
+    "reframed the hero toward the roll and away from the Sun Cruiser can",
+    "shortened Dave's portrait to a square story frame",
+    "strengthened the red, white, navy, and coastal-blue system without turning it into flag graphics",
+    "made Sunday hours explicit"
+  ]
 }
