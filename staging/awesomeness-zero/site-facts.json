@@ -1,0 +1,43 @@
+{
+  "schema": "daves-maine-cafe.public-facts.v1",
+  "updated": "2026-09-22",
+  "status": "review candidate; production publication requires Dave's exact approval",
+  "entity": {
+    "name": "Dave's Maine Cafe",
+    "canonicalUrl": "https://www.davesmainecafe.com/",
+    "address": {
+      "street": "439 US Route 1, Ste 1",
+      "city": "Kittery",
+      "region": "ME",
+      "postalCode": "03904",
+      "country": "US"
+    },
+    "telephone": "+1-207-475-5655",
+    "facebook": "https://www.facebook.com/davesmainecafe/",
+    "instagram": "https://www.instagram.com/davesmainecafe/"
+  },
+  "hours": [
+    {"days": ["Wednesday", "Thursday", "Friday"], "opens": "11:30", "closes": "19:00"},
+    {"days": ["Saturday", "Sunday"], "opens": "11:30", "closes": "17:00"},
+    {"days": ["Monday", "Tuesday"], "closed": true}
+  ],
+  "featuredOffer": {
+    "name": "Dave's Lobster Roll",
+    "description": "Fresh, hand-picked Maine lobster, never frozen, served on a buttered New England roll.",
+    "regularPriceUsd": 20,
+    "thursdayPriceUsd": 18,
+    "availabilityNote": "Limited daily supply"
+  },
+  "customerActions": {
+    "orderPickup": "https://order.toasttab.com/online/davesmainecafe",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME",
+    "call": "tel:+12074755655"
+  },
+  "content": {
+    "homepage": "https://www.davesmainecafe.com/",
+    "lobsterRolls": "https://www.davesmainecafe.com/lobster-rolls/",
+    "catering": "https://www.davesmainecafe.com/catering/",
+    "routeOneBottling": "https://www.davesmainecafe.com/route-one-bottling/"
+  },
+  "accuracy": "Hours, prices, offers and availability can change. The website and live Toast menu are the authoritative customer paths; sold-out inventory is not represented as available."
+}

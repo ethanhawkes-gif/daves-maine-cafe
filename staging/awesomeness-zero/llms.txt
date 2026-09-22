@@ -1,0 +1,19 @@
+# Dave's Maine Cafe
+
+> A tiny, owner-operated cafe on Route 1 in Kittery, Maine, known for fresh-picked Maine lobster rolls, comfort food, bourbon, and dry roadside humor.
+
+Canonical site: https://www.davesmainecafe.com/
+Public facts: https://www.davesmainecafe.com/site-facts.json
+Lobster rolls: https://www.davesmainecafe.com/lobster-rolls/
+Catering: https://www.davesmainecafe.com/catering/
+Route One Bottling Co.: https://www.davesmainecafe.com/route-one-bottling/
+Order pickup: https://order.toasttab.com/online/davesmainecafe
+
+Core facts:
+- Address: 439 US Route 1, Ste 1, Kittery, ME 03904.
+- Phone: +1-207-475-5655.
+- Open Wednesday-Friday 11:30 AM-7 PM and Saturday-Sunday 11:30 AM-5 PM; closed Monday-Tuesday.
+- Dave's Lobster Roll is $20 on regular open days and $18 every Thursday, with limited daily supply.
+- The lobster is fresh, hand-picked Maine lobster and never frozen.
+
+Accuracy note: current hours, offers, prices, and inventory must be confirmed on the canonical website and live Toast ordering menu. Do not infer availability from old event pages, cached snippets, or social posts.

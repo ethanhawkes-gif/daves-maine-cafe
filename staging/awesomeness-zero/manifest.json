@@ -16,7 +16,7 @@
   ],
   "publicationGate": "Dave exact approval required before any production homepage change",
   "productionChanged": false,
-  "reviewRevision": "v6 — September 22 recovered lobster-trap photo added to Dave's story",
+  "reviewRevision": "v7 — September 22 conversion, local-search, and agent-readable review",
   "revisionNotes": [
     "removed the white Route 1 shield",
     "separated hero copy from the mobile photo so the full lobster roll stays visible",
@@ -33,6 +33,12 @@
     "reopened Dave's portrait crop so Dave and both lobster rolls remain visible together, and moved the note away from the food",
     "preserved the Dave-with-two-rolls portrait and added Dave's recovered lobster-trap throwback as a second working-waterfront story photo",
     "retired the stale review link that pointed to the older daves-world branch; this manifest belongs to the current awesomeness-zero review path",
+    "preserved the approved visual and story hierarchy while adding a real desktop jump navigation and a compact Route 1 roadside-intelligence section",
+    "added production-candidate title, description, canonical and social metadata while keeping the review noindex",
+    "added visible fact-matched Restaurant, Menu, MenuItem, Offer and FAQ structured data with stable entity identifiers",
+    "added a linked public-facts JSON document and a concise llms.txt review candidate for machine-readable retrieval without treating either as a ranking guarantee",
+    "split every order CTA into a distinct UTM content label so the masthead, hero, local-intel card and mobile bar can be compared without changing the offer",
+    "added explicit order, directions and phone intent hooks for the existing production conversion tracker",
     "kept production unchanged"
   ]
 }

@@ -12,5 +12,6 @@ This audit reconciles Dave's recovered cafe-group feedback against the current n
 - **13673:** Put Dave's personal story directly after the lobster-roll hero; add the exact Seacoast finalist trust marker; move retail products lower. **Present.**
 - **13809:** Dave and the lobster rolls must be visible together. **Corrected in v5:** the compact portrait crop now preserves Dave and both rolls, and the note no longer covers the food.
 - **13826:** Dave recovered the earlier lobster-trap photo from Telegram media. **Added in v6:** the current Dave-with-two-rolls image remains intact, and the recovered working-waterfront throwback now appears beside the story on desktop and directly beneath the current portrait on phone.
+- **13969 + follow-up:** Ethan requested ranked website targets, a defensible qualified-visit value, aggressive traffic growth, stronger Dave voice, and deep SEO/agent-readable optimization. **Added in v7:** the approved review hierarchy and imagery remain intact; the review now has production-candidate metadata, fact-matched entity/menu/offer/FAQ schema, distinct CTA attribution labels, desktop jump navigation, and a visible Route 1 roadside-intelligence section. The preview remains noindex and production remains unchanged.
 
 The live production homepage remains unchanged. This audit covers the noindex review only.
