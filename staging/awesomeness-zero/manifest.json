@@ -16,7 +16,7 @@
   ],
   "publicationGate": "Dave exact approval required before any production homepage change",
   "productionChanged": false,
-  "reviewRevision": "v5 — September 22 recovered-revision audit and Dave-with-the-rolls correction",
+  "reviewRevision": "v6 — September 22 recovered lobster-trap photo added to Dave's story",
   "revisionNotes": [
     "removed the white Route 1 shield",
     "separated hero copy from the mobile photo so the full lobster roll stays visible",
@@ -31,6 +31,7 @@
     "added the exact 2026 Best of the Seacoast Community's Choice finalist recognition to the hero without implying a win",
     "moved soda, sauces, and merchandise to the bottom supporting section",
     "reopened Dave's portrait crop so Dave and both lobster rolls remain visible together, and moved the note away from the food",
+    "preserved the Dave-with-two-rolls portrait and added Dave's recovered lobster-trap throwback as a second working-waterfront story photo",
     "retired the stale review link that pointed to the older daves-world branch; this manifest belongs to the current awesomeness-zero review path",
     "kept production unchanged"
   ]
