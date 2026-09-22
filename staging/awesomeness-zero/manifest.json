@@ -39,6 +39,8 @@
     "added a linked public-facts JSON document and a concise llms.txt review candidate for machine-readable retrieval without treating either as a ranking guarantee",
     "split every order CTA into a distinct UTM content label so the masthead, hero, local-intel card and mobile bar can be compared without changing the offer",
     "added explicit order, directions and phone intent hooks for the existing production conversion tracker",
+    "moved the 2026 Best of the Seacoast finalist marker from the food photo into the open navy field above You Found Lunch at Dave's direction",
+    "rewrote Hi. I'm Dave. in Dave's first person around his Maine roots, outdoor-industry exit, Beer Cafe to lobster-roll evolution, Facebook storytelling, Route One Bottling Co. products, and pickleball addiction",
     "kept production unchanged"
   ]
 }
