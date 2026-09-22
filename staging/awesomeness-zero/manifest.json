@@ -16,7 +16,7 @@
   ],
   "publicationGate": "Dave exact approval required before any production homepage change",
   "productionChanged": false,
-  "reviewRevision": "v4 — September 21 exact pie offer and real-product proof slots",
+  "reviewRevision": "v5 — September 22 recovered-revision audit and Dave-with-the-rolls correction",
   "revisionNotes": [
     "removed the white Route 1 shield",
     "separated hero copy from the mobile photo so the full lobster roll stays visible",
@@ -30,6 +30,8 @@
     "moved Dave's photo and first-person story directly after the lobster-roll hero",
     "added the exact 2026 Best of the Seacoast Community's Choice finalist recognition to the hero without implying a win",
     "moved soda, sauces, and merchandise to the bottom supporting section",
+    "reopened Dave's portrait crop so Dave and both lobster rolls remain visible together, and moved the note away from the food",
+    "retired the stale review link that pointed to the older daves-world branch; this manifest belongs to the current awesomeness-zero review path",
     "kept production unchanged"
   ]
 }
