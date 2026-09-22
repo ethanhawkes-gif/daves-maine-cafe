@@ -12,3 +12,8 @@ Paths are root-absolute (`/assets/img/...`), so this folder deploys as a site ro
 
 Go-live steps and off-page checklist: `SEO-NOTES.md`. Facts to confirm with Dave:
 `reports/daves-maine-cafe-rebuild-2026-09-22.md` in the Vesper workspace.
+
+Review revision 2026-09-22: Dave kept the split hero, moved the 2026 finalist marker from
+the food photo into the navy copy field above “You Found Lunch,” and replaced the “Hi. I'm
+Dave.” section with his Maine → Beer Cafe → lobster roll → Route One Bottling Co. story,
+including Facebook and pickleball. Production remains untouched.
