@@ -19,6 +19,13 @@ pass(/id="answers"/.test(html) && /Route 1 roadside intelligence/.test(html), 'v
 pass((html.match(/data-intent-action="order_online"/g) ?? []).length === 4, 'expected four order intent hooks');
 pass((html.match(/data-intent-action="directions"/g) ?? []).length === 2, 'expected two directions intent hooks');
 pass((html.match(/data-intent-action="phone_call"/g) ?? []).length === 2, 'expected two phone intent hooks');
+pass(html.includes('G-6JFFXXPBNG'), 'production GA4 measurement ID missing');
+pass(html.includes('/assets/dmc-conversions.js'), 'production conversion script missing');
+pass(html.includes('data-cta="masthead"'), 'masthead CTA attribution missing');
+pass(html.includes('data-cta="hero"'), 'hero CTA attribution missing');
+pass(html.includes('data-cta="local_intel"'), 'local-intel CTA attribution missing');
+pass(html.includes('data-cta="visit"'), 'visit CTA attribution missing');
+pass(html.includes('data-cta="mobile_bar"'), 'mobile-bar CTA attribution missing');
 pass((html.match(/utm_content=/g) ?? []).length === 4, 'every order CTA needs a distinct content label');
 pass(manifest.reviewRevision.startsWith('v7'), 'manifest revision must be v7');
 pass(manifest.productionChanged === false, 'productionChanged must remain false');
@@ -45,7 +52,10 @@ for (const match of html.matchAll(/(?:src|href)="([^"#][^"]*)"/g)) {
   const value = match[1].replaceAll('&amp;', '&');
   if (/^(?:https?:|tel:|mailto:)/.test(value)) continue;
   const relative = value.split(/[?#]/, 1)[0];
-  try { await access(resolve(here, relative)); } catch { failures.push(`missing local asset: ${relative}`); }
+  const localPath = relative.startsWith('/')
+    ? resolve(here, '../..', relative.slice(1))
+    : resolve(here, relative);
+  try { await access(localPath); } catch { failures.push(`missing local asset: ${relative}`); }
 }
 
 if (failures.length) {

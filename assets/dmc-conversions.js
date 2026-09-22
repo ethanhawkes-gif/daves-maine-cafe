@@ -26,6 +26,7 @@
     const common = {
       link_url: href,
       link_text: linkText,
+      cta_position: link.dataset.cta || "unlabeled",
     };
 
     if (/\/\/(?:www\.|order\.)?toasttab\.com\//i.test(href)) {

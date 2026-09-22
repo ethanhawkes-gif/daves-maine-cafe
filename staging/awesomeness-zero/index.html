@@ -21,6 +21,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Special+Elite&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      const productionHosts = new Set(["davesmainecafe.com", "www.davesmainecafe.com"]);
+      if (!productionHosts.has(window.location.hostname) || window.location.pathname.startsWith("/staging/")) return;
+
+      const analytics = document.createElement("script");
+      analytics.async = true;
+      analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-6JFFXXPBNG";
+      document.head.appendChild(analytics);
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag(){ window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", "G-6JFFXXPBNG");
+    })();
+  </script>
+  <script defer src="/assets/dmc-conversions.js"></script>
   <script type="application/ld+json">
   [
   {
