@@ -30,7 +30,8 @@ const jsonLdBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\
 pass(jsonLdBlocks.length === 1, 'expected exactly one JSON-LD graph');
 if (jsonLdBlocks.length === 1) {
   try {
-    const graph = JSON.parse(jsonLdBlocks[0][1]);
+    const parsed = JSON.parse(jsonLdBlocks[0][1]);
+    const graph = Array.isArray(parsed) ? parsed[0] : parsed;
     const nodes = graph['@graph'] ?? [];
     pass(nodes.some((node) => node['@type'] === 'Restaurant'), 'Restaurant schema missing');
     pass(nodes.some((node) => node['@type'] === 'FAQPage'), 'FAQPage schema missing');
