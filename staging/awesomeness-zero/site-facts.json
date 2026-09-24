@@ -1,7 +1,7 @@
 {
   "schema": "daves-maine-cafe.public-facts.v1",
   "updated": "2026-09-22",
-  "status": "review candidate; production publication requires Dave's exact approval",
+  "status": "final customer-ready review candidate; production publication requires Dave's exact approval",
   "entity": {
     "name": "Dave's Maine Cafe",
     "canonicalUrl": "https://www.davesmainecafe.com/",

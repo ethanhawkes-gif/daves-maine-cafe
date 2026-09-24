@@ -3,7 +3,8 @@ import { readFile } from 'node:fs/promises';
 
 const html = await readFile(new URL('../lobster-rolls/index.html', import.meta.url), 'utf8');
 
-assert.match(html, /<title>\$20 Maine Lobster Roll in Kittery \| Dave's Maine Cafe<\/title>/);
+assert.match(html, /<title>Dave's \$20 Lobster Roll in Kittery, Maine \| Route 1<\/title>/);
+assert.doesNotMatch(html, /Maine lobster meat/i, 'do not imply a verified Maine origin for the lobster meat');
 assert.match(html, /<link rel="canonical" href="https:\/\/www\.davesmainecafe\.com\/lobster-rolls\/">/);
 assert.match(html, /<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">/);
 assert.match(html, /<meta property="og:image" content="https:\/\/www\.davesmainecafe\.com\/assets\/photos\/lobster-roll-sun-cruiser-2026-08-26\.jpg">/);

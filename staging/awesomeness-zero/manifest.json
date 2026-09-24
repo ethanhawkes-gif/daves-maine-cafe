@@ -16,7 +16,7 @@
   ],
   "publicationGate": "Dave exact approval required before any production homepage change",
   "productionChanged": false,
-  "reviewRevision": "v8 — September 24 numbered, 50+ readable, route-preserving review",
+  "reviewRevision": "v9 — September 24 customer-ready final homepage candidate",
   "revisionNotes": [
     "removed the white Route 1 shield",
     "separated hero copy from the mobile photo so the full lobster roll stays visible",
@@ -26,7 +26,7 @@
     "made Sunday hours explicit",
     "combined Shepherd's Pie, Chicken Pot Pies, and rotating pies into one card led by the real shepherd's pie photo",
     "replaced the $9 starburst with a plain eligibility line: buy any entree or sandwich, then take home one Take & Bake for $9",
-    "replaced invented soda and sauce drawings with the actual soda label, approved hot-sauce label proofs, and explicit photo slots for the real products Dave will supply",
+    "replaced invented soda and sauce drawings with the actual soda label and approved hot-sauce label proofs",
     "moved Dave's photo and first-person story directly after the lobster-roll hero",
     "added the exact 2026 Best of the Seacoast Community's Choice finalist recognition to the hero without implying a win",
     "moved soda, sauces, and merchandise to the bottom supporting section",
@@ -46,6 +46,9 @@
     "added a clear Menu tab linked to the authoritative live Toast menu",
     "preserved and surfaced the established Lobster Rolls, Catering, Route One Bottling, and Lunch in Kittery routes",
     "raised base type, supporting copy, navigation labels, and touch-target sizes for the cafe's primarily 50+ customer demographic",
-    "removed stale Maine-origin wording from visible copy, metadata, structured data, public facts, and the agent-readable summary while preserving Kittery, Maine location wording"
+    "removed stale Maine-origin wording from visible copy, metadata, structured data, public facts, and the agent-readable summary while preserving Kittery, Maine location wording",
+    "removed the numbered review bar, numbered badges, and customer-visible photo placeholders so the URL now shows the exact launch candidate rather than an annotated proof",
+    "replaced the retired Friday implication with the current verified $9 bourbon-pour reason",
+    "normalized Chicken Pot Pie to Dave's canonical customer-facing name"
   ]
 }

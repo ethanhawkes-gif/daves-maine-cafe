@@ -29,10 +29,12 @@ pass(html.includes('data-cta="local_intel"'), 'local-intel CTA attribution missi
 pass(html.includes('data-cta="visit"'), 'visit CTA attribution missing');
 pass(html.includes('data-cta="mobile_bar"'), 'mobile-bar CTA attribution missing');
 pass((html.match(/utm_content=/g) ?? []).length === 4, 'every order CTA needs a distinct content label');
-pass(manifest.reviewRevision.startsWith('v8'), 'manifest revision must be v8');
+pass(manifest.reviewRevision.startsWith('v9'), 'manifest revision must be v9');
 pass(manifest.productionChanged === false, 'productionChanged must remain false');
 pass((html.match(/data-review-zone="[1-7]"/g) ?? []).length === 7, 'expected seven numbered review zones');
-pass(/Fast review:/.test(html), 'fast review instruction missing');
+pass(!html.includes('Fast review:') && !html.includes('review-map'), 'customer-ready candidate must not show review scaffolding');
+pass(!/photo slots? reserved/i.test(html) && !html.includes('photo-slot'), 'customer-ready candidate must not show photo placeholders');
+pass(html.includes('$9 bourbon pours all day'), 'current Friday bourbon reason missing');
 pass(/>Menu<\/a>/.test(html), 'clear Menu tab missing');
 for (const route of ['lobster-rolls/', 'catering/', 'route-one-bottling/', 'visit-kittery/']) {
   pass(html.includes(`href="https://www.davesmainecafe.com/${route}"`), `established route missing from review navigation: ${route}`);
@@ -71,13 +73,11 @@ for (const width of [360, 390, 768, 1440]) {
 }
 await page.setViewportSize({ width: 390, height: 844 });
 assert.equal(await page.locator('.mast__links').isVisible(), false, 'desktop navigation should not crowd the phone header');
-assert.equal(await page.locator('.review-map').isVisible(), true, 'numbered review map must be visible on phone');
-assert.equal(await page.locator('.review-map__links a').first().evaluate((node) => node.getBoundingClientRect().height >= 44), true, 'review jump target too small');
 assert.equal(await page.locator('body').evaluate((node) => getComputedStyle(node).fontSize), '18px', 'body type must remain 18px');
-await page.screenshot({ path: '/tmp/dmc-review-mobile-v8.png', fullPage: false });
+await page.screenshot({ path: '/tmp/dmc-review-mobile-v9.png', fullPage: false });
 await page.setViewportSize({ width: 1440, height: 1000 });
 assert.equal(await page.locator('.mast__links').isVisible(), true, 'desktop route navigation must be visible');
-await page.screenshot({ path: '/tmp/dmc-review-desktop-v8.png', fullPage: false });
+await page.screenshot({ path: '/tmp/dmc-review-desktop-v9.png', fullPage: false });
 assert.deepEqual(browserErrors, [], 'browser errors');
 await browser.close();
 
