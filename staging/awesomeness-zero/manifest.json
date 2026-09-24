@@ -16,7 +16,7 @@
   ],
   "publicationGate": "Dave exact approval required before any production homepage change",
   "productionChanged": false,
-  "reviewRevision": "v7 — September 22 conversion, local-search, and agent-readable review",
+  "reviewRevision": "v8 — September 24 numbered, 50+ readable, route-preserving review",
   "revisionNotes": [
     "removed the white Route 1 shield",
     "separated hero copy from the mobile photo so the full lobster roll stays visible",
@@ -41,6 +41,11 @@
     "added explicit order, directions and phone intent hooks for the existing production conversion tracker",
     "moved the 2026 Best of the Seacoast finalist marker from the food photo into the open navy field above You Found Lunch at Dave's direction",
     "rewrote Hi. I'm Dave. in Dave's first person around his Maine roots, outdoor-industry exit, Beer Cafe to lobster-roll evolution, Facebook storytelling, Route One Bottling Co. products, and pickleball addiction",
-    "kept production unchanged"
+    "kept production unchanged",
+    "added a review-only numbered map so Dave can request changes by area instead of describing screen position",
+    "added a clear Menu tab linked to the authoritative live Toast menu",
+    "preserved and surfaced the established Lobster Rolls, Catering, Route One Bottling, and Lunch in Kittery routes",
+    "raised base type, supporting copy, navigation labels, and touch-target sizes for the cafe's primarily 50+ customer demographic",
+    "removed stale Maine-origin wording from visible copy, metadata, structured data, public facts, and the agent-readable summary while preserving Kittery, Maine location wording"
   ]
 }
