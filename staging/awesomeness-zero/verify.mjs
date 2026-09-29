@@ -29,7 +29,7 @@ pass(html.includes('data-cta="local_intel"'), 'local-intel CTA attribution missi
 pass(html.includes('data-cta="visit"'), 'visit CTA attribution missing');
 pass(html.includes('data-cta="mobile_bar"'), 'mobile-bar CTA attribution missing');
 pass((html.match(/utm_content=/g) ?? []).length === 4, 'every order CTA needs a distinct content label');
-pass(manifest.reviewRevision.startsWith('v12'), 'manifest revision must be v12');
+pass(manifest.reviewRevision.startsWith('v13'), 'manifest revision must be v13');
 pass(manifest.productionChanged === false, 'productionChanged must remain false');
 pass((html.match(/data-review-zone="[1-7]"/g) ?? []).length === 7, 'expected seven numbered review zones');
 pass(!html.includes('Fast review:') && !html.includes('review-map'), 'customer-ready candidate must not show review scaffolding');
@@ -80,10 +80,10 @@ for (const width of [360, 390, 768, 1440]) {
 await page.setViewportSize({ width: 390, height: 844 });
 assert.equal(await page.locator('.mast__links').isVisible(), false, 'desktop navigation should not crowd the phone header');
 assert.equal(await page.locator('body').evaluate((node) => getComputedStyle(node).fontSize), '18px', 'body type must remain 18px');
-await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-mobile-v12.png', fullPage: false });
+await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-mobile-v13.png', fullPage: false });
 await page.setViewportSize({ width: 1440, height: 1000 });
 assert.equal(await page.locator('.mast__links').isVisible(), true, 'desktop route navigation must be visible');
-await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-desktop-v12.png', fullPage: false });
+await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-desktop-v13.png', fullPage: false });
 assert.deepEqual(browserErrors, [], 'browser errors');
 await browser.close();
 
