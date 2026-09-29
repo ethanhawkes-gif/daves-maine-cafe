@@ -19,7 +19,7 @@ pass(/<title>Lobster Rolls in Kittery, Maine \| Dave's Maine Cafe<\/title>/.test
 pass(/<link rel="canonical" href="https:\/\/www\.davesmainecafe\.com\/">/.test(html), 'canonical missing');
 pass(/id="answers"/.test(html) && /Route 1 roadside intelligence/.test(html), 'visible answer section missing');
 pass((html.match(/data-intent-action="order_online"/g) ?? []).length === 4, 'expected four order intent hooks');
-pass((html.match(/data-intent-action="directions"/g) ?? []).length === 2, 'expected two directions intent hooks');
+pass((html.match(/data-intent-action="directions"/g) ?? []).length === 3, 'expected three directions intent hooks');
 pass((html.match(/data-intent-action="phone_call"/g) ?? []).length === 2, 'expected two phone intent hooks');
 pass(html.includes('G-6JFFXXPBNG'), 'production GA4 measurement ID missing');
 pass(html.includes('/assets/dmc-conversions.js'), 'production conversion script missing');
@@ -29,7 +29,7 @@ pass(html.includes('data-cta="local_intel"'), 'local-intel CTA attribution missi
 pass(html.includes('data-cta="visit"'), 'visit CTA attribution missing');
 pass(html.includes('data-cta="mobile_bar"'), 'mobile-bar CTA attribution missing');
 pass((html.match(/utm_content=/g) ?? []).length === 4, 'every order CTA needs a distinct content label');
-pass(manifest.reviewRevision.startsWith('v9'), 'manifest revision must be v9');
+pass(manifest.reviewRevision.startsWith('v10'), 'manifest revision must be v10');
 pass(manifest.productionChanged === false, 'productionChanged must remain false');
 pass((html.match(/data-review-zone="[1-7]"/g) ?? []).length === 7, 'expected seven numbered review zones');
 pass(!html.includes('Fast review:') && !html.includes('review-map'), 'customer-ready candidate must not show review scaffolding');
@@ -60,6 +60,10 @@ if (jsonLdBlocks.length === 1) {
   }
 }
 
+pass(!html.includes('<div class="lobster-burst">'), 'red price starburst must be removed');
+pass(html.includes('Order pickup') && html.includes('hero__hours'), 'first-screen pickup and hours required');
+pass(html.indexOf('id="food"') < html.indexOf('id="dave"'), 'food must precede owner story');
+pass(html.includes('data-intent-action="social_visit"'), 'real social journey required');
 const browser = await chromium.launch({ executablePath: '/usr/bin/chromium', headless: true, args: ['--no-sandbox'] });
 const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1 });
 const browserErrors = [];
@@ -74,10 +78,10 @@ for (const width of [360, 390, 768, 1440]) {
 await page.setViewportSize({ width: 390, height: 844 });
 assert.equal(await page.locator('.mast__links').isVisible(), false, 'desktop navigation should not crowd the phone header');
 assert.equal(await page.locator('body').evaluate((node) => getComputedStyle(node).fontSize), '18px', 'body type must remain 18px');
-await page.screenshot({ path: '/tmp/dmc-review-mobile-v9.png', fullPage: false });
+await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-mobile-v10.png', fullPage: false });
 await page.setViewportSize({ width: 1440, height: 1000 });
 assert.equal(await page.locator('.mast__links').isVisible(), true, 'desktop route navigation must be visible');
-await page.screenshot({ path: '/tmp/dmc-review-desktop-v9.png', fullPage: false });
+await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-desktop-v10.png', fullPage: false });
 assert.deepEqual(browserErrors, [], 'browser errors');
 await browser.close();
 
@@ -101,7 +105,7 @@ console.log(JSON.stringify({
   reviewRevision: manifest.reviewRevision,
   structuredDataTypes: ['WebSite', 'Restaurant', 'Menu', 'MenuItem', 'Offer', 'FAQPage'],
   orderIntentHooks: 4,
-  directionsIntentHooks: 2,
+  directionsIntentHooks: 3,
   phoneIntentHooks: 2,
   browserWidths: [360, 390, 768, 1440],
   bodyFontSize: '18px',

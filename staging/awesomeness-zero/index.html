@@ -239,6 +239,17 @@
     }
     @media(min-width:1000px){.mast__links{display:flex}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+    /* September 29: quiet price treatment, useful first screen, social story. */
+    .hero__price{font:600 20px/1.5 Inter,sans-serif;color:#fff;margin:16px 0 8px}
+    .hero__price strong{color:var(--yellow);font-size:25px}.hero__price span{white-space:nowrap}
+    .hero__hours{font:400 15px/1.6 Inter,sans-serif;color:#fff;max-width:420px;margin:0 0 20px}
+    .social-note{margin-top:22px;border-top:2px solid var(--red);padding-top:20px}.social-note h3{font-size:27px;margin:10px 0}
+    .social-note .btn{white-space:normal;text-align:center;max-width:100%}
+    a:focus-visible{outline:3px solid #007d90;outline-offset:5px}
+    .hero h1{font-size:clamp(42px,7vw,76px);line-height:1.04;max-width:12ch;margin:12px 0}
+    @media(max-width:759px){.hero__photo{height:210px}.hero__photo img{object-position:50% 48%}.hero__copy{padding:22px 0 30px}.hero__proof{display:none}.hero__dek{font-size:17px}.hero__price{margin:10px 0 5px}.hero__hours{font-size:14px}.hero h1{font-size:36px;max-width:none;letter-spacing:-.02em}}
+    @media(min-width:760px){.hero{min-height:700px}.hero__copy{width:44%;margin-left:6%;margin-right:50%;padding:55px 25px 55px 0}.hero h1{font-size:clamp(48px,5.3vw,76px)}}
   </style>
 </head>
 <body id="top">
@@ -266,37 +277,16 @@
     <div class="hero__photo">
       <img src="../daves-world-review/assets/photos/lobster-roll-sun-cruiser-2026-08-26.jpg" alt="Dave's fresh-picked lobster roll with chips on Route 1 in Kittery, Maine" width="1100" height="1280" fetchpriority="high" decoding="async">
     </div>
-    <div class="lobster-burst">Dave's<br>Lobster Roll<b>$20</b><small>$18 Thursdays</small></div>
     <div class="wrap hero__copy">
       <div class="hero__proof"><b>2026 Finalist</b>Best of the Seacoast · Community's Choice</div>
-      <span class="eyebrow">Welcome to Dave's World</span>
-      <h1>You found lunch.</h1>
-      <p class="hero__dek">A tiny Route 1 cafe with a big lobster roll and absolutely no interest in acting normal.</p>
+      <span class="eyebrow">Kittery, Maine · 439 US Route 1</span>
+      <h1>Your Maine stop.<br>Your lobster roll.</h1>
+      <p class="hero__dek">Fresh-picked lobster rolls. Comfort food. A little roadside mischief. Welcome to Dave’s.</p>
+      <p class="hero__price">Dave’s Lobster Roll <strong>$20</strong> <span>· $18 Thursdays</span></p>
+      <p class="hero__hours">Wed–Fri 11:30–7 · Sat–Sun 11:30–5<br>Closed Monday &amp; Tuesday. Check pickup availability in the menu.</p>
       <div class="hero__actions">
-        <a class="btn btn--yellow" data-intent-action="order_online" data-cta="hero" href="https://order.toasttab.com/online/davesmainecafe?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=roadside_field_guide&amp;utm_content=hero">See today's menu</a>
-        <a class="btn btn--ghost" href="#dave">Meet Dave</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="story review-zone" id="dave" data-review-zone="2" aria-label="Review area 2: Dave's story" aria-labelledby="dave-title">
-    <div class="wrap story__in">
-      <div class="story__photo">
-        <img src="../daves-world-review/assets/photos/dave-owner-2026.jpg" alt="Dave holding two Dave's Lobster Rolls together behind the bar" loading="lazy" width="1100" height="1280">
-        <span class="story__note">The person to blame</span>
-      </div>
-      <figure class="story__memory">
-        <img src="../../assets/photos/dave-lobster-trap-throwback.jpg" alt="A younger Dave holding a lobster beside a trap on the water" loading="lazy" width="1251" height="1280">
-        <figcaption>Before the lobster roll took over.</figcaption>
-      </figure>
-      <div class="story__copy">
-        <span class="label">The roll that built the place</span>
-        <h2 id="dave-title">Hi. I'm Dave.</h2>
-        <p class="story__lead">I was born and raised in Maine, for better or worse. After 25 years in the outdoor business, I left corporate life to spend more time with Catherine and our kids. Naturally, I opened a beer cafe—which is not how most people create free time.</p>
-        <p>Maine Beer Cafe started with craft beer, grew a menu larger than our kitchen had any business handling, and eventually got hijacked by a lobster roll. I told the whole sideways story on Facebook—the good days, the sold-out days, and the ideas that probably should have stayed in my head. Somewhere in there, Maine Beer Cafe became Dave's Maine Cafe.</p>
-        <p>Now that lobster roll has led us to Route One Bottling Co., where we're taking the same Route 1 point of view into craft sodas, hot sauces, and BBQ sauces. Apparently running a tiny cafe wasn't enough. I also picked up a pickleball addiction, because one questionable life choice at a time felt too organized.</p>
-        <a class="btn" href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">Follow the real story</a>
-        <p class="signature">Community First. Profits Second. — Dave</p>
+        <a class="btn btn--yellow" data-intent-action="order_online" data-cta="hero" href="https://order.toasttab.com/online/davesmainecafe?utm_source=davesmainecafe.com&amp;utm_medium=website&amp;utm_campaign=roadside_field_guide&amp;utm_content=hero">Order pickup</a>
+        <a class="btn btn--ghost" data-intent-action="directions" data-cta="hero_directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=Dave%27s+Maine+Cafe+439+US-1+Kittery+ME">Get directions</a>
       </div>
     </div>
   </section>
@@ -314,7 +304,7 @@
             <img src="../daves-world-review/assets/photos/dave-oux-gumbo-2026-07.jpg" alt="Dave-oux gumbo" loading="lazy">
             <img src="../daves-world-review/assets/photos/stuffed-clams-2026-07.jpg" alt="Double D's clam stuffies" loading="lazy">
           </div>
-          <div class="reason__body"><h3>Soup Flights</h3><p>Three cups. One tray. Commitment issues finally rewarded.</p></div>
+          <div class="reason__body"><h3>Soups &amp; Stuffies</h3><p>Chowder, gumbo, and clam stuffies. See today’s menu for the current lineup.</p></div>
         </article>
         <article class="reason">
           <img class="reason__one" src="../../assets/photos/toast-shepherds-pie.png" alt="Shepherd's pie at Dave's Maine Cafe" loading="lazy" width="1536" height="1024">
@@ -324,6 +314,28 @@
             <p class="take-line"><b>$9 Take &amp; Bake:</b> Buy any entrée or sandwich and take one of our Take &amp; Bakes home for $9.</p>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="story review-zone" id="dave" data-review-zone="2" aria-label="Review area 2: Dave's story" aria-labelledby="dave-title">
+    <div class="wrap story__in">
+      <div class="story__photo">
+        <img src="../daves-world-review/assets/photos/dave-owner-2026.jpg" alt="Dave holding two Dave's Lobster Rolls together behind the bar" loading="lazy" width="1100" height="1280">
+        <span class="story__note">The person to blame</span>
+      </div>
+      <figure class="story__memory">
+        <img src="../../assets/photos/dave-lobster-trap-throwback.jpg" alt="A younger Dave holding a lobster beside a trap on the water" loading="lazy" width="1251" height="1280">
+        <figcaption>Before the lobster roll took over.</figcaption>
+      </figure>
+      <div class="story__copy">
+        <span class="label">The roll that built the place</span>
+        <h2 id="dave-title">Hi. I'm Dave.</h2>
+        <p class="story__lead">Born and raised in Maine. Opened a beer cafe. Got hijacked by a lobster roll.</p>
+        <p>That’s the short version. The good days, the sold-out days, and the ideas that probably should have stayed in my head? Those are on Facebook.</p>
+        <div class="social-note"><span class="label">Meanwhile, at Dave’s…</span><h3>The cafe doesn’t end at the counter.</h3><p>Food, familiar faces, and whatever Dave’s up to next. Follow the real story, then come be part of it.</p>
+        <a class="btn" data-intent-action="social_visit" data-cta="dave_story" href="https://www.facebook.com/davesmainecafe/" target="_blank" rel="noopener">See what’s happening on Facebook</a></div>
+        <p class="signature">Community First. Profits Second. — Dave</p>
       </div>
     </div>
   </section>
@@ -347,7 +359,7 @@
       <div class="intel__head">
         <span class="label">Route 1 roadside intelligence</span>
         <h2 id="intel-title">Answers before hunger makes the decisions.</h2>
-        <p>Useful facts for people, search engines, and whatever robot is planning your Maine lunch.</p>
+        <p>Planning a stop near the Kittery Outlets? Here’s the useful stuff.</p>
       </div>
       <div class="intel__grid">
         <article class="intel__card">
