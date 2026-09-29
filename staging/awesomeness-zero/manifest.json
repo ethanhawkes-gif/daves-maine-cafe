@@ -16,7 +16,7 @@
   ],
   "publicationGate": "Dave exact approval required before any production homepage change",
   "productionChanged": false,
-  "reviewRevision": "v10 \u2014 September 29 fall conversion and Maine social refinement",
+  "reviewRevision": "v11 \u2014 September 29 weekend specials and kitchen-to-bottle connections",
   "revisionNotes": [
     "removed the white Route 1 shield",
     "separated hero copy from the mobile photo so the full lobster roll stays visible",
@@ -49,6 +49,7 @@
     "removed stale Maine-origin wording from visible copy, metadata, structured data, public facts, and the agent-readable summary while preserving Kittery, Maine location wording",
     "removed the numbered review bar, numbered badges, and customer-visible photo placeholders so the URL now shows the exact launch candidate rather than an annotated proof",
     "replaced the retired Friday implication with the current verified $9 bourbon-pour reason",
-    "normalized Chicken Pot Pie to Dave's canonical customer-facing name"
+    "normalized Chicken Pot Pie to Dave's canonical customer-facing name",
+    "Dave released review hold at15:04. Combined Weekend Day Drinkers, Wednesday3pm and product-food connections updated. Supplied media import blocked by file access; existing images retained, not represented as new. Production unchanged."
   ]
 }

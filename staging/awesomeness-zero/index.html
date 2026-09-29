@@ -186,6 +186,8 @@
     .shop-card h3{font-size:29px;line-height:1;margin:0 0 9px;padding-right:72px}
     .shop-card p{font-size:16px;margin-bottom:14px}
     .flavors{font:14px/1.5 Oswald,sans-serif;text-transform:uppercase;color:#3f4650;margin:12px 0 0;text-align:center}
+    .day--weekend{grid-column:1/-1}.day--weekend strong{font:26px/1.2 Oswald,sans-serif;color:var(--yellow)}
+    .product-connections{padding-left:20px;font-size:16px;line-height:1.55;margin:0 0 16px}.product-connections li{margin-bottom:7px}
     .product-proof{height:190px;background:#fff;border:2px solid var(--night);display:grid;place-items:center;overflow:hidden}
     .product-proof img{width:100%;height:100%;object-fit:contain}
     .product-proof--soda img{object-position:center 54%}
@@ -345,11 +347,10 @@
       <h2 id="week-title">The week at Dave's</h2>
       <p class="week__dek">Five days open. Five good excuses to make the turn.</p>
       <div class="days">
-        <div class="day"><b>Wed</b><span>Shell Yeah seafood specials</span></div>
+        <div class="day"><b>Wed · 3pm</b><span><strong>Shell Yeah Dollars Menu</strong><br>Oysters, shrimp &amp; more. Starts at 3pm.</span></div>
         <div class="day"><b>Thu</b><span>$18 Dave's Lobster Rolls</span></div>
         <div class="day"><b>Fri</b><span>$9 bourbon pours all day</span></div>
-        <div class="day"><b>Sat</b><span>Lunch, drinks and whatever's on</span></div>
-        <div class="day"><b>Sun · 11:30–5</b><span>Comfort food before Monday notices</span></div>
+        <div class="day day--weekend"><b>Sat + Sun</b><span><strong>Weekend Day Drinkers</strong><br>College game day Saturday. NFL Sunday.<br>$6 drafts · $3.50 hot dogs · $1 shrimp all day · $10 shot &amp; beer combos.<br><small>Sunday hours: 11:30–5.</small></span></div>
       </div>
     </div>
   </section>
@@ -400,8 +401,13 @@
         </article>
         <article class="shop-card">
           <span class="shop-card__stamp">Dave bottled</span>
-          <h3>Heat, Smoke &amp; Bad Judgment</h3>
-          <p>Not “some hot sauce.” Double D's hot sauces and Spicy Whiskey BBQ sauce—built for lobster, burgers, eggs and the person who always says “make it hotter.”</p>
+          <h3>Route 1 Bottling<br>Sauces &amp; Steak Seasoning</h3>
+          <p>The flavors from your plate, ready to take home.</p>
+          <ul class="product-connections">
+            <li><strong>Steak seasoning:</strong> the seasoning in our Shepherd’s Pie.</li>
+            <li><strong>Hot sauce:</strong> the kick in our gumbo.</li>
+            <li><strong>Spicy Whiskey BBQ sauce:</strong> the sauce on our pulled pork.</li>
+          </ul>
           <div class="product-proof-grid" aria-label="Approved Double D's hot sauce label proofs">
             <img src="assets/product-proofs/hot-sauce-cajun-cayenne-proof.png" alt="Double D's Cajun Cayenne hot sauce proof" loading="lazy" width="1000" height="1000">
             <img src="assets/product-proofs/hot-sauce-garlic-serrano-proof.png" alt="Double D's Garlic Serrano hot sauce proof" loading="lazy" width="1000" height="1000">

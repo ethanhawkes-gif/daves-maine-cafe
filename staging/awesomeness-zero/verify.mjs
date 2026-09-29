@@ -29,11 +29,13 @@ pass(html.includes('data-cta="local_intel"'), 'local-intel CTA attribution missi
 pass(html.includes('data-cta="visit"'), 'visit CTA attribution missing');
 pass(html.includes('data-cta="mobile_bar"'), 'mobile-bar CTA attribution missing');
 pass((html.match(/utm_content=/g) ?? []).length === 4, 'every order CTA needs a distinct content label');
-pass(manifest.reviewRevision.startsWith('v10'), 'manifest revision must be v10');
+pass(manifest.reviewRevision.startsWith('v11'), 'manifest revision must be v11');
 pass(manifest.productionChanged === false, 'productionChanged must remain false');
 pass((html.match(/data-review-zone="[1-7]"/g) ?? []).length === 7, 'expected seven numbered review zones');
 pass(!html.includes('Fast review:') && !html.includes('review-map'), 'customer-ready candidate must not show review scaffolding');
 pass(!/photo slots? reserved/i.test(html) && !html.includes('photo-slot'), 'customer-ready candidate must not show photo placeholders');
+pass(html.includes('Weekend Day Drinkers') && html.includes('$3.50 hot dogs') && html.includes('Wed · 3pm'), 'new weekly promotions missing');
+pass(html.includes('the seasoning in our Shepherd’s Pie') && html.includes('the kick in our gumbo') && html.includes('the sauce on our pulled pork'), 'product-food connections missing');
 pass(html.includes('$9 bourbon pours all day'), 'current Friday bourbon reason missing');
 pass(/>Menu<\/a>/.test(html), 'clear Menu tab missing');
 for (const route of ['lobster-rolls/', 'catering/', 'route-one-bottling/', 'visit-kittery/']) {
@@ -78,10 +80,10 @@ for (const width of [360, 390, 768, 1440]) {
 await page.setViewportSize({ width: 390, height: 844 });
 assert.equal(await page.locator('.mast__links').isVisible(), false, 'desktop navigation should not crowd the phone header');
 assert.equal(await page.locator('body').evaluate((node) => getComputedStyle(node).fontSize), '18px', 'body type must remain 18px');
-await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-mobile-v10.png', fullPage: false });
+await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-mobile-v11.png', fullPage: false });
 await page.setViewportSize({ width: 1440, height: 1000 });
 assert.equal(await page.locator('.mast__links').isVisible(), true, 'desktop route navigation must be visible');
-await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-desktop-v10.png', fullPage: false });
+await page.screenshot({ path: '/workspace/.openclaw/tmp/dmc-review-desktop-v11.png', fullPage: false });
 assert.deepEqual(browserErrors, [], 'browser errors');
 await browser.close();
 
